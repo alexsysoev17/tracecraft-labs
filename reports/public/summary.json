@@ -1,0 +1,183 @@
+{
+  "schema_version": "tracecraft.results-summary/1",
+  "data_origin": "synthetic",
+  "measurement_status": "measured",
+  "mode": "local",
+  "created_at": "2026-11-17T06:16:37.005424+00:00",
+  "code_source_hash": "4b1a8118018126e8f388bc92caa0fe39f304b54f3be85f832cd928f54601e643",
+  "reports": {
+    "atlas": "reports/public/atlas-local.json",
+    "relay": "reports/public/relay-local.json",
+    "sentinel": "reports/public/sentinel-local.json",
+    "lens": "reports/public/lens-local.json",
+    "echo": "reports/public/echo-local.json",
+    "canon": "reports/public/canon-local.json"
+  },
+  "atlas": {
+    "lexical": {
+      "counts": {
+        "total": 32,
+        "passed": 32,
+        "failed": 0,
+        "skipped": 0
+      },
+      "retrieval": {
+        "mean_recall_at_k": 0.9827586206896551,
+        "mean_reciprocal_rank": 0.9770114942528736
+      }
+    },
+    "dense": {
+      "counts": {
+        "total": 32,
+        "passed": 32,
+        "failed": 0,
+        "skipped": 0
+      },
+      "retrieval": {
+        "mean_recall_at_k": 1.0,
+        "mean_reciprocal_rank": 0.9770114942528736
+      }
+    },
+    "hybrid": {
+      "counts": {
+        "total": 32,
+        "passed": 32,
+        "failed": 0,
+        "skipped": 0
+      },
+      "retrieval": {
+        "mean_recall_at_k": 0.9827586206896551,
+        "mean_reciprocal_rank": 0.9770114942528736
+      }
+    }
+  },
+  "relay": {
+    "status": "PASS",
+    "passed": 6,
+    "failed": 0,
+    "skipped": 0,
+    "checks": {
+      "clarification_requested": true,
+      "resume_after_reopen": true,
+      "stale_approval_rejected": true,
+      "approved_after_review": true,
+      "repeat_has_no_duplicate_effect": true,
+      "three_valid_artifacts": true
+    }
+  },
+  "sentinel": {
+    "broken_gate": "REGRESSION",
+    "normal_gate": "PASS",
+    "manifest_gate": "NOT_COMPARABLE",
+    "scope": "Original32 cases only; independent challenge2 still has5 failures."
+  },
+  "lens": {
+    "status": "PASS",
+    "passed": 6,
+    "failed": 0,
+    "skipped": 0,
+    "checks": {
+      "bounded_fix_verified": true,
+      "failure_observed": true,
+      "failure_reproduced": true,
+      "draft_is_not_gold": true,
+      "replay_has_no_effects": true,
+      "span_references_exist": true
+    }
+  },
+  "echo": {
+    "off": {
+      "requests": 9,
+      "hits": 0,
+      "false_hits": 0,
+      "answer_calls": 9,
+      "llm_calls": 0,
+      "latency_ms": 503.86004301253706,
+      "cost_usd": null
+    },
+    "exact": {
+      "requests": 9,
+      "hits": 1,
+      "false_hits": 0,
+      "answer_calls": 8,
+      "llm_calls": 0,
+      "latency_ms": 426.8785850435961,
+      "cost_usd": null
+    },
+    "semantic": {
+      "requests": 9,
+      "hits": 2,
+      "false_hits": 0,
+      "answer_calls": 7,
+      "llm_calls": 0,
+      "latency_ms": 452.8007080371026,
+      "cost_usd": null
+    }
+  },
+  "canon": {
+    "lexical": {
+      "total": 32,
+      "passed": 32,
+      "failed": 0,
+      "skipped": 0
+    },
+    "full_pack": {
+      "total": 32,
+      "passed": 32,
+      "failed": 0,
+      "skipped": 0
+    },
+    "dense": {
+      "total": 32,
+      "passed": 32,
+      "failed": 0,
+      "skipped": 0
+    },
+    "hybrid": {
+      "total": 32,
+      "passed": 32,
+      "failed": 0,
+      "skipped": 0
+    }
+  },
+  "limitations": [
+    "All measurements use independently authored synthetic data.",
+    "Original32 now pass but independent withheld followup fails5/12 for absent attributes; no generalized quality improvement established.",
+    "SENTINEL normal PASS applies only to its original32 cases, not the independent challenge.",
+    "ECHO measures extraction calls, not provider costs.",
+    "No live provider call, paid run or human judge calibration was performed.",
+    "Independent reviewers were separate delegated agents in the same session, not external people or separate ChatGPT/Claude products."
+  ],
+  "private_source": {
+    "status": "MISSING_PRIVATE_SOURCE",
+    "found": false,
+    "imported": false,
+    "verified": false
+  },
+  "publication": {
+    "pushed": false,
+    "published": false
+  },
+  "independent": {
+    "first_frozen_set": {
+      "baseline_passed": 20,
+      "final_passed": 23,
+      "scored": 23,
+      "uncertain_not_scored": 3,
+      "interpretation": "Cases were first authored independently, then became known regression cases during fixes."
+    },
+    "withheld_followup": {
+      "baseline_passed": 7,
+      "final_passed": 7,
+      "scored": 12,
+      "failed": 5,
+      "interpretation": "Frozen before final implementation; failures exposed only after code freeze, retained without tuning."
+    },
+    "engineering_findings": {
+      "implementation": 3,
+      "security_and_state": 6,
+      "all_reproduced_fixes_verified": true
+    },
+    "report": "reports/public/independent-quality.json"
+  }
+}

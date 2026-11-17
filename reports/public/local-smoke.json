@@ -1,0 +1,56 @@
+{
+  "status": "PASS",
+  "mode": "local",
+  "data_origin": "synthetic",
+  "measurement_status": "measured",
+  "checked_at": "2026-11-17T06:09:56.473733+00:00",
+  "code_source_hash": "4b1a8118018126e8f388bc92caa0fe39f304b54f3be85f832cd928f54601e643",
+  "checks": {
+    "real_384_dimensions": true,
+    "new_process_reuses_passage_vectors": true,
+    "same_ranking_after_restart": true,
+    "same_scores_after_restart": true,
+    "paraphrase_top_source": true
+  },
+  "first_process": {
+    "ids": [
+      "luma-v2-clearspace",
+      "luma-v2-negative",
+      "luma-v2-positive",
+      "luma-v2-wordmark",
+      "luma-v2-packing-b"
+    ],
+    "scores": [
+      0.7916038360112666,
+      0.7877891411900063,
+      0.7851188914694986,
+      0.778559603591288,
+      0.7681775562656017
+    ],
+    "embedding_calls": 3,
+    "stored_vectors": 14,
+    "dimensions": 384,
+    "model": "intfloat/multilingual-e5-small@614241f622f53c4eeff9890bdc4f31cfecc418b3"
+  },
+  "restarted_process": {
+    "ids": [
+      "luma-v2-clearspace",
+      "luma-v2-negative",
+      "luma-v2-positive",
+      "luma-v2-wordmark",
+      "luma-v2-packing-b"
+    ],
+    "scores": [
+      0.7916038360112666,
+      0.7877891411900063,
+      0.7851188914694986,
+      0.778559603591288,
+      0.7681775562656017
+    ],
+    "embedding_calls": 1,
+    "stored_vectors": 14,
+    "dimensions": 384,
+    "model": "intfloat/multilingual-e5-small@614241f622f53c4eeff9890bdc4f31cfecc418b3"
+  },
+  "elapsed_ms": 2153.8665840053
+}

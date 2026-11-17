@@ -1,0 +1,8 @@
+[
+  {"a":"What is the primary color?","b":"Tell me the primary colour.","safe":true},
+  {"a":"What font is used?","b":"Tell me the typeface.","safe":true},
+  {"a":"What is the primary color?","b":"What is not the primary color?","safe":false},
+  {"a":"Logo clearspace 16 px","b":"Logo clearspace 18 px","safe":false},
+  {"a":"Logo clearspace","b":"Logo rotation","safe":false},
+  {"a":"What is the primary color?","b":"Give me a new variant of the primary color.","safe":false}
+]

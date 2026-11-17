@@ -1,0 +1,26 @@
+{
+  "schema_version": "tracecraft.browser-checks/1",
+  "date_local": "2026-11-17",
+  "timezone": "Europe/Moscow",
+  "data_origin": "synthetic",
+  "measurement_status": "observed",
+  "runner": "interactive browser automation through CUA",
+  "checks": {
+    "atlas_real_lexical_dense_hybrid": "PASS",
+    "atlas_source_inspector_hash_and_span": "PASS",
+    "relay_missing_dimensions_pause": "PASS",
+    "relay_process_stop_start_same_checkpoint": "PASS",
+    "relay_three_artifacts_and_bound_approval": "PASS",
+    "sentinel_actual_broken_candidate_regression": "PASS",
+    "lens_actual_invalid_args_spans_and_draft": "PASS",
+    "echo_real_semantic_paraphrase_hit": "PASS",
+    "echo_negation_semantic_guard_miss": "PASS",
+    "canon_hybrid_32_cases_29_pass_3_fail_visible": "PASS",
+    "mobile_390_css_pixels_no_horizontal_document_overflow": "PASS",
+    "inspector_escape_key_closes_dialog": "PASS",
+    "browser_console_errors_or_warnings": "NONE_OBSERVED"
+  },
+  "relay_restart_run_id": "7c45eda88a52428c844721e518dedefa",
+  "screenshots": ["docs/screenshots/atlas-local.jpg", "docs/screenshots/echo-local.jpg", "docs/screenshots/canon-local.jpg", "docs/screenshots/canon-mobile.jpg"],
+  "limitations": ["Mobile browser viewport simulation, not a physical-device test.", "No live provider calls; default/local output is extractive.", "This is a recorded smoke check, not an exhaustive accessibility audit."]
+}

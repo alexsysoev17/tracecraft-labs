@@ -1,0 +1,16 @@
+# Checkout application, not a distributable wheel. Use Makefile bootstrap and
+# PYTHONPATH=src .venv/bin/python -m tracecraft; resources stay in this checkout.
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+testpaths = ["tests"]
+
+[tool.ruff]
+line-length = 120
+target-version = "py312"
+
+[tool.mypy]
+python_version = "3.12"
+ignore_missing_imports = true
+check_untyped_defs = true
+

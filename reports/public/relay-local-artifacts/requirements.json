@@ -1,0 +1,57 @@
+{
+  "schema": "tracecraft.requirements/1",
+  "brief": {
+    "brand": "luma",
+    "objective": "brand logo banner",
+    "width": 1200,
+    "height": 628,
+    "copy": "Explore your next path"
+  },
+  "scope": {
+    "acl_version": "1",
+    "brand": "luma",
+    "context": "",
+    "locale": "ru",
+    "permissions": [
+      "public"
+    ],
+    "principal": "demo-reader",
+    "project": "public-lab",
+    "snapshot": "v2",
+    "tenant": "demo"
+  },
+  "input_hash": "9c67e0d37a1f49755daf4298ef73fc1c0f74c469df74689518ddb62337271416",
+  "rules": [
+    {
+      "evidence_id": "luma-v2-clearspace",
+      "text": "Keep at least 16 px of empty space on every side of the Luma Field logo in digital banners. Охранное поле логотипа — не менее 16 px с каждой стороны цифрового баннера.",
+      "source_hash": "cbc50a599deba194a90778da63707de8eb72fa7c7e8aa42b2e8ed190dd042600",
+      "section": "Logo clearspace / Охранное поле"
+    },
+    {
+      "evidence_id": "luma-v2-discount",
+      "text": "Luma Field evergreen banners must not show a discount percentage. Скидка в процентах запрещена в постоянных баннерах. Campaign SPRING-26 is the only exception; see the linked exception.",
+      "source_hash": "cbc50a599deba194a90778da63707de8eb72fa7c7e8aa42b2e8ed190dd042600",
+      "section": "Discount policy / Скидка"
+    },
+    {
+      "evidence_id": "luma-v2-discount-exception",
+      "text": "Only campaign SPRING-26 may display exactly 15% during 1–14 April 2026. Только SPRING-26 может показывать ровно 15% с 1 по 14 апреля 2026. Include the sentence «Предложение действует до 14.04.2026».",
+      "source_hash": "cbc50a599deba194a90778da63707de8eb72fa7c7e8aa42b2e8ed190dd042600",
+      "section": "Campaign exception / Исключение"
+    },
+    {
+      "evidence_id": "luma-v2-identity",
+      "text": "Write the brand name exactly as Luma Field. Название бренда пишется Luma Field, без сокращения LF.",
+      "source_hash": "cbc50a599deba194a90778da63707de8eb72fa7c7e8aa42b2e8ed190dd042600",
+      "section": "Brand identity / Название бренда"
+    },
+    {
+      "evidence_id": "luma-v2-wordmark",
+      "text": "Never stretch or rotate the Luma Field wordmark. Не растягивать и не поворачивать логотип Luma Field. Scaling uniformly is allowed. Пропорциональное масштабирование допустимо.",
+      "source_hash": "cbc50a599deba194a90778da63707de8eb72fa7c7e8aa42b2e8ed190dd042600",
+      "section": "Logo transformation / Трансформация"
+    }
+  ],
+  "unknowns": []
+}

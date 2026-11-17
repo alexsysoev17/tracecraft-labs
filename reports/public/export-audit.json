@@ -1,0 +1,29 @@
+{
+  "schema_version": "tracecraft.export-audit/2",
+  "data_origin": "synthetic",
+  "measurement_status": "measured",
+  "checked_at": "2026-11-17T06:21:01.796947+00:00",
+  "status": "PASS",
+  "code_source_hash": "4b1a8118018126e8f388bc92caa0fe39f304b54f3be85f832cd928f54601e643",
+  "tracked_files_scanned": 152,
+  "tracked_bytes": 29915186,
+  "findings": [],
+  "reviewed_test_pattern_files": [
+    "src/tracecraft/core/reports.py",
+    "tests/test_providers.py"
+  ],
+  "review_reason": "Literal rejection pattern and fictional path in negative privacy test.",
+  "report_boundary_scan": {
+    "status": "PASS",
+    "scanned_files": 130,
+    "findings": [],
+    "private_corpus": "MISSING_PRIVATE_SOURCE",
+    "limitations": "Heuristic scan plus synthetic-only report boundary; no comprehensive historical secret audit."
+  },
+  "symlink_defenses": "Independent direct, directory, root-file and ancestor-link regressions all pass.",
+  "independent_security_report": "reports/public/independent-security.json",
+  "limitations": [
+    "Heuristic scan plus authored-data boundary, not universal secret or semantic classifier.",
+    "Count includes the prior audit-report version; this replacement is separately audited before write."
+  ]
+}

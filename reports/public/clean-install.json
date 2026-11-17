@@ -1,0 +1,241 @@
+{
+  "schema_version": "tracecraft.clean-install/1",
+  "status": "PASS",
+  "measurement_status": "measured",
+  "data_origin": "synthetic",
+  "verified_at": "2026-11-16T21:53:51.692318+00:00",
+  "client_date": "2026-11-17",
+  "client_timezone": "Europe/Moscow",
+  "environment": {
+    "python": "3.12.14",
+    "os": "Darwin",
+    "architecture": "arm64",
+    "dependency_profile": "requirements-fixture.lock"
+  },
+  "copy_policy": {
+    "allowlisted_directories": [
+      "src",
+      "web",
+      "docs",
+      "datasets/public-demo",
+      "tests",
+      "configs",
+      "scripts",
+      "examples",
+      ".github"
+    ],
+    "excluded": [
+      ".git",
+      ".venv",
+      "private",
+      "runtime",
+      "reports"
+    ],
+    "copied_source_projects": false
+  },
+  "initial_snapshot": {
+    "captured_at": "2026-11-16T21:49:51.653837+00:00",
+    "file_count": 70,
+    "tree_sha256": "ce5690528ed6af6b4a54fbeccf89fc72361d20d29350eb6c054f33de045e53dc",
+    "fresh_virtual_environment": true,
+    "empty_runtime_before_demo": true,
+    "test_result": {
+      "passed": 111,
+      "failed": 0,
+      "skipped": 0,
+      "warnings": 1,
+      "elapsed_seconds": 5.18
+    },
+    "check_failure": "Ruff E902: empty untracked scripts directory was absent in a file-only copy.",
+    "resolution": "The updated source includes scripts/export_public.py; the same make check command passes."
+  },
+  "verified_snapshot": {
+    "captured_at": "2026-11-16T21:52:40.480058+00:00",
+    "file_count": 79,
+    "tree_sha256": "f057027e8eeceafc37bf8daedf163c4ffabdfc7758b5fb51e8d8e0c88570a5e1",
+    "src_tree_sha256": "0dc6500a09a68899a995a78cdab2e00d89eead82ce56f96dd653e68b636e27a4",
+    "fixture_lock_sha256": "bfee88edbcd94d76afdf0fdedd8de4601a64ed8d17dc6fd2f5880ccc9baf469d",
+    "files_sha256": {
+      ".github/workflows/ci.yml": "ad6019fc4a26d18573618669e65651adf77d235074c0fd30a9d83d3bbc0e71d0",
+      ".gitignore": "b59204de595df7ec2b9f5f454f6162560dac8f2c16ac815d9204a65f6953eda2",
+      "AGENTS.md": "bad38e08c56ae90b0e50cc2ae5962e0f104d04c2516f86a348edfac61151fc06",
+      "CONTRIBUTING.md": "d7b661a2d5b59b187979b098ec2c424c7aa68514e58000a380d97d0e9e03c709",
+      "LIMITATIONS.md": "47c5e5c409fc462e68cafcc83482582c7fa9095c8c6d5303a82d187bf45b595d",
+      "Makefile": "24b181826d6102bde3093cd628e75f8a21c16721b2e0015c4c45aae87b0b8524",
+      "PLAN.md": "c290d554ab09e0ccddb4bc509d7d65a330c6cf3622f2bd5c940295f412c451c7",
+      "README.md": "c37bad21cd0b74e5006695e2d9e4b542019dc1ba8ec2288390a3e54f718e06f7",
+      "SECURITY.md": "13ff25401dc19331d1a759e51636a1b7bde64354c67fcd03935a0fffc80f7ef8",
+      "THIRD_PARTY_NOTICES.md": "0f60e227abe1bd8fe260aea0f7c1ca973f98aa6a84d6657f391271e0508b5396",
+      "configs/embedding.json": "13e50f238d7e84c110ac8ea3873aad2e84826f35154f93c89edf3de1205e81d1",
+      "datasets/public-demo/README.md": "92b8bd209bfa866f9e3bcaba5dfffd79dceb8b8ca4225ce12eaf9191fc52898f",
+      "datasets/public-demo/build_dataset.py": "013e212dc4dc094fc60107357299cfbe8e80f4c784e73946e841a06fe3f8b5f3",
+      "datasets/public-demo/cache-validation.json": "24fdabbcde13429b50de3e390dab500c0cbb7f505dae306d076b0e33c521e0d7",
+      "datasets/public-demo/cases.json": "db6a144b55b9ec7172251418e3b6e41f52657282f2bb97123859bee4c96be68d",
+      "datasets/public-demo/corpus.json": "4fa3786d6216d98f2d2cfccaa305056be2e48aa2eaf5d0664f8e023edaba2f38",
+      "datasets/public-demo/luma-v1.md": "d771c5e4c13201206faa785b5a0bf2c663e821593e27e3abd5a757857f1c3bb6",
+      "datasets/public-demo/luma-v2.md": "cbc50a599deba194a90778da63707de8eb72fa7c7e8aa42b2e8ed190dd042600",
+      "datasets/public-demo/veyra-v1.md": "43c8230718027c87657adc6c8fd306d9e3f17dcb9522f924240de89581870a64",
+      "datasets/public-demo/veyra-v2.md": "32720741d953e7cbe86bea177798612df6285fc10ffb8474aa1852e66da3f837",
+      "docs/adr-001.md": "1879eaedc8abbda5854025dd22e22448b76eb13aaef228534afb3dad04b5b704",
+      "docs/api.md": "8d2d1b59c20444e746e5064c8f1c4e65c0e4c4c492fdc3507ea558a3b738ac61",
+      "docs/architecture.md": "5ced5778d15345b93a42b48d99a45a6932f63f4d64f40f9fcfa346e1fd5078aa",
+      "docs/case-studies.md": "48a9e7edd05d6dbba8c2e7fae8ea13eef119bad5bdc8f0ce7886c118e5d9d06b",
+      "docs/contracts.md": "3ae48160745970a48143c8fa3a007ec83c8d9acf13b205a07dea767d5c95982c",
+      "docs/demo-script.md": "e089680e7807cd9862c16089f425df083db990947d037b4aa5e82ea6e418e2a1",
+      "docs/inspiration.md": "0d700fa80db734fdf000b311ad1acd0cc40779fd5a425d360a4fd1146c9ac9e6",
+      "docs/source-to-design.md": "2ee604467467decddff4cc78a8fb58a429dea6d330a348391a3fe5973dbec0d4",
+      "examples/canon/README.md": "15c4651b71a9538aa0aaa18633328cad04efc837121ab11ca98ce3842b63dc8b",
+      "examples/canon/run.py": "123af54ffc760562a08bf431742018b18973b59a2cd62bf3005c534bb3a3045f",
+      "examples/lens/README.md": "bec7145c9d1253fc63faa6ddea9342725acbe3a59d44846c611d226fb1887d4d",
+      "examples/relay/README.md": "ee4189f9d676907fc23bbe9fc1e6121724121e7b41dd086075422796a34163d1",
+      "examples/sentinel/README.md": "b423f3206469c73cd554510661735ffaa148bb1a733036c685734b306e79f662",
+      "examples/sentinel/run.py": "ea6e464a9569dc9cac56790c7f11aefd1554ab351df2d9210c06c20037c172a0",
+      "pyproject.toml": "3cdfa6619189f3ec3701e8d619800b7ab5e03eb2dd5465a75c2ba276e75a539e",
+      "requirements-dev.txt": "d7f1b04bb5ead6f45b45c986cc3133138ea9253475e01048d8c52f5774120d50",
+      "requirements-fixture.lock": "bfee88edbcd94d76afdf0fdedd8de4601a64ed8d17dc6fd2f5880ccc9baf469d",
+      "requirements-local.lock": "0b9d872ee99de3c261d7a919ddba3961917467a990d8860034b230c34a1a23f7",
+      "requirements-local.txt": "227c49ac1c5e95ad946a5f95942dfc91b4a15eee938e04f88c303de53cf306fc",
+      "requirements.txt": "4fc813f75f5de9fbcae4d03a21b6e06e644ea41fde729f646084ba763801d8fd",
+      "scripts/export_public.py": "a9a187e4d902eaee0ae4668cb8781739d57d4229c925f466da40781b54364079",
+      "src/tracecraft/__init__.py": "badfaece9690a812dd052c2ad1ae18ad456bad29ce16ed5686de4dd7b3e95b88",
+      "src/tracecraft/__main__.py": "7afeadd4522552160b4980dc798d62c6351e23026023c4dc3f40ef0a286a8f3d",
+      "src/tracecraft/api/__init__.py": "bc9304d33924c3010ea7a7b458f945953e2a0bc9a35e07e5b810f3f8f1a5b437",
+      "src/tracecraft/api/app.py": "06f97659ac2d8d324b647c09880b269e969cdd8763f9438b4423e63d651d7308",
+      "src/tracecraft/atlas/__init__.py": "203479524f697a40f63dffb7468b1e43f9145c1b5e426ce335973a7d616085c7",
+      "src/tracecraft/atlas/service.py": "286ac73441de8f14f3c491386681a417b1ceafae487ddcd138d97a1fbc27ad02",
+      "src/tracecraft/canon/__init__.py": "1ca3321233816dca9842519b6ee78b49422ca11e488618b270c6f6d32d0c07fb",
+      "src/tracecraft/canon/evaluator.py": "e33dd68543b0d9e9215ce7436151b9a9a1018ef6027f131bd33653226357c897",
+      "src/tracecraft/canon/service.py": "46623334c49ee7e4c38b7a1e232c98636aa03c97c2e1bcde19e200edc291c4d0",
+      "src/tracecraft/cli.py": "2a0011494e7f971df5e0a51c000d8c9a36f596abcc429ec97fa49001606c5052",
+      "src/tracecraft/core/__init__.py": "9d96b62b088b047212b4efee682e80c480302f2963f7d5504366f4fd79697283",
+      "src/tracecraft/core/embeddings.py": "a59672e396e9b3b8be98250577c367340fce8ce2689ffed6d1986a35cb150529",
+      "src/tracecraft/core/ingest.py": "7af866c36e9e9a3decc03fa3fffde0734059ee7a8cef00b16e7f3bd8cdda37d6",
+      "src/tracecraft/core/models.py": "682d0bc01f5602d016c6ad4ede38ac92c453f73fc49145c872c229402f65f82f",
+      "src/tracecraft/core/providers.py": "e138b30aac33263f26f25a6185b986986c6b5d7f8115a03ef9a16402d855ab40",
+      "src/tracecraft/core/reports.py": "6ad446484d566b85a3d6e7fa0e45c46f11c611abd89375a50554e80dcf653cd0",
+      "src/tracecraft/core/store.py": "0299780b2a734d4f136a6954a7afcc2e45a9b689a8441667ada0459b6f3a2cca",
+      "src/tracecraft/echo/__init__.py": "820a5ba1927fab9603051dfb0a5c10042fdbb9a4b35f1545f4ff92a4f4bb6454",
+      "src/tracecraft/echo/service.py": "6eb05792749e84fdf6c59653d259b6fc585f27b6ab089756dbf700419037e06e",
+      "src/tracecraft/lens/__init__.py": "dcf35ed52b1ee6cc5376759b7bc19db6dcef83a752f7adf162dae19099227d9b",
+      "src/tracecraft/lens/service.py": "f6840d7135a4469393097a8d135338cd7a4de1b6f2b9ff162cabfa5daf8cb114",
+      "src/tracecraft/relay/__init__.py": "296a1727f9d938b95d488974fe9643daf510c482322a326ee664ab9751258d91",
+      "src/tracecraft/relay/service.py": "782dedcef4e9df8134bb772dd9dc161dfc968af0670bac3164df60bd2517d415",
+      "src/tracecraft/sentinel/__init__.py": "902340cb5e6bc20dd7a250c84e79964798cf315f06c3709d0420ef9514b0d883",
+      "src/tracecraft/sentinel/service.py": "0cd91cc478f89f6f8cbf0c885b1fa7832b41f9fbd6b1a5c6948c387806a126dc",
+      "tests/test_adversarial_review.py": "9cc09b7b37b52337f71eff24d89e1b5405eedb6474b010658423babb93d9cf14",
+      "tests/test_api.py": "0ee88979e0199a1d6ec7b03d07d6117b02d8c0048019c57c767bfaf9543899a7",
+      "tests/test_atlas.py": "a765b638c4ba452cb8e34a85ee533adedd3987616cdbb9b6a0931246a9e9bab5",
+      "tests/test_canon.py": "f85b062f425073571a48c2953a7cd8f16a406a48d5ea8107e6b371076036ded9",
+      "tests/test_echo.py": "d6a19dbca921fd131d1cdf0fb5ab94d4a67d49f9e4917ff6746dce0b26d55c57",
+      "tests/test_ingest_review.py": "9c77e88f6791ccd42e09f1c7333b55e471ebd0c595e8b040239e6ff3bfebb2fe",
+      "tests/test_lens.py": "15287d10730beee3aa31a067082593c152a8a76d592a93ea4559276e2135df76",
+      "tests/test_providers.py": "d12d3b33e05417887341fe7676b11a841f2695799736ca6fdda5d389fc0b3cea",
+      "tests/test_relay.py": "559251b40cb93856f040b31c3e8fd52a58ec62c929f6d8bc24fce61c7223cfc5",
+      "tests/test_sentinel.py": "093b7c6df92efa33ec2d5ceac35781063ba2d273dd0e459f75b749fba2a8414d",
+      "web/app.js": "8f377e22ad651bf005eaa8758106a3c2128d567943f3c1a2301f0b3d054bb407",
+      "web/index.html": "6c12410a9137483ca46a4ed5014dca87d18ea88a8267b794f07d01996fcfe7da",
+      "web/styles.css": "9013bc37ab9c0fb7efa2754e8725f3d1936274a94894c5319bef33e98d9d5261"
+    },
+    "changed_source_files_after_capture": [],
+    "virtual_environment_reused_after_source_refresh": true,
+    "empty_runtime_before_demo": true
+  },
+  "commands": [
+    {
+      "command": "make setup PYTHON=<Python-3.12-executable>",
+      "status": "PASS",
+      "exit_code": 0,
+      "details": "Actual absolute interpreter path is normalized here. Initial restricted-network attempt failed DNS; an approved network retry installed the lock in a fresh venv. Setup was then rerun successfully after source refresh."
+    },
+    {
+      "command": "make test",
+      "status": "PASS",
+      "exit_code": 0,
+      "passed": 111,
+      "failed": 0,
+      "skipped": 0,
+      "warnings": 1,
+      "elapsed_seconds": 5.12
+    },
+    {
+      "command": "make demo",
+      "status": "PASS",
+      "exit_code": 0,
+      "mode": "fixture",
+      "reports_generated": 6,
+      "runtime_was_absent": true
+    },
+    {
+      "command": "make check",
+      "status": "PASS",
+      "exit_code": 0,
+      "ruff": "PASS",
+      "mypy": {
+        "status": "PASS",
+        "source_files": 25
+      },
+      "compileall": "PASS"
+    },
+    {
+      "command": ".venv/bin/python -m pip check",
+      "status": "PASS",
+      "exit_code": 0,
+      "broken_requirements": 0
+    },
+    {
+      "command": "make privacy-check",
+      "status": "PASS",
+      "exit_code": 0,
+      "scanned_files": 76,
+      "findings": []
+    }
+  ],
+  "demo_reports": {
+    "atlas": {
+      "status": "measured",
+      "mode": "fixture",
+      "data_origin": "synthetic",
+      "sha256": "ef7dfcaebdef362c0d96d15e375574bc192dd5b30c8ee95169aa71ae94c40f0d"
+    },
+    "relay": {
+      "status": "PASS",
+      "mode": "fixture",
+      "data_origin": "synthetic",
+      "sha256": "563af6a861675f7220a453d87f3b16d24f9c3b48d404b91ad2ab6b89197ab28f"
+    },
+    "sentinel": {
+      "status": "COMPLETED",
+      "mode": "fixture",
+      "data_origin": "synthetic",
+      "sha256": "bb8738abede6ce880c2aeb4e1b70c3cc7dec01d66766920349398f56f54de988"
+    },
+    "lens": {
+      "status": "PASS",
+      "mode": "fixture",
+      "data_origin": "synthetic",
+      "sha256": "e554aac5f74f20c3f6ce3908e642b466454d48ef81bab4a8e689a47963055d67"
+    },
+    "echo": {
+      "status": "measured",
+      "mode": "fixture",
+      "data_origin": "synthetic",
+      "sha256": "fffd6fd15656b83044334af8dc0c17c06a4947f127a6e36cf6ff7863e9677776"
+    },
+    "canon": {
+      "status": "COMPLETED",
+      "mode": "fixture",
+      "data_origin": "synthetic",
+      "sha256": "e88cb0a6104748a0d8e152ba9db112c09346d3dce5d8f1af872c58aedcadcf30"
+    }
+  },
+  "paid_model_calls": 0,
+  "limitations": [
+    "Fixture bootstrap only: embedding preparation and local/live model profiles were not run in this clean-copy check.",
+    "Dependencies were installed in a fresh virtual environment, with approved network access and available package-cache wheels; an empty global package cache was not tested.",
+    "The updated source snapshot reused that virtual environment after the fixture lock remained unchanged; runtime and generated reports were removed before the second demo.",
+    "The Starlette TestClient emits one upstream AnyIO deprecation warning.",
+    "Browser interaction was not part of this independent clean-copy check.",
+    "Privacy scanning is heuristic plus explicit origin boundaries; it is not a universal classifier for confidential text.",
+    "The source fingerprint identifies the tested copy. Later source edits require their own validation."
+  ]
+}

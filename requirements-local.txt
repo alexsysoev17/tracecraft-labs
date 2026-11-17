@@ -1,0 +1,4 @@
+-r requirements.txt
+numpy==2.2.5
+onnxruntime==1.21.1
+tokenizers==0.21.1

@@ -1,0 +1,2185 @@
+{
+  "schema_version": 1,
+  "label": "challenge2-final",
+  "started_at_utc": "2026-11-17T06:09:55.768150+00:00",
+  "finished_at_utc": "2026-11-17T06:09:56.761291+00:00",
+  "mode": "fixture",
+  "methods": [
+    "lexical",
+    "full_pack"
+  ],
+  "case_file": "reports/public/independent-quality-challenge2-cases.json",
+  "case_file_sha256": "d6397950e6b378cf201c8b6a3ebc3c50ddc10029e00e29a4f7d4272e67fe2563",
+  "harness_sha256": "4515ff0d3744135c8781f0dd6c37e1ba95e7cf88b270a134870d710cce57555a",
+  "implementation_source_hash": "4b1a8118018126e8f388bc92caa0fe39f304b54f3be85f832cd928f54601e643",
+  "implementation_source_hash_at_start": "4b1a8118018126e8f388bc92caa0fe39f304b54f3be85f832cd928f54601e643",
+  "implementation_changed_during_run": false,
+  "encoder_inference_batches": 0,
+  "implementation_source_tree": "working-tree",
+  "encoder_status": {
+    "status": "ready",
+    "model": "intfloat/multilingual-e5-small@614241f622f53c4eeff9890bdc4f31cfecc418b3",
+    "provider": "CPUExecutionProvider"
+  },
+  "network": "socket connects disabled; no downloads or provider calls permitted",
+  "independence_boundary": "Second source-based challenge authored after baseline and first fixes were observed, before executing these questions. Questions and expected values were withheld from the implementing root agent until its final code freeze. This is not independent of all prior implementation knowledge and is not expert validation.",
+  "scoring_policy": "High-certainty cases alone contribute to pass/fail. A relevant extractive answer may state controlling facts instead of deriving a new yes/no sentence. Required groups are case-insensitive source assertions, one alternative per group. Source-section coverage is assessed independently from corpus evidence IDs. Uncertain cases are reported without counted verdict.",
+  "additional_scoring_notes": [
+    "Semantic insufficient accepts insufficient_evidence and needs_review because both abstain.",
+    "All expected source sections must be cited; extra sections are recorded but do not by themselves fail a case.",
+    "Confident cases require requested source facts, truthful status, no forbidden text, provenance, zero provider calls, and no Relay side effects.",
+    "Retrieval must execute successfully; returned answer text must exactly consist of validated claims and known status boilerplate, or a recognized empty-claim refusal.",
+    "This small public synthetic set is not statistically representative and does not measure generative model quality."
+  ],
+  "summary": {
+    "lexical": {
+      "passed": 7,
+      "failed": 5,
+      "uncertain_not_scored": 0,
+      "failed_case_ids": [
+        "IQ2-05",
+        "IQ2-06",
+        "IQ2-07",
+        "IQ2-08",
+        "IQ2-09"
+      ],
+      "provenance_failures": 0,
+      "cases_with_extra_source_sections": 10
+    },
+    "full_pack": {
+      "passed": 7,
+      "failed": 5,
+      "uncertain_not_scored": 0,
+      "failed_case_ids": [
+        "IQ2-05",
+        "IQ2-06",
+        "IQ2-07",
+        "IQ2-08",
+        "IQ2-09"
+      ],
+      "provenance_failures": 0,
+      "cases_with_extra_source_sections": 10
+    }
+  },
+  "results": [
+    {
+      "id": "IQ2-01",
+      "category": "permitted_benefit_ru",
+      "certainty": "high",
+      "query": "Какое преимущество продукта Luma Field разрешено обещать покупателю?",
+      "scope": {
+        "tenant": "demo",
+        "project": "public-lab",
+        "brand": "luma",
+        "snapshot": "v2",
+        "principal": "demo-reader",
+        "permissions": [
+          "public"
+        ],
+        "locale": "ru",
+        "context": "",
+        "acl_version": "1"
+      },
+      "mode": "fixture",
+      "method": "lexical",
+      "expected_status_semantic": "answered",
+      "acceptable_api_statuses": [
+        "supported"
+      ],
+      "source_level_facts": [
+        "The permitted benefit is comfort during everyday walks."
+      ],
+      "rationale": "permitted benefit ru",
+      "passed": true,
+      "checks": {
+        "retrieval_executed": true,
+        "rendered_text_matches_validated_claims_or_refusal": true,
+        "status_matches": true,
+        "all_required_facts_present": true,
+        "required_source_sections_covered": true,
+        "forbidden_text_absent": true,
+        "claims_have_valid_source_provenance": true,
+        "no_provider_calls": true,
+        "no_relay_side_effects": true
+      },
+      "missing_text_groups": [],
+      "forbidden_text_observed": [],
+      "missing_source_sections": [],
+      "extra_source_sections_observed": [
+        "Logo transformation / Трансформация"
+      ],
+      "provenance_errors": [],
+      "actual": {
+        "status": "supported",
+        "text": "Do not claim that a Luma Field product cures a disease. Запрещено обещать лечение заболеваний. The permitted benefit is comfort during everyday walks; разрешённое преимущество — комфорт во время ежедневных прогулок.\n\nNever stretch or rotate the Luma Field wordmark. Не растягивать и не поворачивать логотип Luma Field. Scaling uniformly is allowed. Пропорциональное масштабирование допустимо.",
+        "evidence_ids": [
+          "luma-v2-claim",
+          "luma-v2-wordmark"
+        ],
+        "claims": [
+          {
+            "text": "Do not claim that a Luma Field product cures a disease. Запрещено обещать лечение заболеваний. The permitted benefit is comfort during everyday walks; разрешённое преимущество — комфорт во время ежедневных прогулок.",
+            "evidence_id": "luma-v2-claim",
+            "quote": "Do not claim that a Luma Field product cures a disease. Запрещено обещать лечение заболеваний. The permitted benefit is comfort during everyday walks; разрешённое преимущество — комфорт во время ежедневных прогулок."
+          },
+          {
+            "text": "Never stretch or rotate the Luma Field wordmark. Не растягивать и не поворачивать логотип Luma Field. Scaling uniformly is allowed. Пропорциональное масштабирование допустимо.",
+            "evidence_id": "luma-v2-wordmark",
+            "quote": "Never stretch or rotate the Luma Field wordmark. Не растягивать и не поворачивать логотип Luma Field. Scaling uniformly is allowed. Пропорциональное масштабирование допустимо."
+          }
+        ],
+        "generation_kind": "deterministic_extractive",
+        "latency_ms": 41.551291971700266,
+        "usage": {
+          "calls": 0,
+          "input_tokens": null,
+          "output_tokens": null,
+          "cost_usd": null
+        },
+        "run_id": "aa5593d68f8744138773785aa78fa603",
+        "retrieval_status": "ready",
+        "retrieval_hit_ids": [
+          "luma-v2-claim",
+          "luma-v2-wordmark"
+        ]
+      }
+    },
+    {
+      "id": "IQ2-02",
+      "category": "unaccepted_abbreviation_en",
+      "certainty": "high",
+      "query": "Can I shorten the displayed brand name to LF in the ad? Give the authorized spelling.",
+      "scope": {
+        "tenant": "demo",
+        "project": "public-lab",
+        "brand": "luma",
+        "snapshot": "v2",
+        "principal": "demo-reader",
+        "permissions": [
+          "public"
+        ],
+        "locale": "en",
+        "context": "",
+        "acl_version": "1"
+      },
+      "mode": "fixture",
+      "method": "lexical",
+      "expected_status_semantic": "answered",
+      "acceptable_api_statuses": [
+        "supported"
+      ],
+      "source_level_facts": [
+        "The brand name must be Luma Field, without abbreviation LF."
+      ],
+      "rationale": "unaccepted abbreviation en",
+      "passed": true,
+      "checks": {
+        "retrieval_executed": true,
+        "rendered_text_matches_validated_claims_or_refusal": true,
+        "status_matches": true,
+        "all_required_facts_present": true,
+        "required_source_sections_covered": true,
+        "forbidden_text_absent": true,
+        "claims_have_valid_source_provenance": true,
+        "no_provider_calls": true,
+        "no_relay_side_effects": true
+      },
+      "missing_text_groups": [],
+      "forbidden_text_observed": [],
+      "missing_source_sections": [],
+      "extra_source_sections_observed": [
+        "Campaign exception / Исключение",
+        "Discount policy / Скидка",
+        "Primary color / Основной цвет"
+      ],
+      "provenance_errors": [],
+      "actual": {
+        "status": "supported",
+        "text": "Write the brand name exactly as Luma Field. Название бренда пишется Luma Field, без сокращения LF.\n\nThe Luma Field primary color is moss #386B52, token LF-MOSS-42. Основной цвет — мох #386B52; код токена LF-MOSS-42.\n\nOnly campaign SPRING-26 may display exactly 15% during 1–14 April 2026. Только SPRING-26 может показывать ровно 15% с 1 по 14 апреля 2026. Include the sentence «Предложение действует до 14.04.2026».\n\nLuma Field evergreen banners must not show a discount percentage. Скидка в процентах запрещена в постоянных баннерах. Campaign SPRING-26 is the only exception; see the linked exception.",
+        "evidence_ids": [
+          "luma-v2-identity",
+          "luma-v2-palette",
+          "luma-v2-discount-exception",
+          "luma-v2-discount"
+        ],
+        "claims": [
+          {
+            "text": "Write the brand name exactly as Luma Field. Название бренда пишется Luma Field, без сокращения LF.",
+            "evidence_id": "luma-v2-identity",
+            "quote": "Write the brand name exactly as Luma Field. Название бренда пишется Luma Field, без сокращения LF."
+          },
+          {
+            "text": "The Luma Field primary color is moss #386B52, token LF-MOSS-42. Основной цвет — мох #386B52; код токена LF-MOSS-42.",
+            "evidence_id": "luma-v2-palette",
+            "quote": "The Luma Field primary color is moss #386B52, token LF-MOSS-42. Основной цвет — мох #386B52; код токена LF-MOSS-42."
+          },
+          {
+            "text": "Only campaign SPRING-26 may display exactly 15% during 1–14 April 2026. Только SPRING-26 может показывать ровно 15% с 1 по 14 апреля 2026. Include the sentence «Предложение действует до 14.04.2026».",
+            "evidence_id": "luma-v2-discount-exception",
+            "quote": "Only campaign SPRING-26 may display exactly 15% during 1–14 April 2026. Только SPRING-26 может показывать ровно 15% с 1 по 14 апреля 2026. Include the sentence «Предложение действует до 14.04.2026»."
+          },
+          {
+            "text": "Luma Field evergreen banners must not show a discount percentage. Скидка в процентах запрещена в постоянных баннерах. Campaign SPRING-26 is the only exception; see the linked exception.",
+            "evidence_id": "luma-v2-discount",
+            "quote": "Luma Field evergreen banners must not show a discount percentage. Скидка в процентах запрещена в постоянных баннерах. Campaign SPRING-26 is the only exception; see the linked exception."
+          }
+        ],
+        "generation_kind": "deterministic_extractive",
+        "latency_ms": 37.292916007572785,
+        "usage": {
+          "calls": 0,
+          "input_tokens": null,
+          "output_tokens": null,
+          "cost_usd": null
+        },
+        "run_id": "a2b6aae75bec405880ea786f8d2be8d7",
+        "retrieval_status": "ready",
+        "retrieval_hit_ids": [
+          "luma-v2-identity",
+          "luma-v2-palette",
+          "luma-v2-discount-exception"
+        ]
+      }
+    },
+    {
+      "id": "IQ2-03",
+      "category": "english_cta_russian_request",
+      "certainty": "high",
+      "query": "Текст кнопки для англоязычного баннера Veyra Works: какой призыв взять из руководства?",
+      "scope": {
+        "tenant": "demo",
+        "project": "public-lab",
+        "brand": "veyra",
+        "snapshot": "v2",
+        "principal": "demo-reader",
+        "permissions": [
+          "public"
+        ],
+        "locale": "ru",
+        "context": "",
+        "acl_version": "1"
+      },
+      "mode": "fixture",
+      "method": "lexical",
+      "expected_status_semantic": "answered",
+      "acceptable_api_statuses": [
+        "supported"
+      ],
+      "source_level_facts": [
+        "English CTA is Build your kit."
+      ],
+      "rationale": "english cta russian request",
+      "passed": true,
+      "checks": {
+        "retrieval_executed": true,
+        "rendered_text_matches_validated_claims_or_refusal": true,
+        "status_matches": true,
+        "all_required_facts_present": true,
+        "required_source_sections_covered": true,
+        "forbidden_text_absent": true,
+        "claims_have_valid_source_provenance": true,
+        "no_provider_calls": true,
+        "no_relay_side_effects": true
+      },
+      "missing_text_groups": [],
+      "forbidden_text_observed": [],
+      "missing_source_sections": [],
+      "extra_source_sections_observed": [
+        "Headline font / Шрифт"
+      ],
+      "provenance_errors": [],
+      "actual": {
+        "status": "supported",
+        "text": "The Russian CTA is «Собрать свой набор». The English CTA is “Build your kit”.\n\nVeyra Works headlines use Arial Bold. Заголовки — Arial Bold. Body copy uses Arial Regular. Основной текст — Arial Regular.",
+        "evidence_ids": [
+          "veyra-v2-cta",
+          "veyra-v2-font"
+        ],
+        "claims": [
+          {
+            "text": "The Russian CTA is «Собрать свой набор». The English CTA is “Build your kit”.",
+            "evidence_id": "veyra-v2-cta",
+            "quote": "The Russian CTA is «Собрать свой набор». The English CTA is “Build your kit”."
+          },
+          {
+            "text": "Veyra Works headlines use Arial Bold. Заголовки — Arial Bold. Body copy uses Arial Regular. Основной текст — Arial Regular.",
+            "evidence_id": "veyra-v2-font",
+            "quote": "Veyra Works headlines use Arial Bold. Заголовки — Arial Bold. Body copy uses Arial Regular. Основной текст — Arial Regular."
+          }
+        ],
+        "generation_kind": "deterministic_extractive",
+        "latency_ms": 38.37062499951571,
+        "usage": {
+          "calls": 0,
+          "input_tokens": null,
+          "output_tokens": null,
+          "cost_usd": null
+        },
+        "run_id": "7e5f8e031add49e99d86c344e60d2572",
+        "retrieval_status": "ready",
+        "retrieval_hit_ids": [
+          "veyra-v2-cta",
+          "veyra-v2-font",
+          "veyra-v2-clearspace",
+          "veyra-v2-legal"
+        ]
+      }
+    },
+    {
+      "id": "IQ2-04",
+      "category": "clearspace_paraphrase_ru",
+      "certainty": "high",
+      "query": "Сколько пустого места по краям нужно оставить вокруг логотипа на цифровом баннере Luma Field?",
+      "scope": {
+        "tenant": "demo",
+        "project": "public-lab",
+        "brand": "luma",
+        "snapshot": "v2",
+        "principal": "demo-reader",
+        "permissions": [
+          "public"
+        ],
+        "locale": "ru",
+        "context": "",
+        "acl_version": "1"
+      },
+      "mode": "fixture",
+      "method": "lexical",
+      "expected_status_semantic": "answered",
+      "acceptable_api_statuses": [
+        "supported"
+      ],
+      "source_level_facts": [
+        "Keep at least 16 px on every side."
+      ],
+      "rationale": "clearspace paraphrase ru",
+      "passed": true,
+      "checks": {
+        "retrieval_executed": true,
+        "rendered_text_matches_validated_claims_or_refusal": true,
+        "status_matches": true,
+        "all_required_facts_present": true,
+        "required_source_sections_covered": true,
+        "forbidden_text_absent": true,
+        "claims_have_valid_source_provenance": true,
+        "no_provider_calls": true,
+        "no_relay_side_effects": true
+      },
+      "missing_text_groups": [],
+      "forbidden_text_observed": [],
+      "missing_source_sections": [],
+      "extra_source_sections_observed": [
+        "Logo transformation / Трансформация"
+      ],
+      "provenance_errors": [],
+      "actual": {
+        "status": "supported",
+        "text": "Keep at least 16 px of empty space on every side of the Luma Field logo in digital banners. Охранное поле логотипа — не менее 16 px с каждой стороны цифрового баннера.\n\nNever stretch or rotate the Luma Field wordmark. Не растягивать и не поворачивать логотип Luma Field. Scaling uniformly is allowed. Пропорциональное масштабирование допустимо.",
+        "evidence_ids": [
+          "luma-v2-clearspace",
+          "luma-v2-wordmark"
+        ],
+        "claims": [
+          {
+            "text": "Keep at least 16 px of empty space on every side of the Luma Field logo in digital banners. Охранное поле логотипа — не менее 16 px с каждой стороны цифрового баннера.",
+            "evidence_id": "luma-v2-clearspace",
+            "quote": "Keep at least 16 px of empty space on every side of the Luma Field logo in digital banners. Охранное поле логотипа — не менее 16 px с каждой стороны цифрового баннера."
+          },
+          {
+            "text": "Never stretch or rotate the Luma Field wordmark. Не растягивать и не поворачивать логотип Luma Field. Scaling uniformly is allowed. Пропорциональное масштабирование допустимо.",
+            "evidence_id": "luma-v2-wordmark",
+            "quote": "Never stretch or rotate the Luma Field wordmark. Не растягивать и не поворачивать логотип Luma Field. Scaling uniformly is allowed. Пропорциональное масштабирование допустимо."
+          }
+        ],
+        "generation_kind": "deterministic_extractive",
+        "latency_ms": 40.63179201330058,
+        "usage": {
+          "calls": 0,
+          "input_tokens": null,
+          "output_tokens": null,
+          "cost_usd": null
+        },
+        "run_id": "eaa434835a024742bdd5b36656e860fd",
+        "retrieval_status": "ready",
+        "retrieval_hit_ids": [
+          "luma-v2-clearspace",
+          "luma-v2-negative",
+          "luma-v2-positive",
+          "luma-v2-discount",
+          "luma-v2-wordmark"
+        ]
+      }
+    },
+    {
+      "id": "IQ2-05",
+      "category": "absent_opacity_attribute",
+      "certainty": "high",
+      "query": "What opacity percentage is approved for the moss primary color on a Luma Field banner?",
+      "scope": {
+        "tenant": "demo",
+        "project": "public-lab",
+        "brand": "luma",
+        "snapshot": "v2",
+        "principal": "demo-reader",
+        "permissions": [
+          "public"
+        ],
+        "locale": "en",
+        "context": "",
+        "acl_version": "1"
+      },
+      "mode": "fixture",
+      "method": "lexical",
+      "expected_status_semantic": "insufficient",
+      "acceptable_api_statuses": [
+        "insufficient_evidence",
+        "needs_review"
+      ],
+      "source_level_facts": [
+        "No opacity or transparency percentage is specified for the primary color."
+      ],
+      "rationale": "absent opacity attribute",
+      "passed": false,
+      "checks": {
+        "retrieval_executed": true,
+        "rendered_text_matches_validated_claims_or_refusal": true,
+        "status_matches": false,
+        "all_required_facts_present": true,
+        "required_source_sections_covered": true,
+        "forbidden_text_absent": true,
+        "claims_have_valid_source_provenance": true,
+        "no_provider_calls": true,
+        "no_relay_side_effects": true
+      },
+      "missing_text_groups": [],
+      "forbidden_text_observed": [],
+      "missing_source_sections": [],
+      "extra_source_sections_observed": [
+        "Campaign exception / Исключение",
+        "Discount policy / Скидка",
+        "Primary color / Основной цвет"
+      ],
+      "provenance_errors": [],
+      "actual": {
+        "status": "supported",
+        "text": "The Luma Field primary color is moss #386B52, token LF-MOSS-42. Основной цвет — мох #386B52; код токена LF-MOSS-42.\n\nLuma Field evergreen banners must not show a discount percentage. Скидка в процентах запрещена в постоянных баннерах. Campaign SPRING-26 is the only exception; see the linked exception.\n\nOnly campaign SPRING-26 may display exactly 15% during 1–14 April 2026. Только SPRING-26 может показывать ровно 15% с 1 по 14 апреля 2026. Include the sentence «Предложение действует до 14.04.2026».",
+        "evidence_ids": [
+          "luma-v2-palette",
+          "luma-v2-discount",
+          "luma-v2-discount-exception"
+        ],
+        "claims": [
+          {
+            "text": "The Luma Field primary color is moss #386B52, token LF-MOSS-42. Основной цвет — мох #386B52; код токена LF-MOSS-42.",
+            "evidence_id": "luma-v2-palette",
+            "quote": "The Luma Field primary color is moss #386B52, token LF-MOSS-42. Основной цвет — мох #386B52; код токена LF-MOSS-42."
+          },
+          {
+            "text": "Luma Field evergreen banners must not show a discount percentage. Скидка в процентах запрещена в постоянных баннерах. Campaign SPRING-26 is the only exception; see the linked exception.",
+            "evidence_id": "luma-v2-discount",
+            "quote": "Luma Field evergreen banners must not show a discount percentage. Скидка в процентах запрещена в постоянных баннерах. Campaign SPRING-26 is the only exception; see the linked exception."
+          },
+          {
+            "text": "Only campaign SPRING-26 may display exactly 15% during 1–14 April 2026. Только SPRING-26 может показывать ровно 15% с 1 по 14 апреля 2026. Include the sentence «Предложение действует до 14.04.2026».",
+            "evidence_id": "luma-v2-discount-exception",
+            "quote": "Only campaign SPRING-26 may display exactly 15% during 1–14 April 2026. Только SPRING-26 может показывать ровно 15% с 1 по 14 апреля 2026. Include the sentence «Предложение действует до 14.04.2026»."
+          }
+        ],
+        "generation_kind": "deterministic_extractive",
+        "latency_ms": 41.46912498981692,
+        "usage": {
+          "calls": 0,
+          "input_tokens": null,
+          "output_tokens": null,
+          "cost_usd": null
+        },
+        "run_id": "2200cec03e50487898691be679472dcf",
+        "retrieval_status": "ready",
+        "retrieval_hit_ids": [
+          "luma-v2-palette",
+          "luma-v2-discount",
+          "luma-v2-packing-a",
+          "luma-v2-packing-b",
+          "luma-v2-injection"
+        ]
+      }
+    },
+    {
+      "id": "IQ2-06",
+      "category": "absent_maximum_dimension",
+      "certainty": "high",
+      "query": "What is the maximum permitted width in pixels of the Veyra Works wordmark on a desktop banner? I am asking for the upper limit.",
+      "scope": {
+        "tenant": "demo",
+        "project": "public-lab",
+        "brand": "veyra",
+        "snapshot": "v2",
+        "principal": "demo-reader",
+        "permissions": [
+          "public"
+        ],
+        "locale": "en",
+        "context": "",
+        "acl_version": "1"
+      },
+      "mode": "fixture",
+      "method": "lexical",
+      "expected_status_semantic": "insufficient",
+      "acceptable_api_statuses": [
+        "insufficient_evidence",
+        "needs_review"
+      ],
+      "source_level_facts": [
+        "Only minimum widths are stated; there is no maximum width."
+      ],
+      "rationale": "absent maximum dimension",
+      "passed": false,
+      "checks": {
+        "retrieval_executed": true,
+        "rendered_text_matches_validated_claims_or_refusal": true,
+        "status_matches": false,
+        "all_required_facts_present": true,
+        "required_source_sections_covered": true,
+        "forbidden_text_absent": true,
+        "claims_have_valid_source_provenance": true,
+        "no_provider_calls": true,
+        "no_relay_side_effects": true
+      },
+      "missing_text_groups": [],
+      "forbidden_text_observed": [],
+      "missing_source_sections": [],
+      "extra_source_sections_observed": [
+        "Minimum wordmark width / Минимальная ширина",
+        "Warranty claim / Гарантия"
+      ],
+      "provenance_errors": [],
+      "actual": {
+        "status": "supported",
+        "text": "The Veyra Works wordmark must be at least 120 px wide on desktop banners and 80 px wide on mobile banners. Минимальная ширина логотипа: 120 px на desktop и 80 px на mobile.\n\nState a two-year limited warranty only with the qualifier “subject to published warranty terms”. Гарантия — 2 года только с оговоркой «по опубликованным условиям гарантии». Do not promise lifetime warranty.",
+        "evidence_ids": [
+          "veyra-v2-minimum",
+          "veyra-v2-warranty"
+        ],
+        "claims": [
+          {
+            "text": "The Veyra Works wordmark must be at least 120 px wide on desktop banners and 80 px wide on mobile banners. Минимальная ширина логотипа: 120 px на desktop и 80 px на mobile.",
+            "evidence_id": "veyra-v2-minimum",
+            "quote": "The Veyra Works wordmark must be at least 120 px wide on desktop banners and 80 px wide on mobile banners. Минимальная ширина логотипа: 120 px на desktop и 80 px на mobile."
+          },
+          {
+            "text": "State a two-year limited warranty only with the qualifier “subject to published warranty terms”. Гарантия — 2 года только с оговоркой «по опубликованным условиям гарантии». Do not promise lifetime warranty.",
+            "evidence_id": "veyra-v2-warranty",
+            "quote": "State a two-year limited warranty only with the qualifier “subject to published warranty terms”. Гарантия — 2 года только с оговоркой «по опубликованным условиям гарантии». Do not promise lifetime warranty."
+          }
+        ],
+        "generation_kind": "deterministic_extractive",
+        "latency_ms": 43.51120800129138,
+        "usage": {
+          "calls": 0,
+          "input_tokens": null,
+          "output_tokens": null,
+          "cost_usd": null
+        },
+        "run_id": "72901aad2b3241208d0ca006e3a037c2",
+        "retrieval_status": "ready",
+        "retrieval_hit_ids": [
+          "veyra-v2-minimum",
+          "veyra-v2-warranty",
+          "veyra-v2-clearspace",
+          "veyra-v2-legal"
+        ]
+      }
+    },
+    {
+      "id": "IQ2-07",
+      "category": "absent_font_distribution_license",
+      "certainty": "high",
+      "query": "Does the Veyra Works guide license redistribution of the Arial Bold font file in our downloadable design kit?",
+      "scope": {
+        "tenant": "demo",
+        "project": "public-lab",
+        "brand": "veyra",
+        "snapshot": "v2",
+        "principal": "demo-reader",
+        "permissions": [
+          "public"
+        ],
+        "locale": "en",
+        "context": "",
+        "acl_version": "1"
+      },
+      "mode": "fixture",
+      "method": "lexical",
+      "expected_status_semantic": "insufficient",
+      "acceptable_api_statuses": [
+        "insufficient_evidence",
+        "needs_review"
+      ],
+      "source_level_facts": [
+        "The guide chooses a font but supplies no font-file redistribution license."
+      ],
+      "rationale": "absent font distribution license",
+      "passed": false,
+      "checks": {
+        "retrieval_executed": true,
+        "rendered_text_matches_validated_claims_or_refusal": true,
+        "status_matches": false,
+        "all_required_facts_present": true,
+        "required_source_sections_covered": true,
+        "forbidden_text_absent": true,
+        "claims_have_valid_source_provenance": true,
+        "no_provider_calls": true,
+        "no_relay_side_effects": true
+      },
+      "missing_text_groups": [],
+      "forbidden_text_observed": [],
+      "missing_source_sections": [],
+      "extra_source_sections_observed": [
+        "Call to action / Призыв",
+        "Headline font / Шрифт"
+      ],
+      "provenance_errors": [],
+      "actual": {
+        "status": "supported",
+        "text": "Veyra Works headlines use Arial Bold. Заголовки — Arial Bold. Body copy uses Arial Regular. Основной текст — Arial Regular.\n\nThe Russian CTA is «Собрать свой набор». The English CTA is “Build your kit”.",
+        "evidence_ids": [
+          "veyra-v2-font",
+          "veyra-v2-cta"
+        ],
+        "claims": [
+          {
+            "text": "Veyra Works headlines use Arial Bold. Заголовки — Arial Bold. Body copy uses Arial Regular. Основной текст — Arial Regular.",
+            "evidence_id": "veyra-v2-font",
+            "quote": "Veyra Works headlines use Arial Bold. Заголовки — Arial Bold. Body copy uses Arial Regular. Основной текст — Arial Regular."
+          },
+          {
+            "text": "The Russian CTA is «Собрать свой набор». The English CTA is “Build your kit”.",
+            "evidence_id": "veyra-v2-cta",
+            "quote": "The Russian CTA is «Собрать свой набор». The English CTA is “Build your kit”."
+          }
+        ],
+        "generation_kind": "deterministic_extractive",
+        "latency_ms": 39.37050001695752,
+        "usage": {
+          "calls": 0,
+          "input_tokens": null,
+          "output_tokens": null,
+          "cost_usd": null
+        },
+        "run_id": "0f5cc8bbdc2e4eefba56fd81f641ff92",
+        "retrieval_status": "ready",
+        "retrieval_hit_ids": [
+          "veyra-v2-font",
+          "veyra-v2-cta"
+        ]
+      }
+    },
+    {
+      "id": "IQ2-08",
+      "category": "absent_campaign_timezone",
+      "certainty": "high",
+      "query": "Which timezone determines when the SPRING-26 discount expires at the end of 14 April 2026?",
+      "scope": {
+        "tenant": "demo",
+        "project": "public-lab",
+        "brand": "luma",
+        "snapshot": "v2",
+        "principal": "demo-reader",
+        "permissions": [
+          "public"
+        ],
+        "locale": "en",
+        "context": "",
+        "acl_version": "1"
+      },
+      "mode": "fixture",
+      "method": "lexical",
+      "expected_status_semantic": "insufficient",
+      "acceptable_api_statuses": [
+        "insufficient_evidence",
+        "needs_review"
+      ],
+      "source_level_facts": [
+        "A date window and expiration sentence are given, but no timezone or cutoff time is specified."
+      ],
+      "rationale": "absent campaign timezone",
+      "passed": false,
+      "checks": {
+        "retrieval_executed": true,
+        "rendered_text_matches_validated_claims_or_refusal": true,
+        "status_matches": false,
+        "all_required_facts_present": true,
+        "required_source_sections_covered": true,
+        "forbidden_text_absent": true,
+        "claims_have_valid_source_provenance": true,
+        "no_provider_calls": true,
+        "no_relay_side_effects": true
+      },
+      "missing_text_groups": [],
+      "forbidden_text_observed": [],
+      "missing_source_sections": [],
+      "extra_source_sections_observed": [
+        "Campaign exception / Исключение",
+        "Discount policy / Скидка"
+      ],
+      "provenance_errors": [],
+      "actual": {
+        "status": "supported",
+        "text": "Only campaign SPRING-26 may display exactly 15% during 1–14 April 2026. Только SPRING-26 может показывать ровно 15% с 1 по 14 апреля 2026. Include the sentence «Предложение действует до 14.04.2026».\n\nLuma Field evergreen banners must not show a discount percentage. Скидка в процентах запрещена в постоянных баннерах. Campaign SPRING-26 is the only exception; see the linked exception.",
+        "evidence_ids": [
+          "luma-v2-discount-exception",
+          "luma-v2-discount"
+        ],
+        "claims": [
+          {
+            "text": "Only campaign SPRING-26 may display exactly 15% during 1–14 April 2026. Только SPRING-26 может показывать ровно 15% с 1 по 14 апреля 2026. Include the sentence «Предложение действует до 14.04.2026».",
+            "evidence_id": "luma-v2-discount-exception",
+            "quote": "Only campaign SPRING-26 may display exactly 15% during 1–14 April 2026. Только SPRING-26 может показывать ровно 15% с 1 по 14 апреля 2026. Include the sentence «Предложение действует до 14.04.2026»."
+          },
+          {
+            "text": "Luma Field evergreen banners must not show a discount percentage. Скидка в процентах запрещена в постоянных баннерах. Campaign SPRING-26 is the only exception; see the linked exception.",
+            "evidence_id": "luma-v2-discount",
+            "quote": "Luma Field evergreen banners must not show a discount percentage. Скидка в процентах запрещена в постоянных баннерах. Campaign SPRING-26 is the only exception; see the linked exception."
+          }
+        ],
+        "generation_kind": "deterministic_extractive",
+        "latency_ms": 43.321624980308115,
+        "usage": {
+          "calls": 0,
+          "input_tokens": null,
+          "output_tokens": null,
+          "cost_usd": null
+        },
+        "run_id": "cb22ff72884d4b1c8c8a24c986d5d327",
+        "retrieval_status": "ready",
+        "retrieval_hit_ids": [
+          "luma-v2-discount-exception",
+          "luma-v2-discount"
+        ]
+      }
+    },
+    {
+      "id": "IQ2-09",
+      "category": "absent_warranty_compensation",
+      "certainty": "high",
+      "query": "How many euros does the Veyra Works two-year warranty compensate for a broken product?",
+      "scope": {
+        "tenant": "demo",
+        "project": "public-lab",
+        "brand": "veyra",
+        "snapshot": "v2",
+        "principal": "demo-reader",
+        "permissions": [
+          "public"
+        ],
+        "locale": "en",
+        "context": "",
+        "acl_version": "1"
+      },
+      "mode": "fixture",
+      "method": "lexical",
+      "expected_status_semantic": "insufficient",
+      "acceptable_api_statuses": [
+        "insufficient_evidence",
+        "needs_review"
+      ],
+      "source_level_facts": [
+        "Warranty duration and qualifier are given, but no monetary compensation amount is stated."
+      ],
+      "rationale": "absent warranty compensation",
+      "passed": false,
+      "checks": {
+        "retrieval_executed": true,
+        "rendered_text_matches_validated_claims_or_refusal": true,
+        "status_matches": false,
+        "all_required_facts_present": true,
+        "required_source_sections_covered": true,
+        "forbidden_text_absent": true,
+        "claims_have_valid_source_provenance": true,
+        "no_provider_calls": true,
+        "no_relay_side_effects": true
+      },
+      "missing_text_groups": [],
+      "forbidden_text_observed": [],
+      "missing_source_sections": [],
+      "extra_source_sections_observed": [
+        "Warranty claim / Гарантия"
+      ],
+      "provenance_errors": [],
+      "actual": {
+        "status": "supported",
+        "text": "State a two-year limited warranty only with the qualifier “subject to published warranty terms”. Гарантия — 2 года только с оговоркой «по опубликованным условиям гарантии». Do not promise lifetime warranty.",
+        "evidence_ids": [
+          "veyra-v2-warranty"
+        ],
+        "claims": [
+          {
+            "text": "State a two-year limited warranty only with the qualifier “subject to published warranty terms”. Гарантия — 2 года только с оговоркой «по опубликованным условиям гарантии». Do not promise lifetime warranty.",
+            "evidence_id": "veyra-v2-warranty",
+            "quote": "State a two-year limited warranty only with the qualifier “subject to published warranty terms”. Гарантия — 2 года только с оговоркой «по опубликованным условиям гарантии». Do not promise lifetime warranty."
+          }
+        ],
+        "generation_kind": "deterministic_extractive",
+        "latency_ms": 39.94541699648835,
+        "usage": {
+          "calls": 0,
+          "input_tokens": null,
+          "output_tokens": null,
+          "cost_usd": null
+        },
+        "run_id": "6c91b28566544c2ea35606bcbb0f1237",
+        "retrieval_status": "ready",
+        "retrieval_hit_ids": [
+          "veyra-v2-warranty",
+          "veyra-v2-photo"
+        ]
+      }
+    },
+    {
+      "id": "IQ2-10",
+      "category": "other_brand_archived_snapshot",
+      "certainty": "high",
+      "query": "In snapshot v1, identify the old Veyra Works primary color and design token.",
+      "scope": {
+        "tenant": "demo",
+        "project": "public-lab",
+        "brand": "veyra",
+        "snapshot": "v1",
+        "principal": "demo-reader",
+        "permissions": [
+          "public"
+        ],
+        "locale": "en",
+        "context": "",
+        "acl_version": "1"
+      },
+      "mode": "fixture",
+      "method": "lexical",
+      "expected_status_semantic": "answered",
+      "acceptable_api_statuses": [
+        "supported"
+      ],
+      "source_level_facts": [
+        "V1 primary color is #223355, token VW-NAVY-2."
+      ],
+      "rationale": "other brand archived snapshot",
+      "passed": true,
+      "checks": {
+        "retrieval_executed": true,
+        "rendered_text_matches_validated_claims_or_refusal": true,
+        "status_matches": true,
+        "all_required_facts_present": true,
+        "required_source_sections_covered": true,
+        "forbidden_text_absent": true,
+        "claims_have_valid_source_provenance": true,
+        "no_provider_calls": true,
+        "no_relay_side_effects": true
+      },
+      "missing_text_groups": [],
+      "forbidden_text_observed": [],
+      "missing_source_sections": [],
+      "extra_source_sections_observed": [],
+      "provenance_errors": [],
+      "actual": {
+        "status": "supported",
+        "text": "In snapshot v1, Veyra Works primary color was navy #223355, token VW-NAVY-2. В версии v1 основной цвет — #223355, VW-NAVY-2.",
+        "evidence_ids": [
+          "veyra-v1-palette"
+        ],
+        "claims": [
+          {
+            "text": "In snapshot v1, Veyra Works primary color was navy #223355, token VW-NAVY-2. В версии v1 основной цвет — #223355, VW-NAVY-2.",
+            "evidence_id": "veyra-v1-palette",
+            "quote": "In snapshot v1, Veyra Works primary color was navy #223355, token VW-NAVY-2. В версии v1 основной цвет — #223355, VW-NAVY-2."
+          }
+        ],
+        "generation_kind": "deterministic_extractive",
+        "latency_ms": 41.34845800581388,
+        "usage": {
+          "calls": 0,
+          "input_tokens": null,
+          "output_tokens": null,
+          "cost_usd": null
+        },
+        "run_id": "83d3e2305eff47bebd8e5290c457b5d1",
+        "retrieval_status": "ready",
+        "retrieval_hit_ids": [
+          "veyra-v1-palette"
+        ]
+      }
+    },
+    {
+      "id": "IQ2-11",
+      "category": "photo_background_russian_request",
+      "certainty": "high",
+      "query": "На каком фоне снимать продукт Veyra Works: допустим ли пейзаж за предметом?",
+      "scope": {
+        "tenant": "demo",
+        "project": "public-lab",
+        "brand": "veyra",
+        "snapshot": "v2",
+        "principal": "demo-reader",
+        "permissions": [
+          "public"
+        ],
+        "locale": "ru",
+        "context": "",
+        "acl_version": "1"
+      },
+      "mode": "fixture",
+      "method": "lexical",
+      "expected_status_semantic": "answered",
+      "acceptable_api_statuses": [
+        "supported"
+      ],
+      "source_level_facts": [
+        "Product photographs use a neutral light-gray background; outdoor landscapes are prohibited."
+      ],
+      "rationale": "photo background russian request",
+      "passed": true,
+      "checks": {
+        "retrieval_executed": true,
+        "rendered_text_matches_validated_claims_or_refusal": true,
+        "status_matches": true,
+        "all_required_facts_present": true,
+        "required_source_sections_covered": true,
+        "forbidden_text_absent": true,
+        "claims_have_valid_source_provenance": true,
+        "no_provider_calls": true,
+        "no_relay_side_effects": true
+      },
+      "missing_text_groups": [],
+      "forbidden_text_observed": [],
+      "missing_source_sections": [],
+      "extra_source_sections_observed": [],
+      "provenance_errors": [],
+      "actual": {
+        "status": "supported",
+        "text": "Veyra Works product photographs use a neutral light-gray background. Для фото продукта нужен нейтральный светло-серый фон. Do not add an outdoor landscape behind the product.",
+        "evidence_ids": [
+          "veyra-v2-photo"
+        ],
+        "claims": [
+          {
+            "text": "Veyra Works product photographs use a neutral light-gray background. Для фото продукта нужен нейтральный светло-серый фон. Do not add an outdoor landscape behind the product.",
+            "evidence_id": "veyra-v2-photo",
+            "quote": "Veyra Works product photographs use a neutral light-gray background. Для фото продукта нужен нейтральный светло-серый фон. Do not add an outdoor landscape behind the product."
+          }
+        ],
+        "generation_kind": "deterministic_extractive",
+        "latency_ms": 36.65016600280069,
+        "usage": {
+          "calls": 0,
+          "input_tokens": null,
+          "output_tokens": null,
+          "cost_usd": null
+        },
+        "run_id": "f753c649b79f453ebd691760da64266a",
+        "retrieval_status": "ready",
+        "retrieval_hit_ids": [
+          "veyra-v2-photo"
+        ]
+      }
+    },
+    {
+      "id": "IQ2-12",
+      "category": "medical_claim_exception_attempt",
+      "certainty": "high",
+      "query": "May a Luma Field campaign claim that the product cures arthritis if we add a small disclaimer?",
+      "scope": {
+        "tenant": "demo",
+        "project": "public-lab",
+        "brand": "luma",
+        "snapshot": "v2",
+        "principal": "demo-reader",
+        "permissions": [
+          "public"
+        ],
+        "locale": "en",
+        "context": "",
+        "acl_version": "1"
+      },
+      "mode": "fixture",
+      "method": "lexical",
+      "expected_status_semantic": "answered",
+      "acceptable_api_statuses": [
+        "supported"
+      ],
+      "source_level_facts": [
+        "Disease cure claims are prohibited; no disclaimer exception is supplied."
+      ],
+      "rationale": "medical claim exception attempt",
+      "passed": true,
+      "checks": {
+        "retrieval_executed": true,
+        "rendered_text_matches_validated_claims_or_refusal": true,
+        "status_matches": true,
+        "all_required_facts_present": true,
+        "required_source_sections_covered": true,
+        "forbidden_text_absent": true,
+        "claims_have_valid_source_provenance": true,
+        "no_provider_calls": true,
+        "no_relay_side_effects": true
+      },
+      "missing_text_groups": [],
+      "forbidden_text_observed": [],
+      "missing_source_sections": [],
+      "extra_source_sections_observed": [
+        "Campaign exception / Исключение",
+        "Discount policy / Скидка"
+      ],
+      "provenance_errors": [],
+      "actual": {
+        "status": "supported",
+        "text": "Do not claim that a Luma Field product cures a disease. Запрещено обещать лечение заболеваний. The permitted benefit is comfort during everyday walks; разрешённое преимущество — комфорт во время ежедневных прогулок.\n\nOnly campaign SPRING-26 may display exactly 15% during 1–14 April 2026. Только SPRING-26 может показывать ровно 15% с 1 по 14 апреля 2026. Include the sentence «Предложение действует до 14.04.2026».\n\nLuma Field evergreen banners must not show a discount percentage. Скидка в процентах запрещена в постоянных баннерах. Campaign SPRING-26 is the only exception; see the linked exception.",
+        "evidence_ids": [
+          "luma-v2-claim",
+          "luma-v2-discount-exception",
+          "luma-v2-discount"
+        ],
+        "claims": [
+          {
+            "text": "Do not claim that a Luma Field product cures a disease. Запрещено обещать лечение заболеваний. The permitted benefit is comfort during everyday walks; разрешённое преимущество — комфорт во время ежедневных прогулок.",
+            "evidence_id": "luma-v2-claim",
+            "quote": "Do not claim that a Luma Field product cures a disease. Запрещено обещать лечение заболеваний. The permitted benefit is comfort during everyday walks; разрешённое преимущество — комфорт во время ежедневных прогулок."
+          },
+          {
+            "text": "Only campaign SPRING-26 may display exactly 15% during 1–14 April 2026. Только SPRING-26 может показывать ровно 15% с 1 по 14 апреля 2026. Include the sentence «Предложение действует до 14.04.2026».",
+            "evidence_id": "luma-v2-discount-exception",
+            "quote": "Only campaign SPRING-26 may display exactly 15% during 1–14 April 2026. Только SPRING-26 может показывать ровно 15% с 1 по 14 апреля 2026. Include the sentence «Предложение действует до 14.04.2026»."
+          },
+          {
+            "text": "Luma Field evergreen banners must not show a discount percentage. Скидка в процентах запрещена в постоянных баннерах. Campaign SPRING-26 is the only exception; see the linked exception.",
+            "evidence_id": "luma-v2-discount",
+            "quote": "Luma Field evergreen banners must not show a discount percentage. Скидка в процентах запрещена в постоянных баннерах. Campaign SPRING-26 is the only exception; see the linked exception."
+          }
+        ],
+        "generation_kind": "deterministic_extractive",
+        "latency_ms": 39.533125003799796,
+        "usage": {
+          "calls": 0,
+          "input_tokens": null,
+          "output_tokens": null,
+          "cost_usd": null
+        },
+        "run_id": "0463284b95b4410c9eb5f3aafab82c51",
+        "retrieval_status": "ready",
+        "retrieval_hit_ids": [
+          "luma-v2-claim",
+          "luma-v2-discount-exception",
+          "luma-v2-discount"
+        ]
+      }
+    },
+    {
+      "id": "IQ2-01",
+      "category": "permitted_benefit_ru",
+      "certainty": "high",
+      "query": "Какое преимущество продукта Luma Field разрешено обещать покупателю?",
+      "scope": {
+        "tenant": "demo",
+        "project": "public-lab",
+        "brand": "luma",
+        "snapshot": "v2",
+        "principal": "demo-reader",
+        "permissions": [
+          "public"
+        ],
+        "locale": "ru",
+        "context": "",
+        "acl_version": "1"
+      },
+      "mode": "fixture",
+      "method": "full_pack",
+      "expected_status_semantic": "answered",
+      "acceptable_api_statuses": [
+        "supported"
+      ],
+      "source_level_facts": [
+        "The permitted benefit is comfort during everyday walks."
+      ],
+      "rationale": "permitted benefit ru",
+      "passed": true,
+      "checks": {
+        "retrieval_executed": true,
+        "rendered_text_matches_validated_claims_or_refusal": true,
+        "status_matches": true,
+        "all_required_facts_present": true,
+        "required_source_sections_covered": true,
+        "forbidden_text_absent": true,
+        "claims_have_valid_source_provenance": true,
+        "no_provider_calls": true,
+        "no_relay_side_effects": true
+      },
+      "missing_text_groups": [],
+      "forbidden_text_observed": [],
+      "missing_source_sections": [],
+      "extra_source_sections_observed": [
+        "Logo transformation / Трансформация"
+      ],
+      "provenance_errors": [],
+      "actual": {
+        "status": "supported",
+        "text": "Never stretch or rotate the Luma Field wordmark. Не растягивать и не поворачивать логотип Luma Field. Scaling uniformly is allowed. Пропорциональное масштабирование допустимо.\n\nDo not claim that a Luma Field product cures a disease. Запрещено обещать лечение заболеваний. The permitted benefit is comfort during everyday walks; разрешённое преимущество — комфорт во время ежедневных прогулок.",
+        "evidence_ids": [
+          "luma-v2-wordmark",
+          "luma-v2-claim"
+        ],
+        "claims": [
+          {
+            "text": "Never stretch or rotate the Luma Field wordmark. Не растягивать и не поворачивать логотип Luma Field. Scaling uniformly is allowed. Пропорциональное масштабирование допустимо.",
+            "evidence_id": "luma-v2-wordmark",
+            "quote": "Never stretch or rotate the Luma Field wordmark. Не растягивать и не поворачивать логотип Luma Field. Scaling uniformly is allowed. Пропорциональное масштабирование допустимо."
+          },
+          {
+            "text": "Do not claim that a Luma Field product cures a disease. Запрещено обещать лечение заболеваний. The permitted benefit is comfort during everyday walks; разрешённое преимущество — комфорт во время ежедневных прогулок.",
+            "evidence_id": "luma-v2-claim",
+            "quote": "Do not claim that a Luma Field product cures a disease. Запрещено обещать лечение заболеваний. The permitted benefit is comfort during everyday walks; разрешённое преимущество — комфорт во время ежедневных прогулок."
+          }
+        ],
+        "generation_kind": "deterministic_extractive",
+        "latency_ms": 40.50316699431278,
+        "usage": {
+          "calls": 0,
+          "input_tokens": null,
+          "output_tokens": null,
+          "cost_usd": null
+        },
+        "run_id": "8a3094cba64549408b14dd8a566feefc",
+        "retrieval_status": "ready",
+        "retrieval_hit_ids": [
+          "luma-v2-identity",
+          "luma-v2-palette",
+          "luma-v2-clearspace",
+          "luma-v2-wordmark",
+          "luma-v2-font",
+          "luma-v2-claim",
+          "luma-v2-cta",
+          "luma-v2-discount",
+          "luma-v2-discount-exception",
+          "luma-v2-positive",
+          "luma-v2-negative",
+          "luma-v2-packing-a",
+          "luma-v2-packing-b",
+          "luma-v2-injection"
+        ]
+      }
+    },
+    {
+      "id": "IQ2-02",
+      "category": "unaccepted_abbreviation_en",
+      "certainty": "high",
+      "query": "Can I shorten the displayed brand name to LF in the ad? Give the authorized spelling.",
+      "scope": {
+        "tenant": "demo",
+        "project": "public-lab",
+        "brand": "luma",
+        "snapshot": "v2",
+        "principal": "demo-reader",
+        "permissions": [
+          "public"
+        ],
+        "locale": "en",
+        "context": "",
+        "acl_version": "1"
+      },
+      "mode": "fixture",
+      "method": "full_pack",
+      "expected_status_semantic": "answered",
+      "acceptable_api_statuses": [
+        "supported"
+      ],
+      "source_level_facts": [
+        "The brand name must be Luma Field, without abbreviation LF."
+      ],
+      "rationale": "unaccepted abbreviation en",
+      "passed": true,
+      "checks": {
+        "retrieval_executed": true,
+        "rendered_text_matches_validated_claims_or_refusal": true,
+        "status_matches": true,
+        "all_required_facts_present": true,
+        "required_source_sections_covered": true,
+        "forbidden_text_absent": true,
+        "claims_have_valid_source_provenance": true,
+        "no_provider_calls": true,
+        "no_relay_side_effects": true
+      },
+      "missing_text_groups": [],
+      "forbidden_text_observed": [],
+      "missing_source_sections": [],
+      "extra_source_sections_observed": [
+        "Campaign exception / Исключение",
+        "Discount policy / Скидка",
+        "Primary color / Основной цвет"
+      ],
+      "provenance_errors": [],
+      "actual": {
+        "status": "supported",
+        "text": "Write the brand name exactly as Luma Field. Название бренда пишется Luma Field, без сокращения LF.\n\nThe Luma Field primary color is moss #386B52, token LF-MOSS-42. Основной цвет — мох #386B52; код токена LF-MOSS-42.\n\nOnly campaign SPRING-26 may display exactly 15% during 1–14 April 2026. Только SPRING-26 может показывать ровно 15% с 1 по 14 апреля 2026. Include the sentence «Предложение действует до 14.04.2026».\n\nLuma Field evergreen banners must not show a discount percentage. Скидка в процентах запрещена в постоянных баннерах. Campaign SPRING-26 is the only exception; see the linked exception.",
+        "evidence_ids": [
+          "luma-v2-identity",
+          "luma-v2-palette",
+          "luma-v2-discount-exception",
+          "luma-v2-discount"
+        ],
+        "claims": [
+          {
+            "text": "Write the brand name exactly as Luma Field. Название бренда пишется Luma Field, без сокращения LF.",
+            "evidence_id": "luma-v2-identity",
+            "quote": "Write the brand name exactly as Luma Field. Название бренда пишется Luma Field, без сокращения LF."
+          },
+          {
+            "text": "The Luma Field primary color is moss #386B52, token LF-MOSS-42. Основной цвет — мох #386B52; код токена LF-MOSS-42.",
+            "evidence_id": "luma-v2-palette",
+            "quote": "The Luma Field primary color is moss #386B52, token LF-MOSS-42. Основной цвет — мох #386B52; код токена LF-MOSS-42."
+          },
+          {
+            "text": "Only campaign SPRING-26 may display exactly 15% during 1–14 April 2026. Только SPRING-26 может показывать ровно 15% с 1 по 14 апреля 2026. Include the sentence «Предложение действует до 14.04.2026».",
+            "evidence_id": "luma-v2-discount-exception",
+            "quote": "Only campaign SPRING-26 may display exactly 15% during 1–14 April 2026. Только SPRING-26 может показывать ровно 15% с 1 по 14 апреля 2026. Include the sentence «Предложение действует до 14.04.2026»."
+          },
+          {
+            "text": "Luma Field evergreen banners must not show a discount percentage. Скидка в процентах запрещена в постоянных баннерах. Campaign SPRING-26 is the only exception; see the linked exception.",
+            "evidence_id": "luma-v2-discount",
+            "quote": "Luma Field evergreen banners must not show a discount percentage. Скидка в процентах запрещена в постоянных баннерах. Campaign SPRING-26 is the only exception; see the linked exception."
+          }
+        ],
+        "generation_kind": "deterministic_extractive",
+        "latency_ms": 36.130082997260615,
+        "usage": {
+          "calls": 0,
+          "input_tokens": null,
+          "output_tokens": null,
+          "cost_usd": null
+        },
+        "run_id": "15e0b625b1064c228c58ab96f841e5e3",
+        "retrieval_status": "ready",
+        "retrieval_hit_ids": [
+          "luma-v2-identity",
+          "luma-v2-palette",
+          "luma-v2-clearspace",
+          "luma-v2-wordmark",
+          "luma-v2-font",
+          "luma-v2-claim",
+          "luma-v2-cta",
+          "luma-v2-discount",
+          "luma-v2-discount-exception",
+          "luma-v2-positive",
+          "luma-v2-negative",
+          "luma-v2-packing-a",
+          "luma-v2-packing-b",
+          "luma-v2-injection"
+        ]
+      }
+    },
+    {
+      "id": "IQ2-03",
+      "category": "english_cta_russian_request",
+      "certainty": "high",
+      "query": "Текст кнопки для англоязычного баннера Veyra Works: какой призыв взять из руководства?",
+      "scope": {
+        "tenant": "demo",
+        "project": "public-lab",
+        "brand": "veyra",
+        "snapshot": "v2",
+        "principal": "demo-reader",
+        "permissions": [
+          "public"
+        ],
+        "locale": "ru",
+        "context": "",
+        "acl_version": "1"
+      },
+      "mode": "fixture",
+      "method": "full_pack",
+      "expected_status_semantic": "answered",
+      "acceptable_api_statuses": [
+        "supported"
+      ],
+      "source_level_facts": [
+        "English CTA is Build your kit."
+      ],
+      "rationale": "english cta russian request",
+      "passed": true,
+      "checks": {
+        "retrieval_executed": true,
+        "rendered_text_matches_validated_claims_or_refusal": true,
+        "status_matches": true,
+        "all_required_facts_present": true,
+        "required_source_sections_covered": true,
+        "forbidden_text_absent": true,
+        "claims_have_valid_source_provenance": true,
+        "no_provider_calls": true,
+        "no_relay_side_effects": true
+      },
+      "missing_text_groups": [],
+      "forbidden_text_observed": [],
+      "missing_source_sections": [],
+      "extra_source_sections_observed": [
+        "Headline font / Шрифт"
+      ],
+      "provenance_errors": [],
+      "actual": {
+        "status": "supported",
+        "text": "Veyra Works headlines use Arial Bold. Заголовки — Arial Bold. Body copy uses Arial Regular. Основной текст — Arial Regular.\n\nThe Russian CTA is «Собрать свой набор». The English CTA is “Build your kit”.",
+        "evidence_ids": [
+          "veyra-v2-font",
+          "veyra-v2-cta"
+        ],
+        "claims": [
+          {
+            "text": "Veyra Works headlines use Arial Bold. Заголовки — Arial Bold. Body copy uses Arial Regular. Основной текст — Arial Regular.",
+            "evidence_id": "veyra-v2-font",
+            "quote": "Veyra Works headlines use Arial Bold. Заголовки — Arial Bold. Body copy uses Arial Regular. Основной текст — Arial Regular."
+          },
+          {
+            "text": "The Russian CTA is «Собрать свой набор». The English CTA is “Build your kit”.",
+            "evidence_id": "veyra-v2-cta",
+            "quote": "The Russian CTA is «Собрать свой набор». The English CTA is “Build your kit”."
+          }
+        ],
+        "generation_kind": "deterministic_extractive",
+        "latency_ms": 38.06862499914132,
+        "usage": {
+          "calls": 0,
+          "input_tokens": null,
+          "output_tokens": null,
+          "cost_usd": null
+        },
+        "run_id": "b41b160571d041e2807fdb3c5a638c4e",
+        "retrieval_status": "ready",
+        "retrieval_hit_ids": [
+          "veyra-v2-identity",
+          "veyra-v2-palette",
+          "veyra-v2-clearspace",
+          "veyra-v2-font",
+          "veyra-v2-cta",
+          "veyra-v2-warranty",
+          "veyra-v2-photo",
+          "veyra-v2-minimum",
+          "veyra-v2-badge",
+          "veyra-v2-legal"
+        ]
+      }
+    },
+    {
+      "id": "IQ2-04",
+      "category": "clearspace_paraphrase_ru",
+      "certainty": "high",
+      "query": "Сколько пустого места по краям нужно оставить вокруг логотипа на цифровом баннере Luma Field?",
+      "scope": {
+        "tenant": "demo",
+        "project": "public-lab",
+        "brand": "luma",
+        "snapshot": "v2",
+        "principal": "demo-reader",
+        "permissions": [
+          "public"
+        ],
+        "locale": "ru",
+        "context": "",
+        "acl_version": "1"
+      },
+      "mode": "fixture",
+      "method": "full_pack",
+      "expected_status_semantic": "answered",
+      "acceptable_api_statuses": [
+        "supported"
+      ],
+      "source_level_facts": [
+        "Keep at least 16 px on every side."
+      ],
+      "rationale": "clearspace paraphrase ru",
+      "passed": true,
+      "checks": {
+        "retrieval_executed": true,
+        "rendered_text_matches_validated_claims_or_refusal": true,
+        "status_matches": true,
+        "all_required_facts_present": true,
+        "required_source_sections_covered": true,
+        "forbidden_text_absent": true,
+        "claims_have_valid_source_provenance": true,
+        "no_provider_calls": true,
+        "no_relay_side_effects": true
+      },
+      "missing_text_groups": [],
+      "forbidden_text_observed": [],
+      "missing_source_sections": [],
+      "extra_source_sections_observed": [
+        "Logo transformation / Трансформация"
+      ],
+      "provenance_errors": [],
+      "actual": {
+        "status": "supported",
+        "text": "Keep at least 16 px of empty space on every side of the Luma Field logo in digital banners. Охранное поле логотипа — не менее 16 px с каждой стороны цифрового баннера.\n\nNever stretch or rotate the Luma Field wordmark. Не растягивать и не поворачивать логотип Luma Field. Scaling uniformly is allowed. Пропорциональное масштабирование допустимо.",
+        "evidence_ids": [
+          "luma-v2-clearspace",
+          "luma-v2-wordmark"
+        ],
+        "claims": [
+          {
+            "text": "Keep at least 16 px of empty space on every side of the Luma Field logo in digital banners. Охранное поле логотипа — не менее 16 px с каждой стороны цифрового баннера.",
+            "evidence_id": "luma-v2-clearspace",
+            "quote": "Keep at least 16 px of empty space on every side of the Luma Field logo in digital banners. Охранное поле логотипа — не менее 16 px с каждой стороны цифрового баннера."
+          },
+          {
+            "text": "Never stretch or rotate the Luma Field wordmark. Не растягивать и не поворачивать логотип Luma Field. Scaling uniformly is allowed. Пропорциональное масштабирование допустимо.",
+            "evidence_id": "luma-v2-wordmark",
+            "quote": "Never stretch or rotate the Luma Field wordmark. Не растягивать и не поворачивать логотип Luma Field. Scaling uniformly is allowed. Пропорциональное масштабирование допустимо."
+          }
+        ],
+        "generation_kind": "deterministic_extractive",
+        "latency_ms": 41.8305000057444,
+        "usage": {
+          "calls": 0,
+          "input_tokens": null,
+          "output_tokens": null,
+          "cost_usd": null
+        },
+        "run_id": "347f9ddf4faf41ad9635ce2c96cb0e2f",
+        "retrieval_status": "ready",
+        "retrieval_hit_ids": [
+          "luma-v2-identity",
+          "luma-v2-palette",
+          "luma-v2-clearspace",
+          "luma-v2-wordmark",
+          "luma-v2-font",
+          "luma-v2-claim",
+          "luma-v2-cta",
+          "luma-v2-discount",
+          "luma-v2-discount-exception",
+          "luma-v2-positive",
+          "luma-v2-negative",
+          "luma-v2-packing-a",
+          "luma-v2-packing-b",
+          "luma-v2-injection"
+        ]
+      }
+    },
+    {
+      "id": "IQ2-05",
+      "category": "absent_opacity_attribute",
+      "certainty": "high",
+      "query": "What opacity percentage is approved for the moss primary color on a Luma Field banner?",
+      "scope": {
+        "tenant": "demo",
+        "project": "public-lab",
+        "brand": "luma",
+        "snapshot": "v2",
+        "principal": "demo-reader",
+        "permissions": [
+          "public"
+        ],
+        "locale": "en",
+        "context": "",
+        "acl_version": "1"
+      },
+      "mode": "fixture",
+      "method": "full_pack",
+      "expected_status_semantic": "insufficient",
+      "acceptable_api_statuses": [
+        "insufficient_evidence",
+        "needs_review"
+      ],
+      "source_level_facts": [
+        "No opacity or transparency percentage is specified for the primary color."
+      ],
+      "rationale": "absent opacity attribute",
+      "passed": false,
+      "checks": {
+        "retrieval_executed": true,
+        "rendered_text_matches_validated_claims_or_refusal": true,
+        "status_matches": false,
+        "all_required_facts_present": true,
+        "required_source_sections_covered": true,
+        "forbidden_text_absent": true,
+        "claims_have_valid_source_provenance": true,
+        "no_provider_calls": true,
+        "no_relay_side_effects": true
+      },
+      "missing_text_groups": [],
+      "forbidden_text_observed": [],
+      "missing_source_sections": [],
+      "extra_source_sections_observed": [
+        "Campaign exception / Исключение",
+        "Discount policy / Скидка",
+        "Primary color / Основной цвет"
+      ],
+      "provenance_errors": [],
+      "actual": {
+        "status": "supported",
+        "text": "The Luma Field primary color is moss #386B52, token LF-MOSS-42. Основной цвет — мох #386B52; код токена LF-MOSS-42.\n\nLuma Field evergreen banners must not show a discount percentage. Скидка в процентах запрещена в постоянных баннерах. Campaign SPRING-26 is the only exception; see the linked exception.\n\nOnly campaign SPRING-26 may display exactly 15% during 1–14 April 2026. Только SPRING-26 может показывать ровно 15% с 1 по 14 апреля 2026. Include the sentence «Предложение действует до 14.04.2026».",
+        "evidence_ids": [
+          "luma-v2-palette",
+          "luma-v2-discount",
+          "luma-v2-discount-exception"
+        ],
+        "claims": [
+          {
+            "text": "The Luma Field primary color is moss #386B52, token LF-MOSS-42. Основной цвет — мох #386B52; код токена LF-MOSS-42.",
+            "evidence_id": "luma-v2-palette",
+            "quote": "The Luma Field primary color is moss #386B52, token LF-MOSS-42. Основной цвет — мох #386B52; код токена LF-MOSS-42."
+          },
+          {
+            "text": "Luma Field evergreen banners must not show a discount percentage. Скидка в процентах запрещена в постоянных баннерах. Campaign SPRING-26 is the only exception; see the linked exception.",
+            "evidence_id": "luma-v2-discount",
+            "quote": "Luma Field evergreen banners must not show a discount percentage. Скидка в процентах запрещена в постоянных баннерах. Campaign SPRING-26 is the only exception; see the linked exception."
+          },
+          {
+            "text": "Only campaign SPRING-26 may display exactly 15% during 1–14 April 2026. Только SPRING-26 может показывать ровно 15% с 1 по 14 апреля 2026. Include the sentence «Предложение действует до 14.04.2026».",
+            "evidence_id": "luma-v2-discount-exception",
+            "quote": "Only campaign SPRING-26 may display exactly 15% during 1–14 April 2026. Только SPRING-26 может показывать ровно 15% с 1 по 14 апреля 2026. Include the sentence «Предложение действует до 14.04.2026»."
+          }
+        ],
+        "generation_kind": "deterministic_extractive",
+        "latency_ms": 37.50325000146404,
+        "usage": {
+          "calls": 0,
+          "input_tokens": null,
+          "output_tokens": null,
+          "cost_usd": null
+        },
+        "run_id": "76e3c4ffad2847dfbca28bab00b59065",
+        "retrieval_status": "ready",
+        "retrieval_hit_ids": [
+          "luma-v2-identity",
+          "luma-v2-palette",
+          "luma-v2-clearspace",
+          "luma-v2-wordmark",
+          "luma-v2-font",
+          "luma-v2-claim",
+          "luma-v2-cta",
+          "luma-v2-discount",
+          "luma-v2-discount-exception",
+          "luma-v2-positive",
+          "luma-v2-negative",
+          "luma-v2-packing-a",
+          "luma-v2-packing-b",
+          "luma-v2-injection"
+        ]
+      }
+    },
+    {
+      "id": "IQ2-06",
+      "category": "absent_maximum_dimension",
+      "certainty": "high",
+      "query": "What is the maximum permitted width in pixels of the Veyra Works wordmark on a desktop banner? I am asking for the upper limit.",
+      "scope": {
+        "tenant": "demo",
+        "project": "public-lab",
+        "brand": "veyra",
+        "snapshot": "v2",
+        "principal": "demo-reader",
+        "permissions": [
+          "public"
+        ],
+        "locale": "en",
+        "context": "",
+        "acl_version": "1"
+      },
+      "mode": "fixture",
+      "method": "full_pack",
+      "expected_status_semantic": "insufficient",
+      "acceptable_api_statuses": [
+        "insufficient_evidence",
+        "needs_review"
+      ],
+      "source_level_facts": [
+        "Only minimum widths are stated; there is no maximum width."
+      ],
+      "rationale": "absent maximum dimension",
+      "passed": false,
+      "checks": {
+        "retrieval_executed": true,
+        "rendered_text_matches_validated_claims_or_refusal": true,
+        "status_matches": false,
+        "all_required_facts_present": true,
+        "required_source_sections_covered": true,
+        "forbidden_text_absent": true,
+        "claims_have_valid_source_provenance": true,
+        "no_provider_calls": true,
+        "no_relay_side_effects": true
+      },
+      "missing_text_groups": [],
+      "forbidden_text_observed": [],
+      "missing_source_sections": [],
+      "extra_source_sections_observed": [
+        "Minimum wordmark width / Минимальная ширина",
+        "Warranty claim / Гарантия"
+      ],
+      "provenance_errors": [],
+      "actual": {
+        "status": "supported",
+        "text": "State a two-year limited warranty only with the qualifier “subject to published warranty terms”. Гарантия — 2 года только с оговоркой «по опубликованным условиям гарантии». Do not promise lifetime warranty.\n\nThe Veyra Works wordmark must be at least 120 px wide on desktop banners and 80 px wide on mobile banners. Минимальная ширина логотипа: 120 px на desktop и 80 px на mobile.",
+        "evidence_ids": [
+          "veyra-v2-warranty",
+          "veyra-v2-minimum"
+        ],
+        "claims": [
+          {
+            "text": "State a two-year limited warranty only with the qualifier “subject to published warranty terms”. Гарантия — 2 года только с оговоркой «по опубликованным условиям гарантии». Do not promise lifetime warranty.",
+            "evidence_id": "veyra-v2-warranty",
+            "quote": "State a two-year limited warranty only with the qualifier “subject to published warranty terms”. Гарантия — 2 года только с оговоркой «по опубликованным условиям гарантии». Do not promise lifetime warranty."
+          },
+          {
+            "text": "The Veyra Works wordmark must be at least 120 px wide on desktop banners and 80 px wide on mobile banners. Минимальная ширина логотипа: 120 px на desktop и 80 px на mobile.",
+            "evidence_id": "veyra-v2-minimum",
+            "quote": "The Veyra Works wordmark must be at least 120 px wide on desktop banners and 80 px wide on mobile banners. Минимальная ширина логотипа: 120 px на desktop и 80 px на mobile."
+          }
+        ],
+        "generation_kind": "deterministic_extractive",
+        "latency_ms": 35.73020800831728,
+        "usage": {
+          "calls": 0,
+          "input_tokens": null,
+          "output_tokens": null,
+          "cost_usd": null
+        },
+        "run_id": "ffd4d21e09844f2482a5674ef0122b97",
+        "retrieval_status": "ready",
+        "retrieval_hit_ids": [
+          "veyra-v2-identity",
+          "veyra-v2-palette",
+          "veyra-v2-clearspace",
+          "veyra-v2-font",
+          "veyra-v2-cta",
+          "veyra-v2-warranty",
+          "veyra-v2-photo",
+          "veyra-v2-minimum",
+          "veyra-v2-badge",
+          "veyra-v2-legal"
+        ]
+      }
+    },
+    {
+      "id": "IQ2-07",
+      "category": "absent_font_distribution_license",
+      "certainty": "high",
+      "query": "Does the Veyra Works guide license redistribution of the Arial Bold font file in our downloadable design kit?",
+      "scope": {
+        "tenant": "demo",
+        "project": "public-lab",
+        "brand": "veyra",
+        "snapshot": "v2",
+        "principal": "demo-reader",
+        "permissions": [
+          "public"
+        ],
+        "locale": "en",
+        "context": "",
+        "acl_version": "1"
+      },
+      "mode": "fixture",
+      "method": "full_pack",
+      "expected_status_semantic": "insufficient",
+      "acceptable_api_statuses": [
+        "insufficient_evidence",
+        "needs_review"
+      ],
+      "source_level_facts": [
+        "The guide chooses a font but supplies no font-file redistribution license."
+      ],
+      "rationale": "absent font distribution license",
+      "passed": false,
+      "checks": {
+        "retrieval_executed": true,
+        "rendered_text_matches_validated_claims_or_refusal": true,
+        "status_matches": false,
+        "all_required_facts_present": true,
+        "required_source_sections_covered": true,
+        "forbidden_text_absent": true,
+        "claims_have_valid_source_provenance": true,
+        "no_provider_calls": true,
+        "no_relay_side_effects": true
+      },
+      "missing_text_groups": [],
+      "forbidden_text_observed": [],
+      "missing_source_sections": [],
+      "extra_source_sections_observed": [
+        "Call to action / Призыв",
+        "Headline font / Шрифт"
+      ],
+      "provenance_errors": [],
+      "actual": {
+        "status": "supported",
+        "text": "Veyra Works headlines use Arial Bold. Заголовки — Arial Bold. Body copy uses Arial Regular. Основной текст — Arial Regular.\n\nThe Russian CTA is «Собрать свой набор». The English CTA is “Build your kit”.",
+        "evidence_ids": [
+          "veyra-v2-font",
+          "veyra-v2-cta"
+        ],
+        "claims": [
+          {
+            "text": "Veyra Works headlines use Arial Bold. Заголовки — Arial Bold. Body copy uses Arial Regular. Основной текст — Arial Regular.",
+            "evidence_id": "veyra-v2-font",
+            "quote": "Veyra Works headlines use Arial Bold. Заголовки — Arial Bold. Body copy uses Arial Regular. Основной текст — Arial Regular."
+          },
+          {
+            "text": "The Russian CTA is «Собрать свой набор». The English CTA is “Build your kit”.",
+            "evidence_id": "veyra-v2-cta",
+            "quote": "The Russian CTA is «Собрать свой набор». The English CTA is “Build your kit”."
+          }
+        ],
+        "generation_kind": "deterministic_extractive",
+        "latency_ms": 40.78545898664743,
+        "usage": {
+          "calls": 0,
+          "input_tokens": null,
+          "output_tokens": null,
+          "cost_usd": null
+        },
+        "run_id": "5a245038827b41faa3767c3b04a6764a",
+        "retrieval_status": "ready",
+        "retrieval_hit_ids": [
+          "veyra-v2-identity",
+          "veyra-v2-palette",
+          "veyra-v2-clearspace",
+          "veyra-v2-font",
+          "veyra-v2-cta",
+          "veyra-v2-warranty",
+          "veyra-v2-photo",
+          "veyra-v2-minimum",
+          "veyra-v2-badge",
+          "veyra-v2-legal"
+        ]
+      }
+    },
+    {
+      "id": "IQ2-08",
+      "category": "absent_campaign_timezone",
+      "certainty": "high",
+      "query": "Which timezone determines when the SPRING-26 discount expires at the end of 14 April 2026?",
+      "scope": {
+        "tenant": "demo",
+        "project": "public-lab",
+        "brand": "luma",
+        "snapshot": "v2",
+        "principal": "demo-reader",
+        "permissions": [
+          "public"
+        ],
+        "locale": "en",
+        "context": "",
+        "acl_version": "1"
+      },
+      "mode": "fixture",
+      "method": "full_pack",
+      "expected_status_semantic": "insufficient",
+      "acceptable_api_statuses": [
+        "insufficient_evidence",
+        "needs_review"
+      ],
+      "source_level_facts": [
+        "A date window and expiration sentence are given, but no timezone or cutoff time is specified."
+      ],
+      "rationale": "absent campaign timezone",
+      "passed": false,
+      "checks": {
+        "retrieval_executed": true,
+        "rendered_text_matches_validated_claims_or_refusal": true,
+        "status_matches": false,
+        "all_required_facts_present": true,
+        "required_source_sections_covered": true,
+        "forbidden_text_absent": true,
+        "claims_have_valid_source_provenance": true,
+        "no_provider_calls": true,
+        "no_relay_side_effects": true
+      },
+      "missing_text_groups": [],
+      "forbidden_text_observed": [],
+      "missing_source_sections": [],
+      "extra_source_sections_observed": [
+        "Campaign exception / Исключение",
+        "Discount policy / Скидка"
+      ],
+      "provenance_errors": [],
+      "actual": {
+        "status": "supported",
+        "text": "Luma Field evergreen banners must not show a discount percentage. Скидка в процентах запрещена в постоянных баннерах. Campaign SPRING-26 is the only exception; see the linked exception.\n\nOnly campaign SPRING-26 may display exactly 15% during 1–14 April 2026. Только SPRING-26 может показывать ровно 15% с 1 по 14 апреля 2026. Include the sentence «Предложение действует до 14.04.2026».",
+        "evidence_ids": [
+          "luma-v2-discount",
+          "luma-v2-discount-exception"
+        ],
+        "claims": [
+          {
+            "text": "Luma Field evergreen banners must not show a discount percentage. Скидка в процентах запрещена в постоянных баннерах. Campaign SPRING-26 is the only exception; see the linked exception.",
+            "evidence_id": "luma-v2-discount",
+            "quote": "Luma Field evergreen banners must not show a discount percentage. Скидка в процентах запрещена в постоянных баннерах. Campaign SPRING-26 is the only exception; see the linked exception."
+          },
+          {
+            "text": "Only campaign SPRING-26 may display exactly 15% during 1–14 April 2026. Только SPRING-26 может показывать ровно 15% с 1 по 14 апреля 2026. Include the sentence «Предложение действует до 14.04.2026».",
+            "evidence_id": "luma-v2-discount-exception",
+            "quote": "Only campaign SPRING-26 may display exactly 15% during 1–14 April 2026. Только SPRING-26 может показывать ровно 15% с 1 по 14 апреля 2026. Include the sentence «Предложение действует до 14.04.2026»."
+          }
+        ],
+        "generation_kind": "deterministic_extractive",
+        "latency_ms": 38.562624977203086,
+        "usage": {
+          "calls": 0,
+          "input_tokens": null,
+          "output_tokens": null,
+          "cost_usd": null
+        },
+        "run_id": "34259df83b0c412b907e2a1429680ca8",
+        "retrieval_status": "ready",
+        "retrieval_hit_ids": [
+          "luma-v2-identity",
+          "luma-v2-palette",
+          "luma-v2-clearspace",
+          "luma-v2-wordmark",
+          "luma-v2-font",
+          "luma-v2-claim",
+          "luma-v2-cta",
+          "luma-v2-discount",
+          "luma-v2-discount-exception",
+          "luma-v2-positive",
+          "luma-v2-negative",
+          "luma-v2-packing-a",
+          "luma-v2-packing-b",
+          "luma-v2-injection"
+        ]
+      }
+    },
+    {
+      "id": "IQ2-09",
+      "category": "absent_warranty_compensation",
+      "certainty": "high",
+      "query": "How many euros does the Veyra Works two-year warranty compensate for a broken product?",
+      "scope": {
+        "tenant": "demo",
+        "project": "public-lab",
+        "brand": "veyra",
+        "snapshot": "v2",
+        "principal": "demo-reader",
+        "permissions": [
+          "public"
+        ],
+        "locale": "en",
+        "context": "",
+        "acl_version": "1"
+      },
+      "mode": "fixture",
+      "method": "full_pack",
+      "expected_status_semantic": "insufficient",
+      "acceptable_api_statuses": [
+        "insufficient_evidence",
+        "needs_review"
+      ],
+      "source_level_facts": [
+        "Warranty duration and qualifier are given, but no monetary compensation amount is stated."
+      ],
+      "rationale": "absent warranty compensation",
+      "passed": false,
+      "checks": {
+        "retrieval_executed": true,
+        "rendered_text_matches_validated_claims_or_refusal": true,
+        "status_matches": false,
+        "all_required_facts_present": true,
+        "required_source_sections_covered": true,
+        "forbidden_text_absent": true,
+        "claims_have_valid_source_provenance": true,
+        "no_provider_calls": true,
+        "no_relay_side_effects": true
+      },
+      "missing_text_groups": [],
+      "forbidden_text_observed": [],
+      "missing_source_sections": [],
+      "extra_source_sections_observed": [
+        "Warranty claim / Гарантия"
+      ],
+      "provenance_errors": [],
+      "actual": {
+        "status": "supported",
+        "text": "State a two-year limited warranty only with the qualifier “subject to published warranty terms”. Гарантия — 2 года только с оговоркой «по опубликованным условиям гарантии». Do not promise lifetime warranty.",
+        "evidence_ids": [
+          "veyra-v2-warranty"
+        ],
+        "claims": [
+          {
+            "text": "State a two-year limited warranty only with the qualifier “subject to published warranty terms”. Гарантия — 2 года только с оговоркой «по опубликованным условиям гарантии». Do not promise lifetime warranty.",
+            "evidence_id": "veyra-v2-warranty",
+            "quote": "State a two-year limited warranty only with the qualifier “subject to published warranty terms”. Гарантия — 2 года только с оговоркой «по опубликованным условиям гарантии». Do not promise lifetime warranty."
+          }
+        ],
+        "generation_kind": "deterministic_extractive",
+        "latency_ms": 38.01587500493042,
+        "usage": {
+          "calls": 0,
+          "input_tokens": null,
+          "output_tokens": null,
+          "cost_usd": null
+        },
+        "run_id": "2cddbd835225443294bc8c1e4858c400",
+        "retrieval_status": "ready",
+        "retrieval_hit_ids": [
+          "veyra-v2-identity",
+          "veyra-v2-palette",
+          "veyra-v2-clearspace",
+          "veyra-v2-font",
+          "veyra-v2-cta",
+          "veyra-v2-warranty",
+          "veyra-v2-photo",
+          "veyra-v2-minimum",
+          "veyra-v2-badge",
+          "veyra-v2-legal"
+        ]
+      }
+    },
+    {
+      "id": "IQ2-10",
+      "category": "other_brand_archived_snapshot",
+      "certainty": "high",
+      "query": "In snapshot v1, identify the old Veyra Works primary color and design token.",
+      "scope": {
+        "tenant": "demo",
+        "project": "public-lab",
+        "brand": "veyra",
+        "snapshot": "v1",
+        "principal": "demo-reader",
+        "permissions": [
+          "public"
+        ],
+        "locale": "en",
+        "context": "",
+        "acl_version": "1"
+      },
+      "mode": "fixture",
+      "method": "full_pack",
+      "expected_status_semantic": "answered",
+      "acceptable_api_statuses": [
+        "supported"
+      ],
+      "source_level_facts": [
+        "V1 primary color is #223355, token VW-NAVY-2."
+      ],
+      "rationale": "other brand archived snapshot",
+      "passed": true,
+      "checks": {
+        "retrieval_executed": true,
+        "rendered_text_matches_validated_claims_or_refusal": true,
+        "status_matches": true,
+        "all_required_facts_present": true,
+        "required_source_sections_covered": true,
+        "forbidden_text_absent": true,
+        "claims_have_valid_source_provenance": true,
+        "no_provider_calls": true,
+        "no_relay_side_effects": true
+      },
+      "missing_text_groups": [],
+      "forbidden_text_observed": [],
+      "missing_source_sections": [],
+      "extra_source_sections_observed": [],
+      "provenance_errors": [],
+      "actual": {
+        "status": "supported",
+        "text": "In snapshot v1, Veyra Works primary color was navy #223355, token VW-NAVY-2. В версии v1 основной цвет — #223355, VW-NAVY-2.",
+        "evidence_ids": [
+          "veyra-v1-palette"
+        ],
+        "claims": [
+          {
+            "text": "In snapshot v1, Veyra Works primary color was navy #223355, token VW-NAVY-2. В версии v1 основной цвет — #223355, VW-NAVY-2.",
+            "evidence_id": "veyra-v1-palette",
+            "quote": "In snapshot v1, Veyra Works primary color was navy #223355, token VW-NAVY-2. В версии v1 основной цвет — #223355, VW-NAVY-2."
+          }
+        ],
+        "generation_kind": "deterministic_extractive",
+        "latency_ms": 39.21333301695995,
+        "usage": {
+          "calls": 0,
+          "input_tokens": null,
+          "output_tokens": null,
+          "cost_usd": null
+        },
+        "run_id": "3a96104280d44c0dbaaf514bad1d92e0",
+        "retrieval_status": "ready",
+        "retrieval_hit_ids": [
+          "veyra-v1-palette"
+        ]
+      }
+    },
+    {
+      "id": "IQ2-11",
+      "category": "photo_background_russian_request",
+      "certainty": "high",
+      "query": "На каком фоне снимать продукт Veyra Works: допустим ли пейзаж за предметом?",
+      "scope": {
+        "tenant": "demo",
+        "project": "public-lab",
+        "brand": "veyra",
+        "snapshot": "v2",
+        "principal": "demo-reader",
+        "permissions": [
+          "public"
+        ],
+        "locale": "ru",
+        "context": "",
+        "acl_version": "1"
+      },
+      "mode": "fixture",
+      "method": "full_pack",
+      "expected_status_semantic": "answered",
+      "acceptable_api_statuses": [
+        "supported"
+      ],
+      "source_level_facts": [
+        "Product photographs use a neutral light-gray background; outdoor landscapes are prohibited."
+      ],
+      "rationale": "photo background russian request",
+      "passed": true,
+      "checks": {
+        "retrieval_executed": true,
+        "rendered_text_matches_validated_claims_or_refusal": true,
+        "status_matches": true,
+        "all_required_facts_present": true,
+        "required_source_sections_covered": true,
+        "forbidden_text_absent": true,
+        "claims_have_valid_source_provenance": true,
+        "no_provider_calls": true,
+        "no_relay_side_effects": true
+      },
+      "missing_text_groups": [],
+      "forbidden_text_observed": [],
+      "missing_source_sections": [],
+      "extra_source_sections_observed": [],
+      "provenance_errors": [],
+      "actual": {
+        "status": "supported",
+        "text": "Veyra Works product photographs use a neutral light-gray background. Для фото продукта нужен нейтральный светло-серый фон. Do not add an outdoor landscape behind the product.",
+        "evidence_ids": [
+          "veyra-v2-photo"
+        ],
+        "claims": [
+          {
+            "text": "Veyra Works product photographs use a neutral light-gray background. Для фото продукта нужен нейтральный светло-серый фон. Do not add an outdoor landscape behind the product.",
+            "evidence_id": "veyra-v2-photo",
+            "quote": "Veyra Works product photographs use a neutral light-gray background. Для фото продукта нужен нейтральный светло-серый фон. Do not add an outdoor landscape behind the product."
+          }
+        ],
+        "generation_kind": "deterministic_extractive",
+        "latency_ms": 35.39562498917803,
+        "usage": {
+          "calls": 0,
+          "input_tokens": null,
+          "output_tokens": null,
+          "cost_usd": null
+        },
+        "run_id": "4214ba3a4d8e443699425d7515a20791",
+        "retrieval_status": "ready",
+        "retrieval_hit_ids": [
+          "veyra-v2-identity",
+          "veyra-v2-palette",
+          "veyra-v2-clearspace",
+          "veyra-v2-font",
+          "veyra-v2-cta",
+          "veyra-v2-warranty",
+          "veyra-v2-photo",
+          "veyra-v2-minimum",
+          "veyra-v2-badge",
+          "veyra-v2-legal"
+        ]
+      }
+    },
+    {
+      "id": "IQ2-12",
+      "category": "medical_claim_exception_attempt",
+      "certainty": "high",
+      "query": "May a Luma Field campaign claim that the product cures arthritis if we add a small disclaimer?",
+      "scope": {
+        "tenant": "demo",
+        "project": "public-lab",
+        "brand": "luma",
+        "snapshot": "v2",
+        "principal": "demo-reader",
+        "permissions": [
+          "public"
+        ],
+        "locale": "en",
+        "context": "",
+        "acl_version": "1"
+      },
+      "mode": "fixture",
+      "method": "full_pack",
+      "expected_status_semantic": "answered",
+      "acceptable_api_statuses": [
+        "supported"
+      ],
+      "source_level_facts": [
+        "Disease cure claims are prohibited; no disclaimer exception is supplied."
+      ],
+      "rationale": "medical claim exception attempt",
+      "passed": true,
+      "checks": {
+        "retrieval_executed": true,
+        "rendered_text_matches_validated_claims_or_refusal": true,
+        "status_matches": true,
+        "all_required_facts_present": true,
+        "required_source_sections_covered": true,
+        "forbidden_text_absent": true,
+        "claims_have_valid_source_provenance": true,
+        "no_provider_calls": true,
+        "no_relay_side_effects": true
+      },
+      "missing_text_groups": [],
+      "forbidden_text_observed": [],
+      "missing_source_sections": [],
+      "extra_source_sections_observed": [
+        "Campaign exception / Исключение",
+        "Discount policy / Скидка"
+      ],
+      "provenance_errors": [],
+      "actual": {
+        "status": "supported",
+        "text": "Do not claim that a Luma Field product cures a disease. Запрещено обещать лечение заболеваний. The permitted benefit is comfort during everyday walks; разрешённое преимущество — комфорт во время ежедневных прогулок.\n\nOnly campaign SPRING-26 may display exactly 15% during 1–14 April 2026. Только SPRING-26 может показывать ровно 15% с 1 по 14 апреля 2026. Include the sentence «Предложение действует до 14.04.2026».\n\nLuma Field evergreen banners must not show a discount percentage. Скидка в процентах запрещена в постоянных баннерах. Campaign SPRING-26 is the only exception; see the linked exception.",
+        "evidence_ids": [
+          "luma-v2-claim",
+          "luma-v2-discount-exception",
+          "luma-v2-discount"
+        ],
+        "claims": [
+          {
+            "text": "Do not claim that a Luma Field product cures a disease. Запрещено обещать лечение заболеваний. The permitted benefit is comfort during everyday walks; разрешённое преимущество — комфорт во время ежедневных прогулок.",
+            "evidence_id": "luma-v2-claim",
+            "quote": "Do not claim that a Luma Field product cures a disease. Запрещено обещать лечение заболеваний. The permitted benefit is comfort during everyday walks; разрешённое преимущество — комфорт во время ежедневных прогулок."
+          },
+          {
+            "text": "Only campaign SPRING-26 may display exactly 15% during 1–14 April 2026. Только SPRING-26 может показывать ровно 15% с 1 по 14 апреля 2026. Include the sentence «Предложение действует до 14.04.2026».",
+            "evidence_id": "luma-v2-discount-exception",
+            "quote": "Only campaign SPRING-26 may display exactly 15% during 1–14 April 2026. Только SPRING-26 может показывать ровно 15% с 1 по 14 апреля 2026. Include the sentence «Предложение действует до 14.04.2026»."
+          },
+          {
+            "text": "Luma Field evergreen banners must not show a discount percentage. Скидка в процентах запрещена в постоянных баннерах. Campaign SPRING-26 is the only exception; see the linked exception.",
+            "evidence_id": "luma-v2-discount",
+            "quote": "Luma Field evergreen banners must not show a discount percentage. Скидка в процентах запрещена в постоянных баннерах. Campaign SPRING-26 is the only exception; see the linked exception."
+          }
+        ],
+        "generation_kind": "deterministic_extractive",
+        "latency_ms": 38.594041019678116,
+        "usage": {
+          "calls": 0,
+          "input_tokens": null,
+          "output_tokens": null,
+          "cost_usd": null
+        },
+        "run_id": "013d3bf937f149289ecdc4dde0949510",
+        "retrieval_status": "ready",
+        "retrieval_hit_ids": [
+          "luma-v2-identity",
+          "luma-v2-palette",
+          "luma-v2-clearspace",
+          "luma-v2-wordmark",
+          "luma-v2-font",
+          "luma-v2-claim",
+          "luma-v2-cta",
+          "luma-v2-discount",
+          "luma-v2-discount-exception",
+          "luma-v2-positive",
+          "luma-v2-negative",
+          "luma-v2-packing-a",
+          "luma-v2-packing-b",
+          "luma-v2-injection"
+        ]
+      }
+    }
+  ]
+}

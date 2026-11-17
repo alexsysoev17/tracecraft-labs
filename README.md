@@ -4,6 +4,8 @@ Six local laboratories for inspecting retrieval, execution, regressions, failure
 
 This is an exploratory research implementation. It is not a production service, a self-improving model, or a claim of measured business value.
 
+Public source: [alexsysoev17/tracecraft-labs](https://github.com/alexsysoev17/tracecraft-labs). Remote checks: [GitHub Actions](https://github.com/alexsysoev17/tracecraft-labs/actions/workflows/ci.yml). Source publication does not deploy a hosted application.
+
 **Read the independent findings alongside the demos:** [implementation review](docs/independent-review.md), [security regressions and rechecks](reports/public/independent-security.json), and [source-first quality challenges](reports/public/independent-quality.json). Separate delegated agents found nine engineering defects that were repaired and rechecked within the recorded scopes. Quality remains limited: a follow-up challenge withheld until the final code freeze still passes only **7 of 12 cases** under all four retrieval configurations.
 
 | Laboratory | Working scenario | Reproduce | Report |
@@ -92,7 +94,7 @@ TXT, Markdown and text-layer PDF are supported; image-only PDF reports `IMAGE_ON
 
 После первоначальной установки выполните `make serve` и откройте **http://127.0.0.1:8317**. В этой рабочей копии окружение и локальная модель уже подготовлены. `make demo` повторяет шесть демонстраций без ключей, `make eval-local` — прогоны с настоящими эмбеддингами. Для каждой лаборатории есть отдельная команда из таблицы выше.
 
-Начните с [русского сценария демонстрации](docs/demo-script.md). Успешные автотесты проверяют механику. Исходный CANON теперь проходит 32/32, но отдельная проверка, скрытая до финальной фиксации кода, остаётся на 7/12: пять отсутствующих атрибутов ошибочно получают статус supported. См. независимые отчёты выше; рост на уже раскрытом наборе не доказывает обобщение. Платные вызовы, Git push и публикация не выполнялись.
+Начните с [русского сценария демонстрации](docs/demo-script.md). Успешные автотесты проверяют механику. Исходный CANON теперь проходит 32/32, но отдельная проверка, скрытая до финальной фиксации кода, остаётся на 7/12: пять отсутствующих атрибутов ошибочно получают статус supported. См. независимые отчёты выше; рост на уже раскрытом наборе не доказывает обобщение. Платные вызовы не выполнялись. Исходники опубликованы на GitHub; приложение запускается локально.
 
 ## Prepare a review copy
 
@@ -100,4 +102,4 @@ TXT, Markdown and text-layer PDF are supported; image-only PDF reports `IMAGE_ON
 .venv/bin/python scripts/export_public.py dist/public-review-new
 ```
 
-This creates the requested fresh destination from an explicit file/directory allowlist; it fails if that destination already exists. The final delivery review copy is `dist/public-review-audited`; the older `dist/public-review` is a preserved earlier snapshot. It excludes private imports, runtime databases, model weights, environments and Git history. The delivered copy has been checked separately, including tracked files. Original source licensing remains an owner decision before publication; see [licensing](docs/licensing.md). The command does not publish anything.
+This creates the requested fresh destination from an explicit file/directory allowlist; it fails if that destination already exists. The final delivery review copy is `dist/public-review-audited`; the older `dist/public-review` is a preserved earlier snapshot. It excludes private imports, runtime databases, model weights, environments and Git history. The delivered copy has been checked separately, including tracked files. No project redistribution license has been selected; see [licensing](docs/licensing.md). The command does not publish anything.

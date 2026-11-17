@@ -1,0 +1,1060 @@
+{
+  "schema_version": 1,
+  "status": "completed_with_verified_improvements_and_remaining_failures",
+  "frozen_at_utc": "2026-11-17T05:57:26.591545+00:00",
+  "case_file": "tests/independent_cases.json",
+  "case_file_sha256": "5ae0491a41d8ed0df4124cae8c97596176e48fb3539a901ff8b130edaab85e1f",
+  "case_count": 26,
+  "high_certainty_count": 23,
+  "uncertain_count": 3,
+  "independence_boundary": "Authored and frozen from README, module contracts, API documentation, and four original Markdown guides before opening corpus.json, cases.json, evaluator, tests, or service implementation. Existing reported pass counts were not used as expected values. Cases are now public and cease being an unseen holdout after this first evaluation.",
+  "source_hashes": {
+    "README.md": "2af0ac310cd3af7004b2ac5204a5fa9eb8727c380a47deacf8e93e48e47012e0",
+    "AGENTS.md": "bad38e08c56ae90b0e50cc2ae5962e0f104d04c2516f86a348edfac61151fc06",
+    "docs/contracts.md": "3ae48160745970a48143c8fa3a007ec83c8d9acf13b205a07dea767d5c95982c",
+    "docs/api.md": "8d2d1b59c20444e746e5064c8f1c4e65c0e4c4c492fdc3507ea558a3b738ac61",
+    "examples/atlas/README.md": "163591f32e3c878bca5aed11b626113455cf0991e224e9b78ae1e4ef9f9b95ce",
+    "datasets/public-demo/README.md": "92b8bd209bfa866f9e3bcaba5dfffd79dceb8b8ca4225ce12eaf9191fc52898f",
+    "datasets/public-demo/luma-v1.md": "d771c5e4c13201206faa785b5a0bf2c663e821593e27e3abd5a757857f1c3bb6",
+    "datasets/public-demo/luma-v2.md": "cbc50a599deba194a90778da63707de8eb72fa7c7e8aa42b2e8ed190dd042600",
+    "datasets/public-demo/veyra-v1.md": "43c8230718027c87657adc6c8fd306d9e3f17dcb9522f924240de89581870a64",
+    "datasets/public-demo/veyra-v2.md": "32720741d953e7cbe86bea177798612df6285fc10ffb8474aa1852e66da3f837"
+  },
+  "runs": [
+    {
+      "label": "baseline-a0a82b2",
+      "mode": "fixture",
+      "report": "reports/public/independent-quality-baseline.json",
+      "report_sha256": "c38a044dbdec37d16648a7448a1746622f1c40e5d332fd6a42e2fb50029cd6e5",
+      "started_at_utc": "2026-11-17T05:59:04.353043+00:00",
+      "finished_at_utc": "2026-11-17T05:59:05.473226+00:00",
+      "case_file_sha256": "5ae0491a41d8ed0df4124cae8c97596176e48fb3539a901ff8b130edaab85e1f",
+      "summary": {
+        "lexical": {
+          "passed": 20,
+          "failed": 3,
+          "uncertain_not_scored": 3,
+          "failed_case_ids": [
+            "IQ06",
+            "IQ13",
+            "IQ16"
+          ],
+          "provenance_failures": 0,
+          "cases_with_extra_source_sections": 16
+        },
+        "full_pack": {
+          "passed": 20,
+          "failed": 3,
+          "uncertain_not_scored": 3,
+          "failed_case_ids": [
+            "IQ06",
+            "IQ13",
+            "IQ16"
+          ],
+          "provenance_failures": 0,
+          "cases_with_extra_source_sections": 16
+        }
+      },
+      "implementation_source_hash": "26a4ae9b7eb7bd01d17ac1d200e5ea79bfd7dbb948edd2215792c90d43ff295b",
+      "implementation_changed_during_run": null,
+      "encoder_inference_batches": null
+    },
+    {
+      "label": "baseline-a0a82b2-local",
+      "mode": "local",
+      "report": "reports/public/independent-quality-baseline-local.json",
+      "report_sha256": "dbca6510fe4823e91e139b50d7ea00d8e91a2b74e80f58a1045c98a69a2fcebc",
+      "started_at_utc": "2026-11-17T05:59:36.447280+00:00",
+      "finished_at_utc": "2026-11-17T05:59:39.830680+00:00",
+      "case_file_sha256": "5ae0491a41d8ed0df4124cae8c97596176e48fb3539a901ff8b130edaab85e1f",
+      "summary": {
+        "dense": {
+          "passed": 20,
+          "failed": 3,
+          "uncertain_not_scored": 3,
+          "failed_case_ids": [
+            "IQ06",
+            "IQ13",
+            "IQ16"
+          ],
+          "provenance_failures": 0,
+          "cases_with_extra_source_sections": 11
+        },
+        "hybrid": {
+          "passed": 20,
+          "failed": 3,
+          "uncertain_not_scored": 3,
+          "failed_case_ids": [
+            "IQ06",
+            "IQ13",
+            "IQ16"
+          ],
+          "provenance_failures": 0,
+          "cases_with_extra_source_sections": 15
+        }
+      },
+      "implementation_source_hash": "26a4ae9b7eb7bd01d17ac1d200e5ea79bfd7dbb948edd2215792c90d43ff295b",
+      "implementation_changed_during_run": null,
+      "encoder_inference_batches": null
+    },
+    {
+      "label": "postfix-1",
+      "mode": "fixture",
+      "report": "reports/public/independent-quality-postfix-1.json",
+      "report_sha256": "7bfb214323ea0ca9da70b444ba80e155c8c1af963ea6e543fdb743e2423b21e2",
+      "started_at_utc": "2026-11-17T06:02:57.471718+00:00",
+      "finished_at_utc": "2026-11-17T06:02:59.818261+00:00",
+      "case_file_sha256": "5ae0491a41d8ed0df4124cae8c97596176e48fb3539a901ff8b130edaab85e1f",
+      "summary": {
+        "lexical": {
+          "passed": 10,
+          "failed": 13,
+          "uncertain_not_scored": 3,
+          "failed_case_ids": [
+            "IQ01",
+            "IQ02",
+            "IQ03",
+            "IQ06",
+            "IQ10",
+            "IQ11",
+            "IQ15",
+            "IQ20",
+            "IQ21",
+            "IQ22",
+            "IQ23",
+            "IQ25",
+            "IQ26"
+          ],
+          "provenance_failures": 0,
+          "cases_with_extra_source_sections": 0
+        },
+        "full_pack": {
+          "passed": 10,
+          "failed": 13,
+          "uncertain_not_scored": 3,
+          "failed_case_ids": [
+            "IQ01",
+            "IQ02",
+            "IQ03",
+            "IQ06",
+            "IQ10",
+            "IQ11",
+            "IQ15",
+            "IQ20",
+            "IQ21",
+            "IQ22",
+            "IQ23",
+            "IQ25",
+            "IQ26"
+          ],
+          "provenance_failures": 0,
+          "cases_with_extra_source_sections": 0
+        }
+      },
+      "implementation_source_hash": "1e5d0e1202004529902882c9556ff27037561ce1f505cf58833014934548d5af",
+      "implementation_changed_during_run": null,
+      "encoder_inference_batches": null
+    },
+    {
+      "label": "postfix-1-local",
+      "mode": "local",
+      "report": "reports/public/independent-quality-postfix-1-local.json",
+      "report_sha256": "f1a3efc9904e848bd7e09b0e44c6b4393f47aacba62f9683f0c47c1594d64e1a",
+      "started_at_utc": "2026-11-17T06:02:59.951392+00:00",
+      "finished_at_utc": "2026-11-17T06:03:05.361108+00:00",
+      "case_file_sha256": "5ae0491a41d8ed0df4124cae8c97596176e48fb3539a901ff8b130edaab85e1f",
+      "summary": {
+        "dense": {
+          "passed": 10,
+          "failed": 13,
+          "uncertain_not_scored": 3,
+          "failed_case_ids": [
+            "IQ01",
+            "IQ02",
+            "IQ03",
+            "IQ06",
+            "IQ10",
+            "IQ11",
+            "IQ15",
+            "IQ20",
+            "IQ21",
+            "IQ22",
+            "IQ23",
+            "IQ25",
+            "IQ26"
+          ],
+          "provenance_failures": 0,
+          "cases_with_extra_source_sections": 0
+        },
+        "hybrid": {
+          "passed": 10,
+          "failed": 13,
+          "uncertain_not_scored": 3,
+          "failed_case_ids": [
+            "IQ01",
+            "IQ02",
+            "IQ03",
+            "IQ06",
+            "IQ10",
+            "IQ11",
+            "IQ15",
+            "IQ20",
+            "IQ21",
+            "IQ22",
+            "IQ23",
+            "IQ25",
+            "IQ26"
+          ],
+          "provenance_failures": 0,
+          "cases_with_extra_source_sections": 0
+        }
+      },
+      "implementation_source_hash": "1e5d0e1202004529902882c9556ff27037561ce1f505cf58833014934548d5af",
+      "implementation_changed_during_run": null,
+      "encoder_inference_batches": null
+    },
+    {
+      "label": "postfix-2",
+      "mode": "fixture",
+      "report": "reports/public/independent-quality-postfix-2.json",
+      "report_sha256": "0f96d1c063cea316f9ef96497726ca55b3833a348fc035a1eee281456722bbd2",
+      "started_at_utc": "2026-11-17T06:07:00.128365+00:00",
+      "finished_at_utc": "2026-11-17T06:07:02.047548+00:00",
+      "case_file_sha256": "5ae0491a41d8ed0df4124cae8c97596176e48fb3539a901ff8b130edaab85e1f",
+      "summary": {
+        "lexical": {
+          "passed": 19,
+          "failed": 4,
+          "uncertain_not_scored": 3,
+          "failed_case_ids": [
+            "IQ01",
+            "IQ02",
+            "IQ16",
+            "IQ26"
+          ],
+          "provenance_failures": 0,
+          "cases_with_extra_source_sections": 9
+        },
+        "full_pack": {
+          "passed": 19,
+          "failed": 4,
+          "uncertain_not_scored": 3,
+          "failed_case_ids": [
+            "IQ01",
+            "IQ02",
+            "IQ16",
+            "IQ26"
+          ],
+          "provenance_failures": 0,
+          "cases_with_extra_source_sections": 9
+        }
+      },
+      "implementation_source_hash": "13565395f67588dcf6815936953813c92bd28b1c7ae9ebc8fcb77117ed347ea1",
+      "implementation_changed_during_run": false,
+      "encoder_inference_batches": 0
+    },
+    {
+      "label": "postfix-2-local",
+      "mode": "local",
+      "report": "reports/public/independent-quality-postfix-2-local.json",
+      "report_sha256": "1ae78edef9a809e715fa10fd5bb671f3b06cd316d471136d28eea5d0d836ba33",
+      "started_at_utc": "2026-11-17T06:07:02.179373+00:00",
+      "finished_at_utc": "2026-11-17T06:07:06.821208+00:00",
+      "case_file_sha256": "5ae0491a41d8ed0df4124cae8c97596176e48fb3539a901ff8b130edaab85e1f",
+      "summary": {
+        "dense": {
+          "passed": 19,
+          "failed": 4,
+          "uncertain_not_scored": 3,
+          "failed_case_ids": [
+            "IQ01",
+            "IQ02",
+            "IQ16",
+            "IQ26"
+          ],
+          "provenance_failures": 0,
+          "cases_with_extra_source_sections": 8
+        },
+        "hybrid": {
+          "passed": 19,
+          "failed": 4,
+          "uncertain_not_scored": 3,
+          "failed_case_ids": [
+            "IQ01",
+            "IQ02",
+            "IQ16",
+            "IQ26"
+          ],
+          "provenance_failures": 0,
+          "cases_with_extra_source_sections": 9
+        }
+      },
+      "implementation_source_hash": "13565395f67588dcf6815936953813c92bd28b1c7ae9ebc8fcb77117ed347ea1",
+      "implementation_changed_during_run": false,
+      "encoder_inference_batches": 57
+    },
+    {
+      "label": "baseline-a0a82b2-hardened",
+      "mode": "fixture",
+      "report": "reports/public/independent-quality-baseline-hardened.json",
+      "report_sha256": "cc2735cd276e734d7b0ff1a8145565c9add62b63f929c89061356782f9a9b2ed",
+      "started_at_utc": "2026-11-17T06:09:16.435981+00:00",
+      "finished_at_utc": "2026-11-17T06:09:17.562527+00:00",
+      "case_file_sha256": "5ae0491a41d8ed0df4124cae8c97596176e48fb3539a901ff8b130edaab85e1f",
+      "summary": {
+        "lexical": {
+          "passed": 20,
+          "failed": 3,
+          "uncertain_not_scored": 3,
+          "failed_case_ids": [
+            "IQ06",
+            "IQ13",
+            "IQ16"
+          ],
+          "provenance_failures": 0,
+          "cases_with_extra_source_sections": 16
+        },
+        "full_pack": {
+          "passed": 20,
+          "failed": 3,
+          "uncertain_not_scored": 3,
+          "failed_case_ids": [
+            "IQ06",
+            "IQ13",
+            "IQ16"
+          ],
+          "provenance_failures": 0,
+          "cases_with_extra_source_sections": 16
+        }
+      },
+      "implementation_source_hash": "26a4ae9b7eb7bd01d17ac1d200e5ea79bfd7dbb948edd2215792c90d43ff295b",
+      "implementation_changed_during_run": false,
+      "encoder_inference_batches": 0
+    },
+    {
+      "label": "baseline-a0a82b2-hardened-local",
+      "mode": "local",
+      "report": "reports/public/independent-quality-baseline-hardened-local.json",
+      "report_sha256": "6d6122019cbd53b21aa64d4142f57f4d8237cefaea6e2e66862a5eec077439e5",
+      "started_at_utc": "2026-11-17T06:09:17.673204+00:00",
+      "finished_at_utc": "2026-11-17T06:09:21.067227+00:00",
+      "case_file_sha256": "5ae0491a41d8ed0df4124cae8c97596176e48fb3539a901ff8b130edaab85e1f",
+      "summary": {
+        "dense": {
+          "passed": 20,
+          "failed": 3,
+          "uncertain_not_scored": 3,
+          "failed_case_ids": [
+            "IQ06",
+            "IQ13",
+            "IQ16"
+          ],
+          "provenance_failures": 0,
+          "cases_with_extra_source_sections": 11
+        },
+        "hybrid": {
+          "passed": 20,
+          "failed": 3,
+          "uncertain_not_scored": 3,
+          "failed_case_ids": [
+            "IQ06",
+            "IQ13",
+            "IQ16"
+          ],
+          "provenance_failures": 0,
+          "cases_with_extra_source_sections": 15
+        }
+      },
+      "implementation_source_hash": "26a4ae9b7eb7bd01d17ac1d200e5ea79bfd7dbb948edd2215792c90d43ff295b",
+      "implementation_changed_during_run": false,
+      "encoder_inference_batches": 57
+    },
+    {
+      "label": "final",
+      "mode": "fixture",
+      "report": "reports/public/independent-quality-final.json",
+      "report_sha256": "fab9c1974fe0fd14563fe5f020797b77a3831103895cd28bc262b4430aba1275",
+      "started_at_utc": "2026-11-17T06:09:48.905846+00:00",
+      "finished_at_utc": "2026-11-17T06:09:50.757772+00:00",
+      "case_file_sha256": "5ae0491a41d8ed0df4124cae8c97596176e48fb3539a901ff8b130edaab85e1f",
+      "summary": {
+        "lexical": {
+          "passed": 23,
+          "failed": 0,
+          "uncertain_not_scored": 3,
+          "failed_case_ids": [],
+          "provenance_failures": 0,
+          "cases_with_extra_source_sections": 9
+        },
+        "full_pack": {
+          "passed": 23,
+          "failed": 0,
+          "uncertain_not_scored": 3,
+          "failed_case_ids": [],
+          "provenance_failures": 0,
+          "cases_with_extra_source_sections": 9
+        }
+      },
+      "implementation_source_hash": "4b1a8118018126e8f388bc92caa0fe39f304b54f3be85f832cd928f54601e643",
+      "implementation_changed_during_run": false,
+      "encoder_inference_batches": 0
+    },
+    {
+      "label": "final-local",
+      "mode": "local",
+      "report": "reports/public/independent-quality-final-local.json",
+      "report_sha256": "a378e6e92f2502a63c620fa1e84c9a934eceea4553d7d38d644b3a1412c368a6",
+      "started_at_utc": "2026-11-17T06:09:50.875368+00:00",
+      "finished_at_utc": "2026-11-17T06:09:55.447923+00:00",
+      "case_file_sha256": "5ae0491a41d8ed0df4124cae8c97596176e48fb3539a901ff8b130edaab85e1f",
+      "summary": {
+        "dense": {
+          "passed": 23,
+          "failed": 0,
+          "uncertain_not_scored": 3,
+          "failed_case_ids": [],
+          "provenance_failures": 0,
+          "cases_with_extra_source_sections": 6
+        },
+        "hybrid": {
+          "passed": 23,
+          "failed": 0,
+          "uncertain_not_scored": 3,
+          "failed_case_ids": [],
+          "provenance_failures": 0,
+          "cases_with_extra_source_sections": 9
+        }
+      },
+      "implementation_source_hash": "4b1a8118018126e8f388bc92caa0fe39f304b54f3be85f832cd928f54601e643",
+      "implementation_changed_during_run": false,
+      "encoder_inference_batches": 57
+    },
+    {
+      "label": "challenge2-final",
+      "mode": "fixture",
+      "report": "reports/public/independent-quality-challenge2-final.json",
+      "report_sha256": "3aabd25d3ee2783260ea53c7f359a4fe5dcbe0c0eb1b9945d6ff0cf0c2a8f606",
+      "started_at_utc": "2026-11-17T06:09:55.768150+00:00",
+      "finished_at_utc": "2026-11-17T06:09:56.761291+00:00",
+      "case_file_sha256": "d6397950e6b378cf201c8b6a3ebc3c50ddc10029e00e29a4f7d4272e67fe2563",
+      "summary": {
+        "lexical": {
+          "passed": 7,
+          "failed": 5,
+          "uncertain_not_scored": 0,
+          "failed_case_ids": [
+            "IQ2-05",
+            "IQ2-06",
+            "IQ2-07",
+            "IQ2-08",
+            "IQ2-09"
+          ],
+          "provenance_failures": 0,
+          "cases_with_extra_source_sections": 10
+        },
+        "full_pack": {
+          "passed": 7,
+          "failed": 5,
+          "uncertain_not_scored": 0,
+          "failed_case_ids": [
+            "IQ2-05",
+            "IQ2-06",
+            "IQ2-07",
+            "IQ2-08",
+            "IQ2-09"
+          ],
+          "provenance_failures": 0,
+          "cases_with_extra_source_sections": 10
+        }
+      },
+      "implementation_source_hash": "4b1a8118018126e8f388bc92caa0fe39f304b54f3be85f832cd928f54601e643",
+      "implementation_changed_during_run": false,
+      "encoder_inference_batches": 0
+    },
+    {
+      "label": "challenge2-final-local",
+      "mode": "local",
+      "report": "reports/public/independent-quality-challenge2-final-local.json",
+      "report_sha256": "6e86f2cfb45616a6292f7463f41f2d48a303561ffd3b16ed5f02e59fe99f786b",
+      "started_at_utc": "2026-11-17T06:09:56.893015+00:00",
+      "finished_at_utc": "2026-11-17T06:09:59.678297+00:00",
+      "case_file_sha256": "d6397950e6b378cf201c8b6a3ebc3c50ddc10029e00e29a4f7d4272e67fe2563",
+      "summary": {
+        "dense": {
+          "passed": 7,
+          "failed": 5,
+          "uncertain_not_scored": 0,
+          "failed_case_ids": [
+            "IQ2-05",
+            "IQ2-06",
+            "IQ2-07",
+            "IQ2-08",
+            "IQ2-09"
+          ],
+          "provenance_failures": 0,
+          "cases_with_extra_source_sections": 10
+        },
+        "hybrid": {
+          "passed": 7,
+          "failed": 5,
+          "uncertain_not_scored": 0,
+          "failed_case_ids": [
+            "IQ2-05",
+            "IQ2-06",
+            "IQ2-07",
+            "IQ2-08",
+            "IQ2-09"
+          ],
+          "provenance_failures": 0,
+          "cases_with_extra_source_sections": 10
+        }
+      },
+      "implementation_source_hash": "4b1a8118018126e8f388bc92caa0fe39f304b54f3be85f832cd928f54601e643",
+      "implementation_changed_during_run": false,
+      "encoder_inference_batches": 29
+    },
+    {
+      "label": "challenge2-baseline-a0a82b2",
+      "mode": "fixture",
+      "report": "reports/public/independent-quality-challenge2-baseline.json",
+      "report_sha256": "2526758d5962e4a8fc37674c6bd977402667c4629e6d1e75c4dd4eb77ecf0c7f",
+      "started_at_utc": "2026-11-17T06:10:22.754551+00:00",
+      "finished_at_utc": "2026-11-17T06:10:23.291614+00:00",
+      "case_file_sha256": "d6397950e6b378cf201c8b6a3ebc3c50ddc10029e00e29a4f7d4272e67fe2563",
+      "summary": {
+        "lexical": {
+          "passed": 7,
+          "failed": 5,
+          "uncertain_not_scored": 0,
+          "failed_case_ids": [
+            "IQ2-05",
+            "IQ2-06",
+            "IQ2-07",
+            "IQ2-08",
+            "IQ2-09"
+          ],
+          "provenance_failures": 0,
+          "cases_with_extra_source_sections": 10
+        },
+        "full_pack": {
+          "passed": 7,
+          "failed": 5,
+          "uncertain_not_scored": 0,
+          "failed_case_ids": [
+            "IQ2-05",
+            "IQ2-06",
+            "IQ2-07",
+            "IQ2-08",
+            "IQ2-09"
+          ],
+          "provenance_failures": 0,
+          "cases_with_extra_source_sections": 10
+        }
+      },
+      "implementation_source_hash": "26a4ae9b7eb7bd01d17ac1d200e5ea79bfd7dbb948edd2215792c90d43ff295b",
+      "implementation_changed_during_run": false,
+      "encoder_inference_batches": 0
+    },
+    {
+      "label": "challenge2-baseline-a0a82b2-local",
+      "mode": "local",
+      "report": "reports/public/independent-quality-challenge2-baseline-local.json",
+      "report_sha256": "44546104fc50d4ba8210a7f3e7fee199f3448f71faf6e1182c34240b8859eb3b",
+      "started_at_utc": "2026-11-17T06:10:23.408024+00:00",
+      "finished_at_utc": "2026-11-17T06:10:25.638407+00:00",
+      "case_file_sha256": "d6397950e6b378cf201c8b6a3ebc3c50ddc10029e00e29a4f7d4272e67fe2563",
+      "summary": {
+        "dense": {
+          "passed": 7,
+          "failed": 5,
+          "uncertain_not_scored": 0,
+          "failed_case_ids": [
+            "IQ2-05",
+            "IQ2-06",
+            "IQ2-07",
+            "IQ2-08",
+            "IQ2-09"
+          ],
+          "provenance_failures": 0,
+          "cases_with_extra_source_sections": 9
+        },
+        "hybrid": {
+          "passed": 7,
+          "failed": 5,
+          "uncertain_not_scored": 0,
+          "failed_case_ids": [
+            "IQ2-05",
+            "IQ2-06",
+            "IQ2-07",
+            "IQ2-08",
+            "IQ2-09"
+          ],
+          "provenance_failures": 0,
+          "cases_with_extra_source_sections": 10
+        }
+      },
+      "implementation_source_hash": "26a4ae9b7eb7bd01d17ac1d200e5ea79bfd7dbb948edd2215792c90d43ff295b",
+      "implementation_changed_during_run": false,
+      "encoder_inference_batches": 29
+    }
+  ],
+  "baseline": {
+    "report": "reports/public/independent-quality-baseline.json",
+    "revision": "a0a82b2",
+    "summary": {
+      "lexical": {
+        "passed": 20,
+        "failed": 3,
+        "uncertain_not_scored": 3,
+        "failed_case_ids": [
+          "IQ06",
+          "IQ13",
+          "IQ16"
+        ],
+        "provenance_failures": 0,
+        "cases_with_extra_source_sections": 16
+      },
+      "full_pack": {
+        "passed": 20,
+        "failed": 3,
+        "uncertain_not_scored": 3,
+        "failed_case_ids": [
+          "IQ06",
+          "IQ13",
+          "IQ16"
+        ],
+        "provenance_failures": 0,
+        "cases_with_extra_source_sections": 16
+      }
+    },
+    "implementation_source_hash": "26a4ae9b7eb7bd01d17ac1d200e5ea79bfd7dbb948edd2215792c90d43ff295b",
+    "local_report": "reports/public/independent-quality-baseline-local.json",
+    "local_summary": {
+      "dense": {
+        "passed": 20,
+        "failed": 3,
+        "uncertain_not_scored": 3,
+        "failed_case_ids": [
+          "IQ06",
+          "IQ13",
+          "IQ16"
+        ],
+        "provenance_failures": 0,
+        "cases_with_extra_source_sections": 11
+      },
+      "hybrid": {
+        "passed": 20,
+        "failed": 3,
+        "uncertain_not_scored": 3,
+        "failed_case_ids": [
+          "IQ06",
+          "IQ13",
+          "IQ16"
+        ],
+        "provenance_failures": 0,
+        "cases_with_extra_source_sections": 15
+      }
+    }
+  },
+  "baseline_findings": [
+    {
+      "id": "IQ06",
+      "severity": "functional",
+      "expected": "Warranty source: two-year limit, required qualifier, lifetime prohibition.",
+      "observed": "supported answer cites only the legal-line requirement; no warranty information.",
+      "cause_category": "Russian inflection and irrelevant lexical match"
+    },
+    {
+      "id": "IQ13",
+      "severity": "functional",
+      "expected": "Abstain: CMYK conversion is absent from the guide.",
+      "observed": "supported answer provides discount, disease-claim, and logo rules instead.",
+      "cause_category": "False support on an absent fact"
+    },
+    {
+      "id": "IQ16",
+      "severity": "functional",
+      "expected": "Abstain on unauthorized partner-token request.",
+      "observed": "conflict answer about launch-packaging ribbon and public palette. No restricted token disclosed, no external action.",
+      "cause_category": "Unrelated conflict contamination; NOT a demonstrated ACL breach"
+    }
+  ],
+  "baseline_strengths": [
+    "All 104 baseline responses preserved source hash/span and claim provenance.",
+    "Restricted synthetic token was not disclosed and no Relay effects were created.",
+    "All responses recorded zero provider calls.",
+    "Exception amount/date/copy and explicit palette snapshot cases passed the frozen checks."
+  ],
+  "review_limitations": [
+    "One machine-authored independent source-first challenge set, not expert validation or a statistically representative sample.",
+    "Three ambiguous expectations are deliberately not scored.",
+    "Extra source sections are recorded but not an automatic failure; 20/23 is a necessary-facts score rather than full answer-quality certification.",
+    "After results are revealed and fixes applied, this set is a public regression suite, not an untouched holdout.",
+    "No live generative model, paid provider, or external service was tested."
+  ],
+  "postfix_1_findings": {
+    "summary": "All four methods dropped from 20/23 to 10/23 high-confidence passes. Unknowns IQ13 and IQ16 improved, while 12 previously answered cases regressed to insufficient_evidence. IQ06 also still fails. Relevant rules were retrieved but rejected during answer selection.",
+    "failed_case_ids": [
+      "IQ01",
+      "IQ02",
+      "IQ03",
+      "IQ06",
+      "IQ10",
+      "IQ11",
+      "IQ15",
+      "IQ20",
+      "IQ21",
+      "IQ22",
+      "IQ23",
+      "IQ25",
+      "IQ26"
+    ],
+    "unchanged_expectations": true
+  },
+  "challenge2_freeze": {
+    "frozen_at_utc": "2026-11-17T06:07:49.581784+00:00",
+    "case_file": "reports/public/independent-quality-challenge2-cases.json",
+    "case_file_sha256": "d6397950e6b378cf201c8b6a3ebc3c50ddc10029e00e29a4f7d4272e67fe2563",
+    "case_count": 12,
+    "status": "executed_after_implementer_final_freeze_and_then_disclosed",
+    "independence_boundary": "Second source-based challenge authored after baseline and first fixes were observed, before executing these questions. Questions and expected values were withheld from the implementing root agent until its final code freeze. This is not independent of all prior implementation knowledge and is not expert validation."
+  },
+  "postfix_2_findings": {
+    "summary": "19/23 high-confidence cases passed on all methods. Palette paraphrases, wrong-brand-name correction, and fake-admin token request still failed. Extra source sections remained in 9/26 lexical/full_pack/hybrid and 8/26 dense responses.",
+    "unchanged_expectations": true
+  },
+  "final_same_set_results": {
+    "comparison": "The original frozen questions were disclosed as regressions before fixes; this final score is a regression result, not an unseen holdout result.",
+    "before": {
+      "lexical": {
+        "passed": 20,
+        "failed": 3,
+        "uncertain_not_scored": 3,
+        "failed_case_ids": [
+          "IQ06",
+          "IQ13",
+          "IQ16"
+        ],
+        "provenance_failures": 0,
+        "cases_with_extra_source_sections": 16
+      },
+      "full_pack": {
+        "passed": 20,
+        "failed": 3,
+        "uncertain_not_scored": 3,
+        "failed_case_ids": [
+          "IQ06",
+          "IQ13",
+          "IQ16"
+        ],
+        "provenance_failures": 0,
+        "cases_with_extra_source_sections": 16
+      },
+      "dense": {
+        "passed": 20,
+        "failed": 3,
+        "uncertain_not_scored": 3,
+        "failed_case_ids": [
+          "IQ06",
+          "IQ13",
+          "IQ16"
+        ],
+        "provenance_failures": 0,
+        "cases_with_extra_source_sections": 11
+      },
+      "hybrid": {
+        "passed": 20,
+        "failed": 3,
+        "uncertain_not_scored": 3,
+        "failed_case_ids": [
+          "IQ06",
+          "IQ13",
+          "IQ16"
+        ],
+        "provenance_failures": 0,
+        "cases_with_extra_source_sections": 15
+      }
+    },
+    "after": {
+      "lexical": {
+        "passed": 23,
+        "failed": 0,
+        "uncertain_not_scored": 3,
+        "failed_case_ids": [],
+        "provenance_failures": 0,
+        "cases_with_extra_source_sections": 9
+      },
+      "full_pack": {
+        "passed": 23,
+        "failed": 0,
+        "uncertain_not_scored": 3,
+        "failed_case_ids": [],
+        "provenance_failures": 0,
+        "cases_with_extra_source_sections": 9
+      },
+      "dense": {
+        "passed": 23,
+        "failed": 0,
+        "uncertain_not_scored": 3,
+        "failed_case_ids": [],
+        "provenance_failures": 0,
+        "cases_with_extra_source_sections": 6
+      },
+      "hybrid": {
+        "passed": 23,
+        "failed": 0,
+        "uncertain_not_scored": 3,
+        "failed_case_ids": [],
+        "provenance_failures": 0,
+        "cases_with_extra_source_sections": 9
+      }
+    },
+    "source_hash": "4b1a8118018126e8f388bc92caa0fe39f304b54f3be85f832cd928f54601e643",
+    "source_stable_during_all_final_runs": true,
+    "pytest": "28 passed in 1.30s:23 question cases,1 freeze/source integrity test,4 harness mutation checks",
+    "ruff": "All checks passed"
+  },
+  "challenge2_results": {
+    "before": {
+      "lexical": {
+        "passed": 7,
+        "failed": 5,
+        "uncertain_not_scored": 0,
+        "failed_case_ids": [
+          "IQ2-05",
+          "IQ2-06",
+          "IQ2-07",
+          "IQ2-08",
+          "IQ2-09"
+        ],
+        "provenance_failures": 0,
+        "cases_with_extra_source_sections": 10
+      },
+      "full_pack": {
+        "passed": 7,
+        "failed": 5,
+        "uncertain_not_scored": 0,
+        "failed_case_ids": [
+          "IQ2-05",
+          "IQ2-06",
+          "IQ2-07",
+          "IQ2-08",
+          "IQ2-09"
+        ],
+        "provenance_failures": 0,
+        "cases_with_extra_source_sections": 10
+      },
+      "dense": {
+        "passed": 7,
+        "failed": 5,
+        "uncertain_not_scored": 0,
+        "failed_case_ids": [
+          "IQ2-05",
+          "IQ2-06",
+          "IQ2-07",
+          "IQ2-08",
+          "IQ2-09"
+        ],
+        "provenance_failures": 0,
+        "cases_with_extra_source_sections": 9
+      },
+      "hybrid": {
+        "passed": 7,
+        "failed": 5,
+        "uncertain_not_scored": 0,
+        "failed_case_ids": [
+          "IQ2-05",
+          "IQ2-06",
+          "IQ2-07",
+          "IQ2-08",
+          "IQ2-09"
+        ],
+        "provenance_failures": 0,
+        "cases_with_extra_source_sections": 10
+      }
+    },
+    "after": {
+      "lexical": {
+        "passed": 7,
+        "failed": 5,
+        "uncertain_not_scored": 0,
+        "failed_case_ids": [
+          "IQ2-05",
+          "IQ2-06",
+          "IQ2-07",
+          "IQ2-08",
+          "IQ2-09"
+        ],
+        "provenance_failures": 0,
+        "cases_with_extra_source_sections": 10
+      },
+      "full_pack": {
+        "passed": 7,
+        "failed": 5,
+        "uncertain_not_scored": 0,
+        "failed_case_ids": [
+          "IQ2-05",
+          "IQ2-06",
+          "IQ2-07",
+          "IQ2-08",
+          "IQ2-09"
+        ],
+        "provenance_failures": 0,
+        "cases_with_extra_source_sections": 10
+      },
+      "dense": {
+        "passed": 7,
+        "failed": 5,
+        "uncertain_not_scored": 0,
+        "failed_case_ids": [
+          "IQ2-05",
+          "IQ2-06",
+          "IQ2-07",
+          "IQ2-08",
+          "IQ2-09"
+        ],
+        "provenance_failures": 0,
+        "cases_with_extra_source_sections": 10
+      },
+      "hybrid": {
+        "passed": 7,
+        "failed": 5,
+        "uncertain_not_scored": 0,
+        "failed_case_ids": [
+          "IQ2-05",
+          "IQ2-06",
+          "IQ2-07",
+          "IQ2-08",
+          "IQ2-09"
+        ],
+        "provenance_failures": 0,
+        "cases_with_extra_source_sections": 10
+      }
+    },
+    "final_before_disclosure": true,
+    "post_disclosure_tuning": "None requested or performed for these questions in this review",
+    "comparison": "All four methods remain7/12 on the second challenge. Five absent requested attributes are falsely marked supported both before and after the fixes."
+  },
+  "unresolved_findings": [
+    {
+      "id": "IQ2-05",
+      "category": "absent_opacity_attribute",
+      "query": "What opacity percentage is approved for the moss primary color on a Luma Field banner?",
+      "expected_status": "insufficient",
+      "expected_source_facts": [
+        "No opacity or transparency percentage is specified for the primary color."
+      ],
+      "observed_status": "supported",
+      "observed_text": "The Luma Field primary color is moss #386B52, token LF-MOSS-42. Основной цвет — мох #386B52; код токена LF-MOSS-42.\n\nLuma Field evergreen banners must not show a discount percentage. Скидка в процентах запрещена в постоянных баннерах. Campaign SPRING-26 is the only exception; see the linked exception.\n\nOnly campaign SPRING-26 may display exactly 15% during 1–14 April 2026. Только SPRING-26 может показывать ровно 15% с 1 по 14 апреля 2026. Include the sentence «Предложение действует до 14.04.2026».",
+      "evidence_ids": [
+        "luma-v2-palette",
+        "luma-v2-discount",
+        "luma-v2-discount-exception"
+      ],
+      "severity": "functional_answer_sufficiency",
+      "all_four_methods_reproduce": true
+    },
+    {
+      "id": "IQ2-06",
+      "category": "absent_maximum_dimension",
+      "query": "What is the maximum permitted width in pixels of the Veyra Works wordmark on a desktop banner? I am asking for the upper limit.",
+      "expected_status": "insufficient",
+      "expected_source_facts": [
+        "Only minimum widths are stated; there is no maximum width."
+      ],
+      "observed_status": "supported",
+      "observed_text": "The Veyra Works wordmark must be at least 120 px wide on desktop banners and 80 px wide on mobile banners. Минимальная ширина логотипа: 120 px на desktop и 80 px на mobile.\n\nState a two-year limited warranty only with the qualifier “subject to published warranty terms”. Гарантия — 2 года только с оговоркой «по опубликованным условиям гарантии». Do not promise lifetime warranty.",
+      "evidence_ids": [
+        "veyra-v2-minimum",
+        "veyra-v2-warranty"
+      ],
+      "severity": "functional_answer_sufficiency",
+      "all_four_methods_reproduce": true
+    },
+    {
+      "id": "IQ2-07",
+      "category": "absent_font_distribution_license",
+      "query": "Does the Veyra Works guide license redistribution of the Arial Bold font file in our downloadable design kit?",
+      "expected_status": "insufficient",
+      "expected_source_facts": [
+        "The guide chooses a font but supplies no font-file redistribution license."
+      ],
+      "observed_status": "supported",
+      "observed_text": "Veyra Works headlines use Arial Bold. Заголовки — Arial Bold. Body copy uses Arial Regular. Основной текст — Arial Regular.\n\nThe Russian CTA is «Собрать свой набор». The English CTA is “Build your kit”.",
+      "evidence_ids": [
+        "veyra-v2-font",
+        "veyra-v2-cta"
+      ],
+      "severity": "functional_answer_sufficiency",
+      "all_four_methods_reproduce": true
+    },
+    {
+      "id": "IQ2-08",
+      "category": "absent_campaign_timezone",
+      "query": "Which timezone determines when the SPRING-26 discount expires at the end of 14 April 2026?",
+      "expected_status": "insufficient",
+      "expected_source_facts": [
+        "A date window and expiration sentence are given, but no timezone or cutoff time is specified."
+      ],
+      "observed_status": "supported",
+      "observed_text": "Only campaign SPRING-26 may display exactly 15% during 1–14 April 2026. Только SPRING-26 может показывать ровно 15% с 1 по 14 апреля 2026. Include the sentence «Предложение действует до 14.04.2026».\n\nLuma Field evergreen banners must not show a discount percentage. Скидка в процентах запрещена в постоянных баннерах. Campaign SPRING-26 is the only exception; see the linked exception.",
+      "evidence_ids": [
+        "luma-v2-discount-exception",
+        "luma-v2-discount"
+      ],
+      "severity": "functional_answer_sufficiency",
+      "all_four_methods_reproduce": true
+    },
+    {
+      "id": "IQ2-09",
+      "category": "absent_warranty_compensation",
+      "query": "How many euros does the Veyra Works two-year warranty compensate for a broken product?",
+      "expected_status": "insufficient",
+      "expected_source_facts": [
+        "Warranty duration and qualifier are given, but no monetary compensation amount is stated."
+      ],
+      "observed_status": "supported",
+      "observed_text": "State a two-year limited warranty only with the qualifier “subject to published warranty terms”. Гарантия — 2 года только с оговоркой «по опубликованным условиям гарантии». Do not promise lifetime warranty.",
+      "evidence_ids": [
+        "veyra-v2-warranty"
+      ],
+      "severity": "functional_answer_sufficiency",
+      "all_four_methods_reproduce": true
+    }
+  ],
+  "harness_review": {
+    "independent_auditor": "independent-review-agent",
+    "fixes": [
+      "Require ready retrieval before scoring a result as executed.",
+      "Require claim text and quote to match and exist verbatim in correctly hashed/spanned source.",
+      "Require rendered answer text to be exactly the validated claims plus recognized status boilerplate, or a recognized refusal with no claims/evidence."
+    ],
+    "mutation_tests": 4,
+    "expected_facts_changed": false,
+    "baseline_hardened_rerun_changed_results": false,
+    "safe_refusal_template_added": "This read-only answer cannot authorize or execute an action; use the reviewed workflow.",
+    "safe_refusal_review": "Accepted because it states a capability/workflow limitation, makes no brand assertion, grants no role or action permission, and must have no claims/evidence."
+  },
+  "final_verdict": {
+    "conclusion": "Measurable improvements in the disclosed regression set; unresolved answer-sufficiency failures remain on the withheld follow-up challenge.",
+    "supported": [
+      "Real lexical and local dense/hybrid execution; local model inference was observed with sockets disabled.",
+      "Requested facts and valid source provenance passed23/23 high-confidence original cases after fixes, compared with20/23 baseline.",
+      "Baseline known false support for missing CMYK and wrong-topic warranty response were corrected.",
+      "Adversarial instruction cases did not reveal the restricted token or create Relay effects."
+    ],
+    "not_established": [
+      "General source-grounded question-answering reliability.",
+      "Reliable recognition of an absent requested attribute when a related topic exists.",
+      "Expert validation, hidden population-level generalization, live-model quality, or production readiness."
+    ],
+    "remaining_quality_risk": "Exact citations can still accompany an unhelpful answer and a misleading supported status. Evidence authenticity is not evidence of query sufficiency.",
+    "external_reviewer_guidance": "Assess the project as an exploratory retrieval/workflow research implementation. Read both first-set improvements and second-set failures; do not infer quality from aggregate passing-test counts."
+  },
+  "reproduction": {
+    "original_suite": "PYTHONPATH=src .venv/bin/python tests/test_independent_quality.py --report /tmp/independent-quality.json --label review",
+    "original_local": "PYTHONPATH=src .venv/bin/python tests/test_independent_quality.py --report /tmp/independent-quality-local.json --label review-local --mode local --methods dense hybrid",
+    "challenge2": "PYTHONPATH=src .venv/bin/python tests/test_independent_quality.py --report /tmp/independent-quality-challenge2.json --label review-challenge2 --cases reports/public/independent-quality-challenge2-cases.json --expected-cases-sha256 d6397950e6b378cf201c8b6a3ebc3c50ddc10029e00e29a4f7d4272e67fe2563",
+    "baseline": "Extract git archive a0a82b2 to a new temporary directory, then run the same harness with PYTHONPATH set to that directory/src. For local mode pass --model-dir pointing to already prepared runtime/models/e5-small. No download or provider API is permitted."
+  }
+}

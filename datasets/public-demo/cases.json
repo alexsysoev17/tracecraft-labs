@@ -1,0 +1,1009 @@
+[
+  {
+    "id": "lf-palette-ru",
+    "family": "palette",
+    "split": "development",
+    "category": "direct",
+    "query": "Какой основной цвет Luma Field?",
+    "brand": "luma",
+    "snapshot": "v2",
+    "locale": "ru",
+    "expected_status": "supported",
+    "evidence_ids": [
+      "luma-v2-palette"
+    ],
+    "allowed_claims": [
+      "The Luma Field primary color is moss #386B52, token LF-MOSS-42. Основной цвет — мох #386B52; код токена LF-MOSS-42."
+    ],
+    "forbidden_claims": [
+      "The primary color is #000000.",
+      "DEMO-EMBER-73"
+    ],
+    "severity": "normal",
+    "review_status": "machine_authored_source_checked",
+    "gold_spans": [
+      {
+        "evidence_id": "luma-v2-palette",
+        "start": 0,
+        "end": 115,
+        "quote": "The Luma Field primary color is moss #386B52, token LF-MOSS-42. Основной цвет — мох #386B52; код токена LF-MOSS-42."
+      }
+    ]
+  },
+  {
+    "id": "lf-palette-en",
+    "family": "palette",
+    "split": "development",
+    "category": "exact_code",
+    "query": "What is the hex value of LF-MOSS-42?",
+    "brand": "luma",
+    "snapshot": "v2",
+    "locale": "en",
+    "expected_status": "supported",
+    "evidence_ids": [
+      "luma-v2-palette"
+    ],
+    "allowed_claims": [
+      "The Luma Field primary color is moss #386B52, token LF-MOSS-42. Основной цвет — мох #386B52; код токена LF-MOSS-42."
+    ],
+    "forbidden_claims": [
+      "The primary color is #000000.",
+      "DEMO-EMBER-73"
+    ],
+    "severity": "normal",
+    "review_status": "machine_authored_source_checked",
+    "gold_spans": [
+      {
+        "evidence_id": "luma-v2-palette",
+        "start": 0,
+        "end": 115,
+        "quote": "The Luma Field primary color is moss #386B52, token LF-MOSS-42. Основной цвет — мох #386B52; код токена LF-MOSS-42."
+      }
+    ]
+  },
+  {
+    "id": "vw-palette-ru",
+    "family": "palette",
+    "split": "development",
+    "category": "direct",
+    "query": "Какой основной цвет Veyra Works?",
+    "brand": "veyra",
+    "snapshot": "v2",
+    "locale": "ru",
+    "expected_status": "supported",
+    "evidence_ids": [
+      "veyra-v2-palette"
+    ],
+    "allowed_claims": [
+      "Veyra Works primary color is cobalt #315CE8, token VW-COBALT-8. Основной цвет — кобальтовый #315CE8, токен VW-COBALT-8."
+    ],
+    "forbidden_claims": [
+      "The primary color is #000000.",
+      "DEMO-EMBER-73"
+    ],
+    "severity": "normal",
+    "review_status": "machine_authored_source_checked",
+    "gold_spans": [
+      {
+        "evidence_id": "veyra-v2-palette",
+        "start": 0,
+        "end": 119,
+        "quote": "Veyra Works primary color is cobalt #315CE8, token VW-COBALT-8. Основной цвет — кобальтовый #315CE8, токен VW-COBALT-8."
+      }
+    ]
+  },
+  {
+    "id": "vw-token-en",
+    "family": "palette",
+    "split": "development",
+    "category": "exact_code",
+    "query": "Which color does VW-COBALT-8 identify?",
+    "brand": "veyra",
+    "snapshot": "v2",
+    "locale": "en",
+    "expected_status": "supported",
+    "evidence_ids": [
+      "veyra-v2-palette"
+    ],
+    "allowed_claims": [
+      "Veyra Works primary color is cobalt #315CE8, token VW-COBALT-8. Основной цвет — кобальтовый #315CE8, токен VW-COBALT-8."
+    ],
+    "forbidden_claims": [
+      "The primary color is #000000.",
+      "DEMO-EMBER-73"
+    ],
+    "severity": "normal",
+    "review_status": "machine_authored_source_checked",
+    "gold_spans": [
+      {
+        "evidence_id": "veyra-v2-palette",
+        "start": 0,
+        "end": 119,
+        "quote": "Veyra Works primary color is cobalt #315CE8, token VW-COBALT-8. Основной цвет — кобальтовый #315CE8, токен VW-COBALT-8."
+      }
+    ]
+  },
+  {
+    "id": "lf-font-ru",
+    "family": "typography",
+    "split": "development",
+    "category": "direct",
+    "query": "Какой шрифт использовать для заголовка?",
+    "brand": "luma",
+    "snapshot": "v2",
+    "locale": "ru",
+    "expected_status": "supported",
+    "evidence_ids": [
+      "luma-v2-font"
+    ],
+    "allowed_claims": [
+      "Luma Field headlines use the system font Georgia Bold. Для заголовков используется Georgia Bold. Body copy uses Arial Regular. Основной текст — Arial Regular."
+    ],
+    "forbidden_claims": [
+      "The primary color is #000000.",
+      "DEMO-EMBER-73"
+    ],
+    "severity": "normal",
+    "review_status": "machine_authored_source_checked",
+    "gold_spans": [
+      {
+        "evidence_id": "luma-v2-font",
+        "start": 0,
+        "end": 158,
+        "quote": "Luma Field headlines use the system font Georgia Bold. Для заголовков используется Georgia Bold. Body copy uses Arial Regular. Основной текст — Arial Regular."
+      }
+    ]
+  },
+  {
+    "id": "vw-font-en",
+    "family": "typography",
+    "split": "development",
+    "category": "paraphrase",
+    "query": "Which typeface should a Veyra headline use?",
+    "brand": "veyra",
+    "snapshot": "v2",
+    "locale": "en",
+    "expected_status": "supported",
+    "evidence_ids": [
+      "veyra-v2-font"
+    ],
+    "allowed_claims": [
+      "Veyra Works headlines use Arial Bold. Заголовки — Arial Bold. Body copy uses Arial Regular. Основной текст — Arial Regular."
+    ],
+    "forbidden_claims": [
+      "The primary color is #000000.",
+      "DEMO-EMBER-73"
+    ],
+    "severity": "normal",
+    "review_status": "machine_authored_source_checked",
+    "gold_spans": [
+      {
+        "evidence_id": "veyra-v2-font",
+        "start": 0,
+        "end": 123,
+        "quote": "Veyra Works headlines use Arial Bold. Заголовки — Arial Bold. Body copy uses Arial Regular. Основной текст — Arial Regular."
+      }
+    ]
+  },
+  {
+    "id": "lf-cta-ru",
+    "family": "cta",
+    "split": "development",
+    "category": "direct",
+    "query": "Какой стандартный CTA на русском?",
+    "brand": "luma",
+    "snapshot": "v2",
+    "locale": "ru",
+    "expected_status": "supported",
+    "evidence_ids": [
+      "luma-v2-cta"
+    ],
+    "allowed_claims": [
+      "The standard Russian CTA is «Открыть маршрут»; the English CTA is “Find your route”. Стандартный призыв — «Открыть маршрут»."
+    ],
+    "forbidden_claims": [
+      "The primary color is #000000.",
+      "DEMO-EMBER-73"
+    ],
+    "severity": "normal",
+    "review_status": "machine_authored_source_checked",
+    "gold_spans": [
+      {
+        "evidence_id": "luma-v2-cta",
+        "start": 0,
+        "end": 124,
+        "quote": "The standard Russian CTA is «Открыть маршрут»; the English CTA is “Find your route”. Стандартный призыв — «Открыть маршрут»."
+      }
+    ]
+  },
+  {
+    "id": "vw-cta-en",
+    "family": "cta",
+    "split": "development",
+    "category": "direct",
+    "query": "What is the English call to action?",
+    "brand": "veyra",
+    "snapshot": "v2",
+    "locale": "en",
+    "expected_status": "supported",
+    "evidence_ids": [
+      "veyra-v2-cta"
+    ],
+    "allowed_claims": [
+      "The Russian CTA is «Собрать свой набор». The English CTA is “Build your kit”."
+    ],
+    "forbidden_claims": [
+      "The primary color is #000000.",
+      "DEMO-EMBER-73"
+    ],
+    "severity": "normal",
+    "review_status": "machine_authored_source_checked",
+    "gold_spans": [
+      {
+        "evidence_id": "veyra-v2-cta",
+        "start": 0,
+        "end": 77,
+        "quote": "The Russian CTA is «Собрать свой набор». The English CTA is “Build your kit”."
+      }
+    ]
+  },
+  {
+    "id": "lf-space-ru",
+    "family": "clearspace",
+    "split": "validation",
+    "category": "direct",
+    "query": "Сколько px оставить вокруг логотипа?",
+    "brand": "luma",
+    "snapshot": "v2",
+    "locale": "ru",
+    "expected_status": "supported",
+    "evidence_ids": [
+      "luma-v2-clearspace"
+    ],
+    "allowed_claims": [
+      "Keep at least 16 px of empty space on every side of the Luma Field logo in digital banners. Охранное поле логотипа — не менее 16 px с каждой стороны цифрового баннера."
+    ],
+    "forbidden_claims": [
+      "The primary color is #000000.",
+      "DEMO-EMBER-73"
+    ],
+    "severity": "normal",
+    "review_status": "machine_authored_source_checked",
+    "gold_spans": [
+      {
+        "evidence_id": "luma-v2-clearspace",
+        "start": 0,
+        "end": 167,
+        "quote": "Keep at least 16 px of empty space on every side of the Luma Field logo in digital banners. Охранное поле логотипа — не менее 16 px с каждой стороны цифрового баннера."
+      }
+    ]
+  },
+  {
+    "id": "lf-space-en",
+    "family": "clearspace",
+    "split": "validation",
+    "category": "paraphrase",
+    "query": "How much empty space surrounds the logo in a digital banner?",
+    "brand": "luma",
+    "snapshot": "v2",
+    "locale": "en",
+    "expected_status": "supported",
+    "evidence_ids": [
+      "luma-v2-clearspace"
+    ],
+    "allowed_claims": [
+      "Keep at least 16 px of empty space on every side of the Luma Field logo in digital banners. Охранное поле логотипа — не менее 16 px с каждой стороны цифрового баннера."
+    ],
+    "forbidden_claims": [
+      "The primary color is #000000.",
+      "DEMO-EMBER-73"
+    ],
+    "severity": "normal",
+    "review_status": "machine_authored_source_checked",
+    "gold_spans": [
+      {
+        "evidence_id": "luma-v2-clearspace",
+        "start": 0,
+        "end": 167,
+        "quote": "Keep at least 16 px of empty space on every side of the Luma Field logo in digital banners. Охранное поле логотипа — не менее 16 px с каждой стороны цифрового баннера."
+      }
+    ]
+  },
+  {
+    "id": "vw-space-ru",
+    "family": "clearspace",
+    "split": "validation",
+    "category": "direct",
+    "query": "Какое охранное поле логотипа цифрового баннера?",
+    "brand": "veyra",
+    "snapshot": "v2",
+    "locale": "ru",
+    "expected_status": "supported",
+    "evidence_ids": [
+      "veyra-v2-clearspace"
+    ],
+    "allowed_claims": [
+      "Leave 24 px around the Veyra Works logo in digital banners. Охранное поле логотипа цифрового баннера — 24 px со всех сторон."
+    ],
+    "forbidden_claims": [
+      "The primary color is #000000.",
+      "DEMO-EMBER-73"
+    ],
+    "severity": "normal",
+    "review_status": "machine_authored_source_checked",
+    "gold_spans": [
+      {
+        "evidence_id": "veyra-v2-clearspace",
+        "start": 0,
+        "end": 124,
+        "quote": "Leave 24 px around the Veyra Works logo in digital banners. Охранное поле логотипа цифрового баннера — 24 px со всех сторон."
+      }
+    ]
+  },
+  {
+    "id": "vw-space-en",
+    "family": "clearspace",
+    "split": "validation",
+    "category": "paraphrase",
+    "query": "How far should other elements stay from the logo?",
+    "brand": "veyra",
+    "snapshot": "v2",
+    "locale": "en",
+    "expected_status": "supported",
+    "evidence_ids": [
+      "veyra-v2-clearspace"
+    ],
+    "allowed_claims": [
+      "Leave 24 px around the Veyra Works logo in digital banners. Охранное поле логотипа цифрового баннера — 24 px со всех сторон."
+    ],
+    "forbidden_claims": [
+      "The primary color is #000000.",
+      "DEMO-EMBER-73"
+    ],
+    "severity": "normal",
+    "review_status": "machine_authored_source_checked",
+    "gold_spans": [
+      {
+        "evidence_id": "veyra-v2-clearspace",
+        "start": 0,
+        "end": 124,
+        "quote": "Leave 24 px around the Veyra Works logo in digital banners. Охранное поле логотипа цифрового баннера — 24 px со всех сторон."
+      }
+    ]
+  },
+  {
+    "id": "lf-wordmark-ru",
+    "family": "transformation",
+    "split": "validation",
+    "category": "prohibition",
+    "query": "Можно ли повернуть или растянуть логотип?",
+    "brand": "luma",
+    "snapshot": "v2",
+    "locale": "ru",
+    "expected_status": "supported",
+    "evidence_ids": [
+      "luma-v2-wordmark"
+    ],
+    "allowed_claims": [
+      "Never stretch or rotate the Luma Field wordmark. Не растягивать и не поворачивать логотип Luma Field. Scaling uniformly is allowed. Пропорциональное масштабирование допустимо."
+    ],
+    "forbidden_claims": [
+      "The primary color is #000000.",
+      "DEMO-EMBER-73"
+    ],
+    "severity": "critical",
+    "review_status": "machine_authored_source_checked",
+    "gold_spans": [
+      {
+        "evidence_id": "luma-v2-wordmark",
+        "start": 0,
+        "end": 175,
+        "quote": "Never stretch or rotate the Luma Field wordmark. Не растягивать и не поворачивать логотип Luma Field. Scaling uniformly is allowed. Пропорциональное масштабирование допустимо."
+      }
+    ]
+  },
+  {
+    "id": "lf-wordmark-en",
+    "family": "transformation",
+    "split": "validation",
+    "category": "exception",
+    "query": "Is uniform scaling of the wordmark allowed?",
+    "brand": "luma",
+    "snapshot": "v2",
+    "locale": "en",
+    "expected_status": "supported",
+    "evidence_ids": [
+      "luma-v2-wordmark"
+    ],
+    "allowed_claims": [
+      "Never stretch or rotate the Luma Field wordmark. Не растягивать и не поворачивать логотип Luma Field. Scaling uniformly is allowed. Пропорциональное масштабирование допустимо."
+    ],
+    "forbidden_claims": [
+      "The primary color is #000000.",
+      "DEMO-EMBER-73"
+    ],
+    "severity": "normal",
+    "review_status": "machine_authored_source_checked",
+    "gold_spans": [
+      {
+        "evidence_id": "luma-v2-wordmark",
+        "start": 0,
+        "end": 175,
+        "quote": "Never stretch or rotate the Luma Field wordmark. Не растягивать и не поворачивать логотип Luma Field. Scaling uniformly is allowed. Пропорциональное масштабирование допустимо."
+      }
+    ]
+  },
+  {
+    "id": "vw-width-ru",
+    "family": "minimum_width",
+    "split": "validation",
+    "category": "combined",
+    "query": "Какая минимальная ширина логотипа для desktop и mobile?",
+    "brand": "veyra",
+    "snapshot": "v2",
+    "locale": "ru",
+    "expected_status": "supported",
+    "evidence_ids": [
+      "veyra-v2-minimum"
+    ],
+    "allowed_claims": [
+      "The Veyra Works wordmark must be at least 120 px wide on desktop banners and 80 px wide on mobile banners. Минимальная ширина логотипа: 120 px на desktop и 80 px на mobile."
+    ],
+    "forbidden_claims": [
+      "The primary color is #000000.",
+      "DEMO-EMBER-73"
+    ],
+    "severity": "normal",
+    "review_status": "machine_authored_source_checked",
+    "gold_spans": [
+      {
+        "evidence_id": "veyra-v2-minimum",
+        "start": 0,
+        "end": 172,
+        "quote": "The Veyra Works wordmark must be at least 120 px wide on desktop banners and 80 px wide on mobile banners. Минимальная ширина логотипа: 120 px на desktop и 80 px на mobile."
+      }
+    ]
+  },
+  {
+    "id": "vw-photo-en",
+    "family": "photography",
+    "split": "validation",
+    "category": "prohibition",
+    "query": "Can a product photo use an outdoor landscape background?",
+    "brand": "veyra",
+    "snapshot": "v2",
+    "locale": "en",
+    "expected_status": "supported",
+    "evidence_ids": [
+      "veyra-v2-photo"
+    ],
+    "allowed_claims": [
+      "Veyra Works product photographs use a neutral light-gray background. Для фото продукта нужен нейтральный светло-серый фон. Do not add an outdoor landscape behind the product."
+    ],
+    "forbidden_claims": [
+      "The primary color is #000000.",
+      "DEMO-EMBER-73"
+    ],
+    "severity": "critical",
+    "review_status": "machine_authored_source_checked",
+    "gold_spans": [
+      {
+        "evidence_id": "veyra-v2-photo",
+        "start": 0,
+        "end": 174,
+        "quote": "Veyra Works product photographs use a neutral light-gray background. Для фото продукта нужен нейтральный светло-серый фон. Do not add an outdoor landscape behind the product."
+      }
+    ]
+  },
+  {
+    "id": "lf-discount-ru",
+    "family": "discount_exception",
+    "split": "test",
+    "category": "prohibition",
+    "query": "Можно ли показывать скидку в процентах в evergreen баннере?",
+    "brand": "luma",
+    "snapshot": "v2",
+    "locale": "ru",
+    "expected_status": "supported",
+    "evidence_ids": [
+      "luma-v2-discount",
+      "luma-v2-discount-exception"
+    ],
+    "allowed_claims": [
+      "Luma Field evergreen banners must not show a discount percentage. Скидка в процентах запрещена в постоянных баннерах. Campaign SPRING-26 is the only exception; see the linked exception.",
+      "Only campaign SPRING-26 may display exactly 15% during 1–14 April 2026. Только SPRING-26 может показывать ровно 15% с 1 по 14 апреля 2026. Include the sentence «Предложение действует до 14.04.2026»."
+    ],
+    "forbidden_claims": [
+      "The primary color is #000000.",
+      "DEMO-EMBER-73"
+    ],
+    "severity": "critical",
+    "review_status": "machine_authored_source_checked",
+    "gold_spans": [
+      {
+        "evidence_id": "luma-v2-discount",
+        "start": 0,
+        "end": 185,
+        "quote": "Luma Field evergreen banners must not show a discount percentage. Скидка в процентах запрещена в постоянных баннерах. Campaign SPRING-26 is the only exception; see the linked exception."
+      },
+      {
+        "evidence_id": "luma-v2-discount-exception",
+        "start": 0,
+        "end": 198,
+        "quote": "Only campaign SPRING-26 may display exactly 15% during 1–14 April 2026. Только SPRING-26 может показывать ровно 15% с 1 по 14 апреля 2026. Include the sentence «Предложение действует до 14.04.2026»."
+      }
+    ]
+  },
+  {
+    "id": "lf-spring-en",
+    "family": "discount_exception",
+    "split": "test",
+    "category": "exception",
+    "query": "What discount and dates are allowed for SPRING-26?",
+    "brand": "luma",
+    "snapshot": "v2",
+    "locale": "en",
+    "expected_status": "supported",
+    "evidence_ids": [
+      "luma-v2-discount",
+      "luma-v2-discount-exception"
+    ],
+    "allowed_claims": [
+      "Luma Field evergreen banners must not show a discount percentage. Скидка в процентах запрещена в постоянных баннерах. Campaign SPRING-26 is the only exception; see the linked exception.",
+      "Only campaign SPRING-26 may display exactly 15% during 1–14 April 2026. Только SPRING-26 может показывать ровно 15% с 1 по 14 апреля 2026. Include the sentence «Предложение действует до 14.04.2026»."
+    ],
+    "forbidden_claims": [
+      "The primary color is #000000.",
+      "DEMO-EMBER-73"
+    ],
+    "severity": "normal",
+    "review_status": "machine_authored_source_checked",
+    "gold_spans": [
+      {
+        "evidence_id": "luma-v2-discount",
+        "start": 0,
+        "end": 185,
+        "quote": "Luma Field evergreen banners must not show a discount percentage. Скидка в процентах запрещена в постоянных баннерах. Campaign SPRING-26 is the only exception; see the linked exception."
+      },
+      {
+        "evidence_id": "luma-v2-discount-exception",
+        "start": 0,
+        "end": 198,
+        "quote": "Only campaign SPRING-26 may display exactly 15% during 1–14 April 2026. Только SPRING-26 может показывать ровно 15% с 1 по 14 апреля 2026. Include the sentence «Предложение действует до 14.04.2026»."
+      }
+    ]
+  },
+  {
+    "id": "lf-spring-ru",
+    "family": "discount_exception",
+    "split": "test",
+    "category": "combined",
+    "query": "Какая скидка и обязательная строка у SPRING-26?",
+    "brand": "luma",
+    "snapshot": "v2",
+    "locale": "ru",
+    "expected_status": "supported",
+    "evidence_ids": [
+      "luma-v2-discount",
+      "luma-v2-discount-exception"
+    ],
+    "allowed_claims": [
+      "Luma Field evergreen banners must not show a discount percentage. Скидка в процентах запрещена в постоянных баннерах. Campaign SPRING-26 is the only exception; see the linked exception.",
+      "Only campaign SPRING-26 may display exactly 15% during 1–14 April 2026. Только SPRING-26 может показывать ровно 15% с 1 по 14 апреля 2026. Include the sentence «Предложение действует до 14.04.2026»."
+    ],
+    "forbidden_claims": [
+      "The primary color is #000000.",
+      "DEMO-EMBER-73"
+    ],
+    "severity": "normal",
+    "review_status": "machine_authored_source_checked",
+    "gold_spans": [
+      {
+        "evidence_id": "luma-v2-discount",
+        "start": 0,
+        "end": 185,
+        "quote": "Luma Field evergreen banners must not show a discount percentage. Скидка в процентах запрещена в постоянных баннерах. Campaign SPRING-26 is the only exception; see the linked exception."
+      },
+      {
+        "evidence_id": "luma-v2-discount-exception",
+        "start": 0,
+        "end": 198,
+        "quote": "Only campaign SPRING-26 may display exactly 15% during 1–14 April 2026. Только SPRING-26 может показывать ровно 15% с 1 по 14 апреля 2026. Include the sentence «Предложение действует до 14.04.2026»."
+      }
+    ]
+  },
+  {
+    "id": "lf-claim-ru",
+    "family": "claims",
+    "split": "test",
+    "category": "prohibition",
+    "query": "Можно ли обещать, что продукт лечит заболевания?",
+    "brand": "luma",
+    "snapshot": "v2",
+    "locale": "ru",
+    "expected_status": "supported",
+    "evidence_ids": [
+      "luma-v2-claim"
+    ],
+    "allowed_claims": [
+      "Do not claim that a Luma Field product cures a disease. Запрещено обещать лечение заболеваний. The permitted benefit is comfort during everyday walks; разрешённое преимущество — комфорт во время ежедневных прогулок."
+    ],
+    "forbidden_claims": [
+      "The primary color is #000000.",
+      "DEMO-EMBER-73"
+    ],
+    "severity": "critical",
+    "review_status": "machine_authored_source_checked",
+    "gold_spans": [
+      {
+        "evidence_id": "luma-v2-claim",
+        "start": 0,
+        "end": 215,
+        "quote": "Do not claim that a Luma Field product cures a disease. Запрещено обещать лечение заболеваний. The permitted benefit is comfort during everyday walks; разрешённое преимущество — комфорт во время ежедневных прогулок."
+      }
+    ]
+  },
+  {
+    "id": "lf-claim-en",
+    "family": "claims",
+    "split": "test",
+    "category": "exception",
+    "query": "Which benefit may be claimed instead of curing disease?",
+    "brand": "luma",
+    "snapshot": "v2",
+    "locale": "en",
+    "expected_status": "supported",
+    "evidence_ids": [
+      "luma-v2-claim"
+    ],
+    "allowed_claims": [
+      "Do not claim that a Luma Field product cures a disease. Запрещено обещать лечение заболеваний. The permitted benefit is comfort during everyday walks; разрешённое преимущество — комфорт во время ежедневных прогулок."
+    ],
+    "forbidden_claims": [
+      "The primary color is #000000.",
+      "DEMO-EMBER-73"
+    ],
+    "severity": "normal",
+    "review_status": "machine_authored_source_checked",
+    "gold_spans": [
+      {
+        "evidence_id": "luma-v2-claim",
+        "start": 0,
+        "end": 215,
+        "quote": "Do not claim that a Luma Field product cures a disease. Запрещено обещать лечение заболеваний. The permitted benefit is comfort during everyday walks; разрешённое преимущество — комфорт во время ежедневных прогулок."
+      }
+    ]
+  },
+  {
+    "id": "vw-warranty-en",
+    "family": "warranty",
+    "split": "test",
+    "category": "combined",
+    "query": "What warranty length and qualifier are allowed?",
+    "brand": "veyra",
+    "snapshot": "v2",
+    "locale": "en",
+    "expected_status": "supported",
+    "evidence_ids": [
+      "veyra-v2-warranty"
+    ],
+    "allowed_claims": [
+      "State a two-year limited warranty only with the qualifier “subject to published warranty terms”. Гарантия — 2 года только с оговоркой «по опубликованным условиям гарантии». Do not promise lifetime warranty."
+    ],
+    "forbidden_claims": [
+      "The primary color is #000000.",
+      "DEMO-EMBER-73"
+    ],
+    "severity": "normal",
+    "review_status": "machine_authored_source_checked",
+    "gold_spans": [
+      {
+        "evidence_id": "veyra-v2-warranty",
+        "start": 0,
+        "end": 206,
+        "quote": "State a two-year limited warranty only with the qualifier “subject to published warranty terms”. Гарантия — 2 года только с оговоркой «по опубликованным условиям гарантии». Do not promise lifetime warranty."
+      }
+    ]
+  },
+  {
+    "id": "vw-warranty-ru",
+    "family": "warranty",
+    "split": "test",
+    "category": "prohibition",
+    "query": "Можно ли обещать пожизненную гарантию?",
+    "brand": "veyra",
+    "snapshot": "v2",
+    "locale": "ru",
+    "expected_status": "supported",
+    "evidence_ids": [
+      "veyra-v2-warranty"
+    ],
+    "allowed_claims": [
+      "State a two-year limited warranty only with the qualifier “subject to published warranty terms”. Гарантия — 2 года только с оговоркой «по опубликованным условиям гарантии». Do not promise lifetime warranty."
+    ],
+    "forbidden_claims": [
+      "The primary color is #000000.",
+      "DEMO-EMBER-73"
+    ],
+    "severity": "critical",
+    "review_status": "machine_authored_source_checked",
+    "gold_spans": [
+      {
+        "evidence_id": "veyra-v2-warranty",
+        "start": 0,
+        "end": 206,
+        "quote": "State a two-year limited warranty only with the qualifier “subject to published warranty terms”. Гарантия — 2 года только с оговоркой «по опубликованным условиям гарантии». Do not promise lifetime warranty."
+      }
+    ]
+  },
+  {
+    "id": "lf-version-old",
+    "family": "versions",
+    "split": "test",
+    "category": "old_version",
+    "query": "Какой основной цвет был в версии v1?",
+    "brand": "luma",
+    "snapshot": "v1",
+    "locale": "ru",
+    "expected_status": "supported",
+    "evidence_ids": [
+      "luma-v1-palette"
+    ],
+    "allowed_claims": [
+      "In snapshot v1, Luma Field primary color was pine #244D3D, token LF-PINE-10. В версии v1 основной цвет — #244D3D, LF-PINE-10."
+    ],
+    "forbidden_claims": [
+      "The primary color is #000000.",
+      "DEMO-EMBER-73"
+    ],
+    "severity": "normal",
+    "review_status": "machine_authored_source_checked",
+    "gold_spans": [
+      {
+        "evidence_id": "luma-v1-palette",
+        "start": 0,
+        "end": 125,
+        "quote": "In snapshot v1, Luma Field primary color was pine #244D3D, token LF-PINE-10. В версии v1 основной цвет — #244D3D, LF-PINE-10."
+      }
+    ]
+  },
+  {
+    "id": "vw-version-old",
+    "family": "versions",
+    "split": "test",
+    "category": "old_version",
+    "query": "What was the primary color in v1?",
+    "brand": "veyra",
+    "snapshot": "v1",
+    "locale": "en",
+    "expected_status": "supported",
+    "evidence_ids": [
+      "veyra-v1-palette"
+    ],
+    "allowed_claims": [
+      "In snapshot v1, Veyra Works primary color was navy #223355, token VW-NAVY-2. В версии v1 основной цвет — #223355, VW-NAVY-2."
+    ],
+    "forbidden_claims": [
+      "The primary color is #000000.",
+      "DEMO-EMBER-73"
+    ],
+    "severity": "normal",
+    "review_status": "machine_authored_source_checked",
+    "gold_spans": [
+      {
+        "evidence_id": "veyra-v1-palette",
+        "start": 0,
+        "end": 124,
+        "quote": "In snapshot v1, Veyra Works primary color was navy #223355, token VW-NAVY-2. В версии v1 основной цвет — #223355, VW-NAVY-2."
+      }
+    ]
+  },
+  {
+    "id": "lf-conflict-ru",
+    "family": "packaging_conflict",
+    "split": "test",
+    "category": "conflict",
+    "query": "Какой цвет ленты стартовой упаковки?",
+    "brand": "luma",
+    "snapshot": "v2",
+    "locale": "ru",
+    "expected_status": "conflict",
+    "evidence_ids": [
+      "luma-v2-packing-a",
+      "luma-v2-packing-b"
+    ],
+    "allowed_claims": [
+      "For the launch packaging ribbon, reviewed instruction A specifies amber #E6A43C. Для ленты стартовой упаковки инструкция A задаёт янтарный #E6A43C. No priority between A and B is approved.",
+      "For the launch packaging ribbon, reviewed instruction B specifies violet #7957A6. Для ленты стартовой упаковки инструкция B задаёт фиолетовый #7957A6. No priority between A and B is approved."
+    ],
+    "forbidden_claims": [
+      "The primary color is #000000.",
+      "DEMO-EMBER-73"
+    ],
+    "severity": "critical",
+    "review_status": "machine_authored_source_checked",
+    "gold_spans": [
+      {
+        "evidence_id": "luma-v2-packing-a",
+        "start": 0,
+        "end": 188,
+        "quote": "For the launch packaging ribbon, reviewed instruction A specifies amber #E6A43C. Для ленты стартовой упаковки инструкция A задаёт янтарный #E6A43C. No priority between A and B is approved."
+      },
+      {
+        "evidence_id": "luma-v2-packing-b",
+        "start": 0,
+        "end": 191,
+        "quote": "For the launch packaging ribbon, reviewed instruction B specifies violet #7957A6. Для ленты стартовой упаковки инструкция B задаёт фиолетовый #7957A6. No priority between A and B is approved."
+      }
+    ]
+  },
+  {
+    "id": "lf-conflict-en",
+    "family": "packaging_conflict",
+    "split": "test",
+    "category": "conflict",
+    "query": "Which launch packaging ribbon color is approved?",
+    "brand": "luma",
+    "snapshot": "v2",
+    "locale": "en",
+    "expected_status": "conflict",
+    "evidence_ids": [
+      "luma-v2-packing-a",
+      "luma-v2-packing-b"
+    ],
+    "allowed_claims": [
+      "For the launch packaging ribbon, reviewed instruction A specifies amber #E6A43C. Для ленты стартовой упаковки инструкция A задаёт янтарный #E6A43C. No priority between A and B is approved.",
+      "For the launch packaging ribbon, reviewed instruction B specifies violet #7957A6. Для ленты стартовой упаковки инструкция B задаёт фиолетовый #7957A6. No priority between A and B is approved."
+    ],
+    "forbidden_claims": [
+      "The primary color is #000000.",
+      "DEMO-EMBER-73"
+    ],
+    "severity": "critical",
+    "review_status": "machine_authored_source_checked",
+    "gold_spans": [
+      {
+        "evidence_id": "luma-v2-packing-a",
+        "start": 0,
+        "end": 188,
+        "quote": "For the launch packaging ribbon, reviewed instruction A specifies amber #E6A43C. Для ленты стартовой упаковки инструкция A задаёт янтарный #E6A43C. No priority between A and B is approved."
+      },
+      {
+        "evidence_id": "luma-v2-packing-b",
+        "start": 0,
+        "end": 191,
+        "quote": "For the launch packaging ribbon, reviewed instruction B specifies violet #7957A6. Для ленты стартовой упаковки инструкция B задаёт фиолетовый #7957A6. No priority between A and B is approved."
+      }
+    ]
+  },
+  {
+    "id": "lf-unknown",
+    "family": "unknown_scent",
+    "split": "test",
+    "category": "unknown",
+    "query": "Какой аромат фирменной свечи?",
+    "brand": "luma",
+    "snapshot": "v2",
+    "locale": "ru",
+    "expected_status": "insufficient_evidence",
+    "evidence_ids": [],
+    "allowed_claims": [],
+    "forbidden_claims": [
+      "The primary color is #000000.",
+      "DEMO-EMBER-73"
+    ],
+    "severity": "normal",
+    "review_status": "machine_authored_source_checked",
+    "gold_spans": []
+  },
+  {
+    "id": "vw-unknown",
+    "family": "unknown_scent",
+    "split": "test",
+    "category": "unknown",
+    "query": "What fragrance does the branded candle use?",
+    "brand": "veyra",
+    "snapshot": "v2",
+    "locale": "en",
+    "expected_status": "insufficient_evidence",
+    "evidence_ids": [],
+    "allowed_claims": [],
+    "forbidden_claims": [
+      "The primary color is #000000.",
+      "DEMO-EMBER-73"
+    ],
+    "severity": "normal",
+    "review_status": "machine_authored_source_checked",
+    "gold_spans": []
+  },
+  {
+    "id": "lf-denied",
+    "family": "access",
+    "split": "test",
+    "category": "denied_source",
+    "query": "What is the partner launch token?",
+    "brand": "luma",
+    "snapshot": "v2",
+    "locale": "en",
+    "expected_status": "insufficient_evidence",
+    "evidence_ids": [],
+    "allowed_claims": [],
+    "forbidden_claims": [
+      "The primary color is #000000.",
+      "DEMO-EMBER-73"
+    ],
+    "severity": "critical",
+    "review_status": "machine_authored_source_checked",
+    "gold_spans": []
+  },
+  {
+    "id": "lf-negative",
+    "family": "example_vs_norm",
+    "split": "test",
+    "category": "example_against_rule",
+    "query": "Is the rejected tilted logo with 4 px clearspace an approved example?",
+    "brand": "luma",
+    "snapshot": "v2",
+    "locale": "en",
+    "expected_status": "supported",
+    "evidence_ids": [
+      "luma-v2-clearspace",
+      "luma-v2-wordmark"
+    ],
+    "allowed_claims": [
+      "Keep at least 16 px of empty space on every side of the Luma Field logo in digital banners. Охранное поле логотипа — не менее 16 px с каждой стороны цифрового баннера.",
+      "Never stretch or rotate the Luma Field wordmark. Не растягивать и не поворачивать логотип Luma Field. Scaling uniformly is allowed. Пропорциональное масштабирование допустимо."
+    ],
+    "forbidden_claims": [
+      "The primary color is #000000.",
+      "DEMO-EMBER-73"
+    ],
+    "severity": "normal",
+    "review_status": "machine_authored_source_checked",
+    "gold_spans": [
+      {
+        "evidence_id": "luma-v2-clearspace",
+        "start": 0,
+        "end": 167,
+        "quote": "Keep at least 16 px of empty space on every side of the Luma Field logo in digital banners. Охранное поле логотипа — не менее 16 px с каждой стороны цифрового баннера."
+      },
+      {
+        "evidence_id": "luma-v2-wordmark",
+        "start": 0,
+        "end": 175,
+        "quote": "Never stretch or rotate the Luma Field wordmark. Не растягивать и не поворачивать логотип Luma Field. Scaling uniformly is allowed. Пропорциональное масштабирование допустимо."
+      }
+    ]
+  },
+  {
+    "id": "vw-badge",
+    "family": "badge",
+    "split": "test",
+    "category": "prohibition",
+    "query": "Можно ли добавить бейдж «Лучший в мире»?",
+    "brand": "veyra",
+    "snapshot": "v2",
+    "locale": "ru",
+    "expected_status": "supported",
+    "evidence_ids": [
+      "veyra-v2-badge"
+    ],
+    "allowed_claims": [
+      "Never use the “Best in the world” badge in Veyra Works advertising. Бейдж «Лучший в мире» запрещён. Use the factual model identifier instead."
+    ],
+    "forbidden_claims": [
+      "The primary color is #000000.",
+      "DEMO-EMBER-73"
+    ],
+    "severity": "critical",
+    "review_status": "machine_authored_source_checked",
+    "gold_spans": [
+      {
+        "evidence_id": "veyra-v2-badge",
+        "start": 0,
+        "end": 141,
+        "quote": "Never use the “Best in the world” badge in Veyra Works advertising. Бейдж «Лучший в мире» запрещён. Use the factual model identifier instead."
+      }
+    ]
+  }
+]

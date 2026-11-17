@@ -1,0 +1,74 @@
+{
+  "module": "relay",
+  "mode": "fixture",
+  "data_origin": "synthetic",
+  "measurement_status": "measured",
+  "review_status": "automated_demo_approval",
+  "status": "PASS",
+  "run_id": "05006a0411af40fbac65e966c46ea422",
+  "checks": {
+    "clarification_requested": true,
+    "resume_after_reopen": true,
+    "stale_approval_rejected": true,
+    "approved_after_review": true,
+    "repeat_has_no_duplicate_effect": true,
+    "three_valid_artifacts": true
+  },
+  "passed": 6,
+  "failed": 0,
+  "skipped": 0,
+  "effect_count": 2,
+  "artifact_names": [
+    "requirements.json",
+    "questions.md",
+    "handoff.md"
+  ],
+  "elapsed_ms": 70.24462500703521,
+  "usage": {
+    "calls": 0,
+    "cost_usd": null
+  },
+  "limitations": [
+    "Explicit workflow, not model-selected planning.",
+    "Approval in this experiment is an automated test action, not a human review.",
+    "SQLite content transaction does not guarantee exactly-once external actions."
+  ],
+  "experiment_manifest": {
+    "code_revision": "a0a82b2383a08448665655a7299c44c142a63cb6",
+    "code_source_hash": "4b1a8118018126e8f388bc92caa0fe39f304b54f3be85f832cd928f54601e643",
+    "config": {
+      "corpus_hash": "3fb769698bd3a16aa6ccbf455c27087631fcb1493a8f3b9a4be7e064285b65a6",
+      "protocol": "public-demo/1"
+    },
+    "config_hash": "e1818556c8690713a20b8410e4852b4ffd48d2bb37a1d718e44d364fb283257a",
+    "data_origin": "synthetic",
+    "dirty_tree": true,
+    "finished_at": "2026-11-17T06:09:57.504745+00:00",
+    "id": "35d5738bc39645b39e5f0ffa04c87802",
+    "measurement_status": "measured",
+    "mode": "fixture",
+    "module": "relay-experiment",
+    "review_status": "not_human_reviewed",
+    "schema_version": "tracecraft.run/1",
+    "started_at": "2026-11-17T06:09:57.431404+00:00",
+    "status": "completed",
+    "usage": {
+      "calls": 0,
+      "cost_usd": null,
+      "input_tokens": null,
+      "output_tokens": null
+    }
+  },
+  "provenance": {
+    "data_origin": "synthetic",
+    "corpus_hash": "3fb769698bd3a16aa6ccbf455c27087631fcb1493a8f3b9a4be7e064285b65a6",
+    "created_at": "2026-11-17T06:09:57.504979+00:00",
+    "source": "independently_authored_public_demo",
+    "code": "tracecraft-labs/0.1.0"
+  },
+  "exported_artifacts": [
+    "reports/public/relay-fixture-artifacts/requirements.json",
+    "reports/public/relay-fixture-artifacts/questions.md",
+    "reports/public/relay-fixture-artifacts/handoff.md"
+  ]
+}

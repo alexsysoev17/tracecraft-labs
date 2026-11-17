@@ -1,0 +1,259 @@
+{
+  "schema_version": "tracecraft.independent-security/1",
+  "module": "independent-security",
+  "mode": "fixture",
+  "data_origin": "synthetic",
+  "measurement_status": "measured",
+  "review_status": "independent_adversarial_code_review",
+  "status": "PASS",
+  "scope": [
+    "RELAY persistence, cancellation and concurrent edits",
+    "ECHO provenance, access revocation and invalidation",
+    "API demo-principal access boundary",
+    "public review-copy source allowlist"
+  ],
+  "test_file": "tests/test_independent_security.py",
+  "command": ".venv/bin/pytest -q tests/test_independent_security.py",
+  "initial": {
+    "timestamp": "2026-11-17T08:59:30.305032+03:00",
+    "tests": 11,
+    "passed": 2,
+    "failed": 9,
+    "errors": 0,
+    "note": "Captured before implementation fixes. The export finding has three failing variants; live cancellation has two."
+  },
+  "final": {
+    "status": "PASS",
+    "timestamp": "2026-11-17T09:09:48.489630+03:00",
+    "tests": 12,
+    "passed": 12,
+    "failed": 0,
+    "errors": 0,
+    "original_11_tests_unchanged": true,
+    "additional_regressions": 1,
+    "code_source_hash": "4b1a8118018126e8f388bc92caa0fe39f304b54f3be85f832cd928f54601e643",
+    "note": "All original regressions and the additional allowlisted-ancestor symlink check pass. Initial failures and the partially fixed stage are retained."
+  },
+  "findings": [
+    {
+      "id": "SEC-01",
+      "priority": "P1",
+      "area": "public export",
+      "title": "Allowlisted paths can follow symlinks into excluded source trees",
+      "location": "scripts/export_public.py:export and core/reports.py:privacy_check",
+      "tests": [
+        "test_public_export_does_not_follow_links_into_excluded_trees[file]",
+        "test_public_export_does_not_follow_links_into_excluded_trees[directory]",
+        "test_public_export_does_not_follow_links_into_excluded_trees[root_file]",
+        "test_public_export_rejects_link_in_allowlisted_parent"
+      ],
+      "reproduction": "In an isolated synthetic tree, place a sample file under private/ and link to it from src/linked.txt, src/linked-dir, or README.md; call export into a new review directory.",
+      "observed_before_fix": "All three variants copied the excluded sample and returned PREPARED_FOR_REVIEW with audit PASS. Directory and root-file variants scanned zero files.",
+      "expected": "Reject symlinks or reject resolved sources outside explicitly permitted trees before copying any content.",
+      "impact": "The directory allowlist does not enforce the documented exclusion of private imports. This is a concrete review-copy leak path; no real private data was used or exported.",
+      "quality_claim_affected": "README says the review copy excludes private imports and runtime databases.",
+      "status": "FIXED_VERIFIED",
+      "final_test_outcome": "PASS",
+      "resolution": "Selected source paths and every ancestor component are checked for symlinks by both the privacy scanner and exporter; no output directory is created for rejected sources."
+    },
+    {
+      "id": "SEC-02",
+      "priority": "P1",
+      "area": "ECHO access revocation",
+      "title": "Uncited cached retrieval content survives source access revocation",
+      "location": "src/tracecraft/echo/service.py:Echo.valid and Echo.request",
+      "tests": [
+        "test_cache_revalidates_access_to_returned_uncited_context"
+      ],
+      "reproduction": "Cache the primary-color query, change the uncited identity source in the same Atlas instance to require partner access, confirm scoped evidence lookup denies it, then repeat the exact query.",
+      "observed_before_fix": "The exact cache hit still contained the identity source text in retrieval.context and retrieval.required, with its old public permission metadata.",
+      "expected": "Revalidate or remove every source-bearing field returned in the cached response, including retrieval payloads.",
+      "impact": "The complete response violates the current source access decision even while cited claims remain permitted. Reproduction requires an in-process source permission change; a rebuilt Atlas changes the corpus namespace.",
+      "quality_claim_affected": "SECURITY says cache admission and hits revalidate exact source claims and source previews enforce scope; returned ancillary source text was unchecked.",
+      "status": "FIXED_VERIFIED",
+      "final_test_outcome": "PASS"
+    },
+    {
+      "id": "SEC-03",
+      "priority": "P2",
+      "area": "ECHO provenance",
+      "title": "Cache validation does not close the set of claims over dependencies",
+      "location": "src/tracecraft/echo/service.py:Echo.valid",
+      "tests": [
+        "test_cache_rejects_claim_outside_declared_dependencies"
+      ],
+      "reproduction": "Extend a persisted answer with a genuine clearspace quote and matching claim, without adding its evidence ID to answer.evidence_ids or the dependency hashes; request the cached query again.",
+      "observed_before_fix": "The altered answer was accepted as an exact hit.",
+      "expected": "The sets of claim evidence IDs, declared evidence IDs and dependency keys must agree.",
+      "impact": "Corrupted or malformed persisted answers can bypass complete provenance validation. The test mutates temporary cache state; this is not proof of a remote cache-write primitive.",
+      "quality_claim_affected": "Complete source provenance for cached emitted claims.",
+      "status": "FIXED_VERIFIED",
+      "final_test_outcome": "PASS"
+    },
+    {
+      "id": "SEC-04",
+      "priority": "P2",
+      "area": "ECHO invalidation scope",
+      "title": "Invalidation for one brand evicts valid entries in another namespace",
+      "location": "src/tracecraft/echo/service.py:Echo.invalidate",
+      "tests": [
+        "test_cache_invalidation_preserves_other_authorized_namespaces"
+      ],
+      "reproduction": "Cache identical queries for luma and veyra, then invalidate with luma scope while both sources remain unchanged.",
+      "observed_before_fix": "The veyra entry was removed because it was checked using luma permissions and brand.",
+      "expected": "Scope-local invalidation only checks matching namespaces and preserves unrelated valid entries.",
+      "impact": "Unrelated cache work is discarded, causing avoidable recomputation and incorrect invalidation accounting; no cross-scope disclosure was demonstrated.",
+      "quality_claim_affected": "Source and scope-aware invalidation.",
+      "status": "FIXED_VERIFIED",
+      "final_test_outcome": "PASS"
+    },
+    {
+      "id": "SEC-05",
+      "priority": "P2",
+      "area": "RELAY concurrent edits",
+      "title": "An active workflow silently drops a different submitted edit",
+      "location": "src/tracecraft/relay/service.py:Relay._claim",
+      "tests": [
+        "test_conflicting_resume_during_active_work_is_not_silently_discarded"
+      ],
+      "reproduction": "Pause the first resume at search after accepting First text, issue a second resume with Second text, then release the first worker.",
+      "observed_before_fix": "The second resume returned normally; the final brief and artifact package contained First text.",
+      "expected": "Persist the newly accepted edit or return an explicit conflict. Identical duplicate submissions may reuse the active operation.",
+      "impact": "Concurrent user edits are lost without an error, potentially causing review of an obsolete brief.",
+      "quality_claim_affected": "Durable continuation and concurrent resume behavior.",
+      "status": "FIXED_VERIFIED",
+      "final_test_outcome": "PASS"
+    },
+    {
+      "id": "SEC-06",
+      "priority": "P2",
+      "area": "RELAY terminal state",
+      "title": "Live bookkeeping overwrites a concurrently committed cancellation",
+      "location": "src/tracecraft/relay/service.py:Relay.run_live and Relay._live_usage",
+      "tests": [
+        "test_live_provider_failure_preserves_concurrent_cancellation",
+        "test_live_usage_persistence_cannot_restore_cancelled_checkpoint"
+      ],
+      "reproduction": "Commit cancel while a fake provider is pending and then fail the provider; separately commit cancel after the draft tool returns but before usage is persisted.",
+      "observed_before_fix": "The first path changed cancelled to failed; the second restored awaiting_approval from a stale checkpoint.",
+      "expected": "Persist usage and failure details through guarded transactions that retain the current terminal state.",
+      "impact": "Cancellation is not stable in the opt-in live adapter, despite fixture workers correctly fencing artifact commits. No real provider was contacted.",
+      "quality_claim_affected": "Persistent cancellation and terminal-state transitions.",
+      "status": "FIXED_VERIFIED",
+      "final_test_outcome": "PASS"
+    }
+  ],
+  "tests": [
+    {
+      "name": "test_cache_revalidates_access_to_returned_uncited_context",
+      "initial_outcome": "FAIL",
+      "final_outcome": "PASS"
+    },
+    {
+      "name": "test_cache_rejects_claim_outside_declared_dependencies",
+      "initial_outcome": "FAIL",
+      "final_outcome": "PASS"
+    },
+    {
+      "name": "test_cache_invalidation_preserves_other_authorized_namespaces",
+      "initial_outcome": "FAIL",
+      "final_outcome": "PASS"
+    },
+    {
+      "name": "test_conflicting_resume_during_active_work_is_not_silently_discarded",
+      "initial_outcome": "FAIL",
+      "final_outcome": "PASS"
+    },
+    {
+      "name": "test_live_provider_failure_preserves_concurrent_cancellation",
+      "initial_outcome": "FAIL",
+      "final_outcome": "PASS"
+    },
+    {
+      "name": "test_live_usage_persistence_cannot_restore_cancelled_checkpoint",
+      "initial_outcome": "FAIL",
+      "final_outcome": "PASS"
+    },
+    {
+      "name": "test_cancellation_during_fixture_search_prevents_artifact_commit",
+      "initial_outcome": "PASS",
+      "final_outcome": "PASS"
+    },
+    {
+      "name": "test_api_denies_all_relay_operations_for_other_principal",
+      "initial_outcome": "PASS",
+      "final_outcome": "PASS"
+    },
+    {
+      "name": "test_public_export_does_not_follow_links_into_excluded_trees[file]",
+      "initial_outcome": "FAIL",
+      "final_outcome": "PASS"
+    },
+    {
+      "name": "test_public_export_does_not_follow_links_into_excluded_trees[directory]",
+      "initial_outcome": "FAIL",
+      "final_outcome": "PASS"
+    },
+    {
+      "name": "test_public_export_does_not_follow_links_into_excluded_trees[root_file]",
+      "initial_outcome": "FAIL",
+      "final_outcome": "PASS"
+    },
+    {
+      "name": "test_public_export_rejects_link_in_allowlisted_parent",
+      "initial_outcome": "NOT_RUN",
+      "initial_note": "Added after the first implementation retest; the corresponding ad hoc reproduction failed at the partial-fix stage.",
+      "final_outcome": "PASS"
+    }
+  ],
+  "passed_controls": [
+    "Fixture cancellation during search prevents artifacts and ledger effects.",
+    "All five RELAY HTTP state/artifact/mutation operations deny a run owned by another principal."
+  ],
+  "external_provider_calls": 0,
+  "network_used": false,
+  "limitations": [
+    "Small authored adversarial suite, not a complete security audit or production authentication certification.",
+    "Source mutation and persisted-answer corruption are deliberately injected into temporary synthetic state.",
+    "Fake-provider contract tests do not establish live model quality, cost, latency or reliability.",
+    "No actual private source, credential, external account or provider was accessed.",
+    "Passing regression tests after fixes would establish only the exercised boundaries."
+  ],
+  "followup_checks": [
+    {
+      "name": "symlink_in_allowlisted_ancestor",
+      "initial_outcome": "FAIL",
+      "final_outcome": "PASS",
+      "reproduction": "Create private/public-demo/sample.txt in a temporary synthetic project and point datasets to private using a directory symlink. The selected datasets/public-demo path itself and its descendants are ordinary paths.",
+      "observed": "The revised exporter copied the excluded sample into review/datasets/public-demo/sample.txt.",
+      "expected": "Reject symlinks in any ancestor component of the selected source path as well as the selected source and descendants.",
+      "finding_id": "SEC-01",
+      "method": "Isolated ad hoc reproduction after inspecting the implementation fix; original 11-test file unchanged.",
+      "regression_test": "test_public_export_rejects_link_in_allowlisted_parent",
+      "final_observed": "privacy_check returns FAIL; export raises ValueError and leaves no review-copy directory."
+    }
+  ],
+  "intermediate_stages": [
+    {
+      "status": "PASS",
+      "timestamp": "2026-11-17T09:06:31.150726+03:00",
+      "tests": 11,
+      "passed": 11,
+      "failed": 0,
+      "errors": 0,
+      "test_file_changed": false,
+      "code_source_hash": "5a2d52c35bf31d903cc50407d4c11fbc00925258370114adc505c0d7cbfcd6d7",
+      "note": "All original regression tests pass; follow-up code inspection exposed an additional ancestor-link export variant.",
+      "overall_status": "FAIL",
+      "finding_statuses": {
+        "SEC-01": "PARTIALLY_FIXED",
+        "SEC-02": "FIXED_VERIFIED",
+        "SEC-03": "FIXED_VERIFIED",
+        "SEC-04": "FIXED_VERIFIED",
+        "SEC-05": "FIXED_VERIFIED",
+        "SEC-06": "FIXED_VERIFIED"
+      }
+    }
+  ],
+  "verification_warning": "One existing Starlette/AnyIO deprecation warning; no test failures or errors."
+}

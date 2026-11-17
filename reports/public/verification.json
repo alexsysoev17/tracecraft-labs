@@ -1,0 +1,46 @@
+{
+  "schema_version": "tracecraft.verification/1",
+  "data_origin": "synthetic",
+  "measurement_status": "measured",
+  "checked_at": "2026-11-17T06:16:36.967060+00:00",
+  "code_source_hash": "4b1a8118018126e8f388bc92caa0fe39f304b54f3be85f832cd928f54601e643",
+  "status": "PASS",
+  "tests": {
+    "tests": 156,
+    "failures": 0,
+    "errors": 0,
+    "skipped": 0
+  },
+  "test_seconds": 9.668,
+  "commands": {
+    "PYTHONPATH=src .venv/bin/python -m pytest -q --junitxml=runtime/review-tests-final.xml": "PASS",
+    "make check": "PASS",
+    ".venv/bin/python -m pip check": "PASS",
+    "make eval-independent": "COMPLETED_WITH_5_KNOWN_CHALLENGE_FAILURES",
+    "make privacy-check": "PASS"
+  },
+  "static_checks": [
+    "ruff: PASS",
+    "mypy: 26 source files PASS",
+    "compileall: PASS"
+  ],
+  "warnings": [
+    "One dependency deprecation warning: Starlette imports anyio.abc.BlockingPortal."
+  ],
+  "separate_evidence": {
+    "fresh_copy": "reports/public/clean-install.json",
+    "real_encoder_restart": "reports/public/local-smoke.json",
+    "browser": "reports/public/browser-smoke.json",
+    "independent_quality": "reports/public/independent-quality.json",
+    "independent_security": "reports/public/independent-security.json",
+    "independent_implementation": "reports/public/independent-review.json",
+    "fresh_copy_final": "reports/public/clean-install-review.json",
+    "browser_focused_final": "reports/public/browser-review.json"
+  },
+  "limitations": [
+    "No live provider calls.",
+    "CI workflow was not run remotely.",
+    "Fresh-copy report has its own snapshot fingerprint; this report checks the final backend source.",
+    "156 passing mechanism/regression tests coexist with five failed held-out answerability cases; test count is not answer reliability."
+  ]
+}

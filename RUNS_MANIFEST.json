@@ -1,0 +1,150 @@
+{
+  "schema_version": "tracecraft.delivery/1",
+  "runs": {
+    "atlas-fixture": {
+      "report": "reports/public/atlas-fixture.json",
+      "mode": "fixture",
+      "data_origin": "synthetic",
+      "measurement_status": "measured",
+      "audit": {
+        "status": "PASS",
+        "bytes": 398962,
+        "sha256": "6c2639c3540602d938683c567b8c2fae98997b1cdd5cac51022ba5becae043cf",
+        "limitations": "Allowlisted synthetic experiments and heuristic secret scan; not a universal private-data classifier."
+      }
+    },
+    "relay-fixture": {
+      "report": "reports/public/relay-fixture.json",
+      "mode": "fixture",
+      "data_origin": "synthetic",
+      "measurement_status": "measured",
+      "audit": {
+        "status": "PASS",
+        "bytes": 2033,
+        "sha256": "63538382195aba86f482dadcceb02f459c6dc0bc03f92adf4f4b98690c0f8b55",
+        "limitations": "Allowlisted synthetic experiments and heuristic secret scan; not a universal private-data classifier."
+      }
+    },
+    "sentinel-fixture": {
+      "report": "reports/public/sentinel-fixture.json",
+      "mode": "fixture",
+      "data_origin": "synthetic",
+      "measurement_status": "measured",
+      "audit": {
+        "status": "PASS",
+        "bytes": 2286562,
+        "sha256": "3ca970388593c95728207d1c93f3179c36306a121c22fc8efe497bba8d2db462",
+        "limitations": "Allowlisted synthetic experiments and heuristic secret scan; not a universal private-data classifier."
+      }
+    },
+    "lens-fixture": {
+      "report": "reports/public/lens-fixture.json",
+      "mode": "fixture",
+      "data_origin": "synthetic",
+      "measurement_status": "measured",
+      "audit": {
+        "status": "PASS",
+        "bytes": 7362,
+        "sha256": "b87920d2c47c09d262f9c7da601a6d4bce9af5db175c557d9c5cc88aa364a978",
+        "limitations": "Allowlisted synthetic experiments and heuristic secret scan; not a universal private-data classifier."
+      }
+    },
+    "echo-fixture": {
+      "report": "reports/public/echo-fixture.json",
+      "mode": "fixture",
+      "data_origin": "synthetic",
+      "measurement_status": "measured",
+      "audit": {
+        "status": "PASS",
+        "bytes": 164931,
+        "sha256": "251c5088a301f2b5d437aebca473913421a9a6e63345ba7a9fcdf0d7d2ce3a6c",
+        "limitations": "Allowlisted synthetic experiments and heuristic secret scan; not a universal private-data classifier."
+      }
+    },
+    "canon-fixture": {
+      "report": "reports/public/canon-fixture.json",
+      "mode": "fixture",
+      "data_origin": "synthetic",
+      "measurement_status": "measured",
+      "audit": {
+        "status": "PASS",
+        "bytes": 1155994,
+        "sha256": "33d5db0d6c3e649fc56bcde7461f44b31b06736e5331786f794677147016601b",
+        "limitations": "Allowlisted synthetic experiments and heuristic secret scan; not a universal private-data classifier."
+      }
+    },
+    "atlas-local": {
+      "report": "reports/public/atlas-local.json",
+      "mode": "local",
+      "data_origin": "synthetic",
+      "measurement_status": "measured",
+      "audit": {
+        "status": "PASS",
+        "bytes": 1072535,
+        "sha256": "9029902e8d3c314433ae5489edca53f4b32f9e631b917b5f0faee434888b561d",
+        "limitations": "Allowlisted synthetic experiments and heuristic secret scan; not a universal private-data classifier."
+      }
+    },
+    "relay-local": {
+      "report": "reports/public/relay-local.json",
+      "mode": "local",
+      "data_origin": "synthetic",
+      "measurement_status": "measured",
+      "audit": {
+        "status": "PASS",
+        "bytes": 2024,
+        "sha256": "0204d9b255410e2cb1e6791ff446682f5e61fa00e4453a3bb197264168754e78",
+        "limitations": "Allowlisted synthetic experiments and heuristic secret scan; not a universal private-data classifier."
+      }
+    },
+    "sentinel-local": {
+      "report": "reports/public/sentinel-local.json",
+      "mode": "local",
+      "data_origin": "synthetic",
+      "measurement_status": "measured",
+      "audit": {
+        "status": "PASS",
+        "bytes": 2283634,
+        "sha256": "a42f9e985e352af150c9a3451294164ce8c6a6c6baa0605edc967ad776b147d2",
+        "limitations": "Allowlisted synthetic experiments and heuristic secret scan; not a universal private-data classifier."
+      }
+    },
+    "lens-local": {
+      "report": "reports/public/lens-local.json",
+      "mode": "local",
+      "data_origin": "synthetic",
+      "measurement_status": "measured",
+      "audit": {
+        "status": "PASS",
+        "bytes": 7354,
+        "sha256": "b465a43bafa89ae27c70816a09e5459f59e26fa2caed3409b61b9f5a94bf96e4",
+        "limitations": "Allowlisted synthetic experiments and heuristic secret scan; not a universal private-data classifier."
+      }
+    },
+    "echo-local": {
+      "report": "reports/public/echo-local.json",
+      "mode": "local",
+      "data_origin": "synthetic",
+      "measurement_status": "measured",
+      "audit": {
+        "status": "PASS",
+        "bytes": 165631,
+        "sha256": "cf03d13d12deb47634c99e4c11060a53d1ec8569390619590e08d685bae8d47e",
+        "limitations": "Allowlisted synthetic experiments and heuristic secret scan; not a universal private-data classifier."
+      }
+    },
+    "canon-local": {
+      "report": "reports/public/canon-local.json",
+      "mode": "local",
+      "data_origin": "synthetic",
+      "measurement_status": "measured",
+      "audit": {
+        "status": "PASS",
+        "bytes": 1829218,
+        "sha256": "7280b8816e73cb79e8047e9e35fd41195b7fc0823101d719d9dcb65a6e6b8c61",
+        "limitations": "Allowlisted synthetic experiments and heuristic secret scan; not a universal private-data classifier."
+      }
+    }
+  },
+  "updated_at": "2026-11-17T06:11:02.031238+00:00"
+}

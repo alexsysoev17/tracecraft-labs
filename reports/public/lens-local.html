@@ -1,0 +1,273 @@
+<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width"><title>LENS observed trace report</title><style>body{max-width:1100px;margin:40px auto;padding:24px;font:16px system-ui;background:#f3f4ef;color:#152421}pre{white-space:pre-wrap;overflow-wrap:anywhere;padding:24px;background:white;border:1px solid #ccc;font:12px ui-monospace}</style><h1>LENS — observed trace</h1><p>Recorded evidence. No external actions re-executed. Synthetic corpus; no production reliability claim.</p><pre>{
+  &quot;schema_version&quot;: &quot;tracecraft.diagnosis/1&quot;,
+  &quot;run_id&quot;: &quot;d87cee1c0d3948ee944ef083543d9267&quot;,
+  &quot;manifest&quot;: {
+    &quot;code_revision&quot;: &quot;a0a82b2383a08448665655a7299c44c142a63cb6&quot;,
+    &quot;code_source_hash&quot;: &quot;4b1a8118018126e8f388bc92caa0fe39f304b54f3be85f832cd928f54601e643&quot;,
+    &quot;config&quot;: {
+      &quot;deadline_seconds&quot;: 300,
+      &quot;max_retries&quot;: 1,
+      &quot;scope&quot;: {
+        &quot;acl_version&quot;: &quot;1&quot;,
+        &quot;brand&quot;: &quot;luma&quot;,
+        &quot;context&quot;: &quot;&quot;,
+        &quot;locale&quot;: &quot;ru&quot;,
+        &quot;permissions&quot;: [
+          &quot;public&quot;
+        ],
+        &quot;principal&quot;: &quot;demo-reader&quot;,
+        &quot;project&quot;: &quot;public-lab&quot;,
+        &quot;snapshot&quot;: &quot;v2&quot;,
+        &quot;tenant&quot;: &quot;demo&quot;
+      },
+      &quot;tool_version&quot;: &quot;relay-tools/1&quot;,
+      &quot;workflow&quot;: &quot;banner-handoff/1&quot;
+    },
+    &quot;config_hash&quot;: &quot;fcba689c1e5a0b714f0ab84cec1087e12769e8ea535400e98f78d504acdc2c4d&quot;,
+    &quot;data_origin&quot;: &quot;synthetic&quot;,
+    &quot;dirty_tree&quot;: true,
+    &quot;finished_at&quot;: null,
+    &quot;id&quot;: &quot;d87cee1c0d3948ee944ef083543d9267&quot;,
+    &quot;measurement_status&quot;: &quot;measured&quot;,
+    &quot;mode&quot;: &quot;local&quot;,
+    &quot;module&quot;: &quot;relay&quot;,
+    &quot;review_status&quot;: &quot;not_human_reviewed&quot;,
+    &quot;schema_version&quot;: &quot;tracecraft.run/1&quot;,
+    &quot;started_at&quot;: &quot;2026-11-17T06:10:51.285382+00:00&quot;,
+    &quot;status&quot;: &quot;awaiting_input&quot;,
+    &quot;usage&quot;: {
+      &quot;calls&quot;: 0,
+      &quot;cost_usd&quot;: null,
+      &quot;input_tokens&quot;: null,
+      &quot;output_tokens&quot;: null
+    }
+  },
+  &quot;timeline&quot;: [
+    {
+      &quot;data_origin&quot;: &quot;synthetic&quot;,
+      &quot;error&quot;: null,
+      &quot;id&quot;: &quot;e438d006f37a43f39c8bc8d220c977a0&quot;,
+      &quot;inputs&quot;: {
+        &quot;arguments&quot;: {},
+        &quot;name&quot;: &quot;validate_requirements&quot;,
+        &quot;proposal_kind&quot;: &quot;workflow&quot;
+      },
+      &quot;outputs&quot;: {
+        &quot;schema&quot;: &quot;valid&quot;,
+        &quot;scope&quot;: &quot;allowed&quot;,
+        &quot;values&quot;: &quot;valid&quot;
+      },
+      &quot;parent_id&quot;: null,
+      &quot;run_id&quot;: &quot;d87cee1c0d3948ee944ef083543d9267&quot;,
+      &quot;schema_version&quot;: &quot;tracecraft.span/1&quot;,
+      &quot;stage&quot;: &quot;tool.proposed&quot;,
+      &quot;status&quot;: &quot;ok&quot;,
+      &quot;timestamp&quot;: &quot;2026-11-17T06:10:51.288348+00:00&quot;
+    },
+    {
+      &quot;data_origin&quot;: &quot;synthetic&quot;,
+      &quot;error&quot;: null,
+      &quot;id&quot;: &quot;7b1d0938756d41d18845640071f74316&quot;,
+      &quot;inputs&quot;: {
+        &quot;arguments&quot;: {},
+        &quot;name&quot;: &quot;validate_requirements&quot;
+      },
+      &quot;outputs&quot;: {
+        &quot;missing&quot;: [
+          &quot;width&quot;,
+          &quot;height&quot;,
+          &quot;copy&quot;
+        ],
+        &quot;schema_valid&quot;: true
+      },
+      &quot;parent_id&quot;: null,
+      &quot;run_id&quot;: &quot;d87cee1c0d3948ee944ef083543d9267&quot;,
+      &quot;schema_version&quot;: &quot;tracecraft.span/1&quot;,
+      &quot;stage&quot;: &quot;tool.executed&quot;,
+      &quot;status&quot;: &quot;ok&quot;,
+      &quot;timestamp&quot;: &quot;2026-11-17T06:10:51.288540+00:00&quot;
+    },
+    {
+      &quot;data_origin&quot;: &quot;synthetic&quot;,
+      &quot;error&quot;: null,
+      &quot;id&quot;: &quot;03f4c42e3a174f30b07e1ded7fea1d5d&quot;,
+      &quot;inputs&quot;: {
+        &quot;arguments&quot;: {
+          &quot;fields&quot;: [
+            &quot;width&quot;,
+            &quot;height&quot;,
+            &quot;copy&quot;
+          ]
+        },
+        &quot;name&quot;: &quot;request_clarification&quot;,
+        &quot;proposal_kind&quot;: &quot;workflow&quot;
+      },
+      &quot;outputs&quot;: {
+        &quot;schema&quot;: &quot;valid&quot;,
+        &quot;scope&quot;: &quot;allowed&quot;,
+        &quot;values&quot;: &quot;valid&quot;
+      },
+      &quot;parent_id&quot;: null,
+      &quot;run_id&quot;: &quot;d87cee1c0d3948ee944ef083543d9267&quot;,
+      &quot;schema_version&quot;: &quot;tracecraft.span/1&quot;,
+      &quot;stage&quot;: &quot;tool.proposed&quot;,
+      &quot;status&quot;: &quot;ok&quot;,
+      &quot;timestamp&quot;: &quot;2026-11-17T06:10:51.288715+00:00&quot;
+    },
+    {
+      &quot;data_origin&quot;: &quot;synthetic&quot;,
+      &quot;error&quot;: null,
+      &quot;id&quot;: &quot;d33740218757471dafb0b08e84479fb6&quot;,
+      &quot;inputs&quot;: {
+        &quot;arguments&quot;: {
+          &quot;fields&quot;: [
+            &quot;width&quot;,
+            &quot;height&quot;,
+            &quot;copy&quot;
+          ]
+        },
+        &quot;name&quot;: &quot;request_clarification&quot;
+      },
+      &quot;outputs&quot;: {
+        &quot;questions&quot;: [
+          {
+            &quot;field&quot;: &quot;width&quot;,
+            &quot;question&quot;: &quot;Какова ширина в пикселях?&quot;
+          },
+          {
+            &quot;field&quot;: &quot;height&quot;,
+            &quot;question&quot;: &quot;Какова высота в пикселях?&quot;
+          },
+          {
+            &quot;field&quot;: &quot;copy&quot;,
+            &quot;question&quot;: &quot;Какой точный текст нужно использовать?&quot;
+          }
+        ]
+      },
+      &quot;parent_id&quot;: null,
+      &quot;run_id&quot;: &quot;d87cee1c0d3948ee944ef083543d9267&quot;,
+      &quot;schema_version&quot;: &quot;tracecraft.span/1&quot;,
+      &quot;stage&quot;: &quot;tool.executed&quot;,
+      &quot;status&quot;: &quot;ok&quot;,
+      &quot;timestamp&quot;: &quot;2026-11-17T06:10:51.288891+00:00&quot;
+    },
+    {
+      &quot;data_origin&quot;: &quot;synthetic&quot;,
+      &quot;error&quot;: &quot;invalid_args&quot;,
+      &quot;id&quot;: &quot;4a88bfab84a048348979be138c3b9070&quot;,
+      &quot;inputs&quot;: {
+        &quot;proposal_type&quot;: &quot;dict&quot;
+      },
+      &quot;outputs&quot;: {
+        &quot;executed&quot;: false,
+        &quot;validation&quot;: &quot;schema_or_values&quot;
+      },
+      &quot;parent_id&quot;: null,
+      &quot;run_id&quot;: &quot;d87cee1c0d3948ee944ef083543d9267&quot;,
+      &quot;schema_version&quot;: &quot;tracecraft.span/1&quot;,
+      &quot;stage&quot;: &quot;tool.validation&quot;,
+      &quot;status&quot;: &quot;error&quot;,
+      &quot;timestamp&quot;: &quot;2026-11-17T06:10:51.289423+00:00&quot;
+    },
+    {
+      &quot;data_origin&quot;: &quot;synthetic&quot;,
+      &quot;error&quot;: null,
+      &quot;id&quot;: &quot;d17bddf9f1c74d1299e355a74a793243&quot;,
+      &quot;inputs&quot;: {
+        &quot;arguments&quot;: {},
+        &quot;name&quot;: &quot;validate_requirements&quot;,
+        &quot;proposal_kind&quot;: &quot;explicit_test_proposal&quot;
+      },
+      &quot;outputs&quot;: {
+        &quot;schema&quot;: &quot;valid&quot;,
+        &quot;scope&quot;: &quot;allowed&quot;,
+        &quot;values&quot;: &quot;valid&quot;
+      },
+      &quot;parent_id&quot;: null,
+      &quot;run_id&quot;: &quot;d87cee1c0d3948ee944ef083543d9267&quot;,
+      &quot;schema_version&quot;: &quot;tracecraft.span/1&quot;,
+      &quot;stage&quot;: &quot;tool.proposed&quot;,
+      &quot;status&quot;: &quot;ok&quot;,
+      &quot;timestamp&quot;: &quot;2026-11-17T06:10:51.289729+00:00&quot;
+    },
+    {
+      &quot;data_origin&quot;: &quot;synthetic&quot;,
+      &quot;error&quot;: null,
+      &quot;id&quot;: &quot;56d9d7a03b8341d79a0e553d06571cad&quot;,
+      &quot;inputs&quot;: {
+        &quot;arguments&quot;: {},
+        &quot;name&quot;: &quot;validate_requirements&quot;
+      },
+      &quot;outputs&quot;: {
+        &quot;missing&quot;: [
+          &quot;width&quot;,
+          &quot;height&quot;,
+          &quot;copy&quot;
+        ],
+        &quot;schema_valid&quot;: true
+      },
+      &quot;parent_id&quot;: null,
+      &quot;run_id&quot;: &quot;d87cee1c0d3948ee944ef083543d9267&quot;,
+      &quot;schema_version&quot;: &quot;tracecraft.span/1&quot;,
+      &quot;stage&quot;: &quot;tool.executed&quot;,
+      &quot;status&quot;: &quot;ok&quot;,
+      &quot;timestamp&quot;: &quot;2026-11-17T06:10:51.289905+00:00&quot;
+    }
+  ],
+  &quot;findings&quot;: [
+    {
+      &quot;classification&quot;: &quot;invalid_args&quot;,
+      &quot;symptom&quot;: &quot;tool.validation: invalid_args&quot;,
+      &quot;hypothesis&quot;: &quot;Correct the typed tool proposal and validate its values before execution.&quot;,
+      &quot;certainty&quot;: &quot;reproduced&quot;,
+      &quot;evidence_span_ids&quot;: [
+        &quot;4a88bfab84a048348979be138c3b9070&quot;
+      ],
+      &quot;fix&quot;: &quot;Correct the typed tool proposal and validate its values before execution.&quot;,
+      &quot;reproduction_run_id&quot;: &quot;e28e0e20e66742a5aacc37272c4f7095&quot;,
+      &quot;reproduction_evidence_span_ids&quot;: [
+        &quot;580067b4a02b4452a85fcaab9166e2a7&quot;
+      ]
+    }
+  ],
+  &quot;status&quot;: &quot;INCIDENT&quot;,
+  &quot;mode&quot;: &quot;local&quot;,
+  &quot;data_origin&quot;: &quot;synthetic&quot;,
+  &quot;measurement_status&quot;: &quot;observed_trace&quot;,
+  &quot;review_status&quot;: &quot;not_human_reviewed&quot;,
+  &quot;replay_kind&quot;: &quot;recorded_observation&quot;,
+  &quot;taxonomy&quot;: [
+    &quot;ingestion&quot;,
+    &quot;missing_source&quot;,
+    &quot;retrieval_miss&quot;,
+    &quot;stale_source&quot;,
+    &quot;unsupported_claim&quot;,
+    &quot;invalid_args&quot;,
+    &quot;tool_execution&quot;,
+    &quot;permission&quot;,
+    &quot;unsafe_cache_hit&quot;,
+    &quot;timeout_budget&quot;,
+    &quot;stale_approval&quot;,
+    &quot;evaluator_gap&quot;,
+    &quot;unknown&quot;
+  ],
+  &quot;injection&quot;: {
+    &quot;checks&quot;: {
+      &quot;bounded_fix_verified&quot;: true,
+      &quot;failure_observed&quot;: true,
+      &quot;failure_reproduced&quot;: true
+    },
+    &quot;classification&quot;: &quot;invalid_args&quot;,
+    &quot;fault&quot;: &quot;invalid_args&quot;,
+    &quot;reproduction_evidence_span_ids&quot;: [
+      &quot;580067b4a02b4452a85fcaab9166e2a7&quot;
+    ],
+    &quot;reproduction_run_id&quot;: &quot;e28e0e20e66742a5aacc37272c4f7095&quot;,
+    &quot;reproduction_trace_hash&quot;: &quot;2ae1cd9a464be384f2dd9fcde65351089257e793b8b16036f98a4634be20b99b&quot;,
+    &quot;source_trace_hash&quot;: &quot;099933569a6b21e5ecacdb0a1632b7951a9c4424dcf13782fccb95a3b80160f7&quot;
+  },
+  &quot;limitations&quot;: [
+    &quot;A trace records observations, not hidden model reasoning.&quot;,
+    &quot;A missing span does not prove a step succeeded. Hypotheses require reproduction.&quot;
+  ]
+}</pre></html>

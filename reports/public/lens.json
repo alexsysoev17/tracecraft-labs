@@ -1,0 +1,336 @@
+{
+  "module": "lens",
+  "mode": "local",
+  "data_origin": "synthetic",
+  "measurement_status": "measured",
+  "status": "PASS",
+  "run_id": "d87cee1c0d3948ee944ef083543d9267",
+  "draft_id": "322a958802364ad196ee91b50cc575a4",
+  "diagnosis": {
+    "schema_version": "tracecraft.diagnosis/1",
+    "run_id": "d87cee1c0d3948ee944ef083543d9267",
+    "manifest": {
+      "code_revision": "a0a82b2383a08448665655a7299c44c142a63cb6",
+      "code_source_hash": "4b1a8118018126e8f388bc92caa0fe39f304b54f3be85f832cd928f54601e643",
+      "config": {
+        "deadline_seconds": 300,
+        "max_retries": 1,
+        "scope": {
+          "acl_version": "1",
+          "brand": "luma",
+          "context": "",
+          "locale": "ru",
+          "permissions": [
+            "public"
+          ],
+          "principal": "demo-reader",
+          "project": "public-lab",
+          "snapshot": "v2",
+          "tenant": "demo"
+        },
+        "tool_version": "relay-tools/1",
+        "workflow": "banner-handoff/1"
+      },
+      "config_hash": "fcba689c1e5a0b714f0ab84cec1087e12769e8ea535400e98f78d504acdc2c4d",
+      "data_origin": "synthetic",
+      "dirty_tree": true,
+      "finished_at": null,
+      "id": "d87cee1c0d3948ee944ef083543d9267",
+      "measurement_status": "measured",
+      "mode": "local",
+      "module": "relay",
+      "review_status": "not_human_reviewed",
+      "schema_version": "tracecraft.run/1",
+      "started_at": "2026-11-17T06:10:51.285382+00:00",
+      "status": "awaiting_input",
+      "usage": {
+        "calls": 0,
+        "cost_usd": null,
+        "input_tokens": null,
+        "output_tokens": null
+      }
+    },
+    "timeline": [
+      {
+        "data_origin": "synthetic",
+        "error": null,
+        "id": "e438d006f37a43f39c8bc8d220c977a0",
+        "inputs": {
+          "arguments": {},
+          "name": "validate_requirements",
+          "proposal_kind": "workflow"
+        },
+        "outputs": {
+          "schema": "valid",
+          "scope": "allowed",
+          "values": "valid"
+        },
+        "parent_id": null,
+        "run_id": "d87cee1c0d3948ee944ef083543d9267",
+        "schema_version": "tracecraft.span/1",
+        "stage": "tool.proposed",
+        "status": "ok",
+        "timestamp": "2026-11-17T06:10:51.288348+00:00"
+      },
+      {
+        "data_origin": "synthetic",
+        "error": null,
+        "id": "7b1d0938756d41d18845640071f74316",
+        "inputs": {
+          "arguments": {},
+          "name": "validate_requirements"
+        },
+        "outputs": {
+          "missing": [
+            "width",
+            "height",
+            "copy"
+          ],
+          "schema_valid": true
+        },
+        "parent_id": null,
+        "run_id": "d87cee1c0d3948ee944ef083543d9267",
+        "schema_version": "tracecraft.span/1",
+        "stage": "tool.executed",
+        "status": "ok",
+        "timestamp": "2026-11-17T06:10:51.288540+00:00"
+      },
+      {
+        "data_origin": "synthetic",
+        "error": null,
+        "id": "03f4c42e3a174f30b07e1ded7fea1d5d",
+        "inputs": {
+          "arguments": {
+            "fields": [
+              "width",
+              "height",
+              "copy"
+            ]
+          },
+          "name": "request_clarification",
+          "proposal_kind": "workflow"
+        },
+        "outputs": {
+          "schema": "valid",
+          "scope": "allowed",
+          "values": "valid"
+        },
+        "parent_id": null,
+        "run_id": "d87cee1c0d3948ee944ef083543d9267",
+        "schema_version": "tracecraft.span/1",
+        "stage": "tool.proposed",
+        "status": "ok",
+        "timestamp": "2026-11-17T06:10:51.288715+00:00"
+      },
+      {
+        "data_origin": "synthetic",
+        "error": null,
+        "id": "d33740218757471dafb0b08e84479fb6",
+        "inputs": {
+          "arguments": {
+            "fields": [
+              "width",
+              "height",
+              "copy"
+            ]
+          },
+          "name": "request_clarification"
+        },
+        "outputs": {
+          "questions": [
+            {
+              "field": "width",
+              "question": "Какова ширина в пикселях?"
+            },
+            {
+              "field": "height",
+              "question": "Какова высота в пикселях?"
+            },
+            {
+              "field": "copy",
+              "question": "Какой точный текст нужно использовать?"
+            }
+          ]
+        },
+        "parent_id": null,
+        "run_id": "d87cee1c0d3948ee944ef083543d9267",
+        "schema_version": "tracecraft.span/1",
+        "stage": "tool.executed",
+        "status": "ok",
+        "timestamp": "2026-11-17T06:10:51.288891+00:00"
+      },
+      {
+        "data_origin": "synthetic",
+        "error": "invalid_args",
+        "id": "4a88bfab84a048348979be138c3b9070",
+        "inputs": {
+          "proposal_type": "dict"
+        },
+        "outputs": {
+          "executed": false,
+          "validation": "schema_or_values"
+        },
+        "parent_id": null,
+        "run_id": "d87cee1c0d3948ee944ef083543d9267",
+        "schema_version": "tracecraft.span/1",
+        "stage": "tool.validation",
+        "status": "error",
+        "timestamp": "2026-11-17T06:10:51.289423+00:00"
+      },
+      {
+        "data_origin": "synthetic",
+        "error": null,
+        "id": "d17bddf9f1c74d1299e355a74a793243",
+        "inputs": {
+          "arguments": {},
+          "name": "validate_requirements",
+          "proposal_kind": "explicit_test_proposal"
+        },
+        "outputs": {
+          "schema": "valid",
+          "scope": "allowed",
+          "values": "valid"
+        },
+        "parent_id": null,
+        "run_id": "d87cee1c0d3948ee944ef083543d9267",
+        "schema_version": "tracecraft.span/1",
+        "stage": "tool.proposed",
+        "status": "ok",
+        "timestamp": "2026-11-17T06:10:51.289729+00:00"
+      },
+      {
+        "data_origin": "synthetic",
+        "error": null,
+        "id": "56d9d7a03b8341d79a0e553d06571cad",
+        "inputs": {
+          "arguments": {},
+          "name": "validate_requirements"
+        },
+        "outputs": {
+          "missing": [
+            "width",
+            "height",
+            "copy"
+          ],
+          "schema_valid": true
+        },
+        "parent_id": null,
+        "run_id": "d87cee1c0d3948ee944ef083543d9267",
+        "schema_version": "tracecraft.span/1",
+        "stage": "tool.executed",
+        "status": "ok",
+        "timestamp": "2026-11-17T06:10:51.289905+00:00"
+      }
+    ],
+    "findings": [
+      {
+        "classification": "invalid_args",
+        "symptom": "tool.validation: invalid_args",
+        "hypothesis": "Correct the typed tool proposal and validate its values before execution.",
+        "certainty": "reproduced",
+        "evidence_span_ids": [
+          "4a88bfab84a048348979be138c3b9070"
+        ],
+        "fix": "Correct the typed tool proposal and validate its values before execution.",
+        "reproduction_run_id": "e28e0e20e66742a5aacc37272c4f7095",
+        "reproduction_evidence_span_ids": [
+          "580067b4a02b4452a85fcaab9166e2a7"
+        ]
+      }
+    ],
+    "status": "INCIDENT",
+    "mode": "local",
+    "data_origin": "synthetic",
+    "measurement_status": "observed_trace",
+    "review_status": "not_human_reviewed",
+    "replay_kind": "recorded_observation",
+    "taxonomy": [
+      "ingestion",
+      "missing_source",
+      "retrieval_miss",
+      "stale_source",
+      "unsupported_claim",
+      "invalid_args",
+      "tool_execution",
+      "permission",
+      "unsafe_cache_hit",
+      "timeout_budget",
+      "stale_approval",
+      "evaluator_gap",
+      "unknown"
+    ],
+    "injection": {
+      "checks": {
+        "bounded_fix_verified": true,
+        "failure_observed": true,
+        "failure_reproduced": true
+      },
+      "classification": "invalid_args",
+      "fault": "invalid_args",
+      "reproduction_evidence_span_ids": [
+        "580067b4a02b4452a85fcaab9166e2a7"
+      ],
+      "reproduction_run_id": "e28e0e20e66742a5aacc37272c4f7095",
+      "reproduction_trace_hash": "2ae1cd9a464be384f2dd9fcde65351089257e793b8b16036f98a4634be20b99b",
+      "source_trace_hash": "099933569a6b21e5ecacdb0a1632b7951a9c4424dcf13782fccb95a3b80160f7"
+    },
+    "limitations": [
+      "A trace records observations, not hidden model reasoning.",
+      "A missing span does not prove a step succeeded. Hypotheses require reproduction."
+    ]
+  },
+  "checks": {
+    "bounded_fix_verified": true,
+    "failure_observed": true,
+    "failure_reproduced": true,
+    "draft_is_not_gold": true,
+    "replay_has_no_effects": true,
+    "span_references_exist": true
+  },
+  "passed": 6,
+  "failed": 0,
+  "skipped": 0,
+  "elapsed_ms": 172.68629200407304,
+  "usage": {
+    "calls": 0,
+    "cost_usd": null
+  },
+  "limitations": [
+    "Only the isolated demonstrated fault is reproduced; general root-cause accuracy is not measured.",
+    "The corrected operation is validated, not an autonomous system update.",
+    "Draft expected behavior still requires separate human review."
+  ],
+  "experiment_manifest": {
+    "code_revision": "a0a82b2383a08448665655a7299c44c142a63cb6",
+    "code_source_hash": "4b1a8118018126e8f388bc92caa0fe39f304b54f3be85f832cd928f54601e643",
+    "config": {
+      "corpus_hash": "3fb769698bd3a16aa6ccbf455c27087631fcb1493a8f3b9a4be7e064285b65a6",
+      "protocol": "public-demo/1"
+    },
+    "config_hash": "e1818556c8690713a20b8410e4852b4ffd48d2bb37a1d718e44d364fb283257a",
+    "data_origin": "synthetic",
+    "dirty_tree": true,
+    "finished_at": "2026-11-17T06:10:51.408407+00:00",
+    "id": "57e8ea8c4a984f068e3f531e04c2f738",
+    "measurement_status": "measured",
+    "mode": "local",
+    "module": "lens-experiment",
+    "review_status": "not_human_reviewed",
+    "schema_version": "tracecraft.run/1",
+    "started_at": "2026-11-17T06:10:51.232722+00:00",
+    "status": "completed",
+    "usage": {
+      "calls": 0,
+      "cost_usd": null,
+      "input_tokens": null,
+      "output_tokens": null
+    }
+  },
+  "provenance": {
+    "data_origin": "synthetic",
+    "corpus_hash": "3fb769698bd3a16aa6ccbf455c27087631fcb1493a8f3b9a4be7e064285b65a6",
+    "created_at": "2026-11-17T06:10:51.408637+00:00",
+    "source": "independently_authored_public_demo",
+    "code": "tracecraft-labs/0.1.0"
+  }
+}

@@ -1,0 +1,330 @@
+{
+  "schema_version": "tracecraft.independent-review/1",
+  "data_origin": "synthetic",
+  "measurement_status": "partly_measured",
+  "review_status": "independent_agent_review_not_human_certification",
+  "reviewer": "Separate delegated agent; no source implementation changes; same-session tools and workspace.",
+  "status": "ORIGINAL_FINDINGS_RECHECKED_DELIVERY_VALIDATION_PENDING",
+  "initial": {
+    "captured_at": "2026-11-17T06:00:33.886976+00:00",
+    "basis": "Initial implementation, before changes requested by this review. Snapshot copied before repair.",
+    "snapshot": {
+      "code_and_resource_files_sha256": {
+        "RUNS_MANIFEST.json": "3c796178bf08de6152d80f834ead54c7ce7f8e63593b6b52b02841d8c82efd53",
+        "configs/embedding.json": "13e50f238d7e84c110ac8ea3873aad2e84826f35154f93c89edf3de1205e81d1",
+        "datasets/public-demo/build_dataset.py": "013e212dc4dc094fc60107357299cfbe8e80f4c784e73946e841a06fe3f8b5f3",
+        "datasets/public-demo/cache-validation.json": "24fdabbcde13429b50de3e390dab500c0cbb7f505dae306d076b0e33c521e0d7",
+        "datasets/public-demo/cases.json": "db6a144b55b9ec7172251418e3b6e41f52657282f2bb97123859bee4c96be68d",
+        "datasets/public-demo/corpus.json": "4fa3786d6216d98f2d2cfccaa305056be2e48aa2eaf5d0664f8e023edaba2f38",
+        "pyproject.toml": "3cdfa6619189f3ec3701e8d619800b7ab5e03eb2dd5465a75c2ba276e75a539e",
+        "src/tracecraft/__init__.py": "badfaece9690a812dd052c2ad1ae18ad456bad29ce16ed5686de4dd7b3e95b88",
+        "src/tracecraft/__main__.py": "9682f39a979253a348b127b4369953ea772f75553dc852faba2de94f1b2435bb",
+        "src/tracecraft/api/__init__.py": "bc9304d33924c3010ea7a7b458f945953e2a0bc9a35e07e5b810f3f8f1a5b437",
+        "src/tracecraft/api/app.py": "06f97659ac2d8d324b647c09880b269e969cdd8763f9438b4423e63d651d7308",
+        "src/tracecraft/atlas/__init__.py": "203479524f697a40f63dffb7468b1e43f9145c1b5e426ce335973a7d616085c7",
+        "src/tracecraft/atlas/service.py": "286ac73441de8f14f3c491386681a417b1ceafae487ddcd138d97a1fbc27ad02",
+        "src/tracecraft/canon/__init__.py": "1ca3321233816dca9842519b6ee78b49422ca11e488618b270c6f6d32d0c07fb",
+        "src/tracecraft/canon/evaluator.py": "e33dd68543b0d9e9215ce7436151b9a9a1018ef6027f131bd33653226357c897",
+        "src/tracecraft/canon/service.py": "46623334c49ee7e4c38b7a1e232c98636aa03c97c2e1bcde19e200edc291c4d0",
+        "src/tracecraft/cli.py": "ab8aec03e42f66a470aa68568330cf934b68bc136fced0902a16d97ee9e587ce",
+        "src/tracecraft/core/__init__.py": "9d96b62b088b047212b4efee682e80c480302f2963f7d5504366f4fd79697283",
+        "src/tracecraft/core/embeddings.py": "a59672e396e9b3b8be98250577c367340fce8ce2689ffed6d1986a35cb150529",
+        "src/tracecraft/core/ingest.py": "7af866c36e9e9a3decc03fa3fffde0734059ee7a8cef00b16e7f3bd8cdda37d6",
+        "src/tracecraft/core/models.py": "682d0bc01f5602d016c6ad4ede38ac92c453f73fc49145c872c229402f65f82f",
+        "src/tracecraft/core/providers.py": "e138b30aac33263f26f25a6185b986986c6b5d7f8115a03ef9a16402d855ab40",
+        "src/tracecraft/core/reports.py": "019e927d25bc4cebab0f29b759e094ad9252ac1a79993d167d4d178130544884",
+        "src/tracecraft/core/store.py": "0299780b2a734d4f136a6954a7afcc2e45a9b689a8441667ada0459b6f3a2cca",
+        "src/tracecraft/echo/__init__.py": "820a5ba1927fab9603051dfb0a5c10042fdbb9a4b35f1545f4ff92a4f4bb6454",
+        "src/tracecraft/echo/service.py": "6eb05792749e84fdf6c59653d259b6fc585f27b6ab089756dbf700419037e06e",
+        "src/tracecraft/lens/__init__.py": "dcf35ed52b1ee6cc5376759b7bc19db6dcef83a752f7adf162dae19099227d9b",
+        "src/tracecraft/lens/service.py": "f6840d7135a4469393097a8d135338cd7a4de1b6f2b9ff162cabfa5daf8cb114",
+        "src/tracecraft/relay/__init__.py": "296a1727f9d938b95d488974fe9643daf510c482322a326ee664ab9751258d91",
+        "src/tracecraft/relay/service.py": "782dedcef4e9df8134bb772dd9dc161dfc968af0670bac3164df60bd2517d415",
+        "src/tracecraft/sentinel/__init__.py": "902340cb5e6bc20dd7a250c84e79964798cf315f06c3709d0420ef9514b0d883",
+        "src/tracecraft/sentinel/service.py": "0cd91cc478f89f6f8cbf0c885b1fa7832b41f9fbd6b1a5c6948c387806a126dc"
+      },
+      "aggregate_sha256": "cf3a810de0e6da864c766a587118e485528d53eeaac1e5b960c609d9f165692f"
+    },
+    "assessment": "Substantial local engineering demonstration with genuinely different laboratory responsibilities. Not yet a strong evaluation portfolio: three independently reproduced evaluator false positives undermine the meaning of benchmark passes, and embedding configuration changes reuse stale persisted vectors.",
+    "commands": [
+      {
+        "command": "make test",
+        "status": "PASS",
+        "tests": 111,
+        "warnings": 1,
+        "seconds": 7.35
+      },
+      {
+        "command": "make check",
+        "status": "PASS",
+        "details": "Ruff, mypy over 25 source files, compileall."
+      },
+      {
+        "command": "make privacy-check",
+        "status": "PASS",
+        "scanned_files": 103
+      },
+      {
+        "command": "copied checkout, fresh-process tracecraft --db <fresh-db> demo",
+        "status": "PASS",
+        "modules": 6,
+        "qualification": "Copied source/resources and fresh database; reused existing dependency environment. This is not a fresh dependency installation."
+      },
+      {
+        "command": "pip wheel --no-deps <copied-source>",
+        "status": "BLOCKED_ENVIRONMENT",
+        "reason": "Sandbox DNS could not fetch setuptools>=68. No wheel was built; this is not a project build failure."
+      },
+      {
+        "command": "python -m tracecraft --help after relocating src/tracecraft into isolated site-packages",
+        "status": "FAIL",
+        "reason": "FileNotFoundError for configs/embedding.json, even with existing runtime dependencies available.",
+        "qualification": "Installed-layout simulation, not a built-wheel test."
+      }
+    ],
+    "findings": [
+      {
+        "id": "IR-001",
+        "severity": "high",
+        "title": "Evaluator accepts non-answers and unsupported assertions",
+        "status": "OPEN",
+        "evidence_files": [
+          "src/tracecraft/canon/evaluator.py",
+          "src/tracecraft/core/models.py"
+        ],
+        "impact": "CANON pass counts and SENTINEL quality gates can accept outputs that do not satisfy the question or invent facts. Existing tests missed these false positives.",
+        "probes": [
+          {
+            "name": "non_answer_fragment_claim",
+            "case_id": "lf-palette-ru",
+            "output_text": "The",
+            "claimed_status": "supported",
+            "claims": [
+              {
+                "text": "The",
+                "evidence_id": "luma-v2-palette",
+                "quote": "The"
+              }
+            ],
+            "observed_passed": true,
+            "expected_passed": false
+          },
+          {
+            "name": "conflict_without_claims",
+            "case_id": "lf-conflict-ru",
+            "output_text": "Sources conflict; a reviewed priority decision is required.",
+            "claimed_status": "conflict",
+            "claims": [],
+            "observed_passed": true,
+            "expected_passed": false
+          },
+          {
+            "name": "false_claim_in_abstention",
+            "case_id": "lf-unknown",
+            "output_text": "This product is certified fireproof and safe for every use.",
+            "claimed_status": "insufficient_evidence",
+            "claims": [],
+            "observed_passed": true,
+            "expected_passed": false
+          }
+        ],
+        "requested_fix": "Require expected claim content, actual supported conflict claims, and a recognized conservative abstention contract; add adversarial tests and rerun reports."
+      },
+      {
+        "id": "IR-002",
+        "severity": "medium",
+        "title": "Persisted vectors and cache ignore encoder configuration identity",
+        "status": "OPEN",
+        "evidence_files": [
+          "src/tracecraft/atlas/service.py",
+          "src/tracecraft/echo/service.py",
+          "src/tracecraft/core/embeddings.py"
+        ],
+        "impact": "Changing prefixes or other embedding configuration at the same model revision can silently mix old passage vectors with new query vectors; thresholds and semantic entries likewise remain eligible.",
+        "probe": {
+          "kind": "controlled encoder configuration-invalidation probe, not a real model measurement",
+          "first_calls": [
+            "passage",
+            "passage",
+            "query"
+          ],
+          "changed_configuration_calls": [
+            "query"
+          ],
+          "changed_configuration_scores": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "expected_if_vectors_recomputed": 1.0,
+          "stale_vectors_reused": true
+        },
+        "requested_fix": "Key passage vectors, answer-cache namespaces and calibration by both model revision and encoder configuration fingerprint; test a changed configuration across new instances."
+      },
+      {
+        "id": "IR-003",
+        "severity": "medium",
+        "title": "Advertised Python package entrypoint has no usable installed distribution",
+        "status": "OPEN",
+        "evidence_files": [
+          "pyproject.toml",
+          "src/tracecraft/core/store.py",
+          "src/tracecraft/core/embeddings.py"
+        ],
+        "impact": "pyproject exposes a console script but supplies neither runtime dependencies nor required configs/datasets/web resources. Resource paths assume the source checkout.",
+        "requested_fix": "Either support and test wheel installation with packaged resources and external writable runtime, or explicitly declare checkout-only support and remove the misleading packaging entrypoint. Checkout-only is acceptable for this local-lab scope."
+      }
+    ],
+    "strengths": [
+      "Six laboratories have real separate responsibilities: retrieval, durable workflow, paired regression gating, trace diagnosis, guarded answer reuse, and evidence evaluation. They share contracts and a small local stack coherently.",
+      "Meaningful negative tests cover stale approval, artifact corruption, scope revocation, prompt-injection-like source text, malformed tools, concurrent resume, private export boundaries and intentional candidate corruption.",
+      "Reports distinguish fixtures, real local embeddings, live and replay; unknown costs remain null; no generative quality or commercial impact claim is fabricated.",
+      "Saved failures, case-level outputs, corpus hashes and explicit synthetic/public provenance make shortcomings inspectable."
+    ],
+    "limitations": [
+      "Same-session independent agent review, not an external human audit or independent organization endorsement. No paid provider calls or publication.",
+      "No remote Linux CI execution observed. CI uses exact version locks but no integrity hashes and GitHub action major tags; dependency resolution was not independently reproduced from an empty cache.",
+      "Public same-author synthetic questions and inspected test splits cannot establish unseen-task model reliability. Original benchmark has 29/32 passes, not a held-out validation.",
+      "LENS diagnosis largely classifies known error labels and controlled injections; RELAY is a bounded workflow. These are legitimate mechanisms but not measured general agent autonomy.",
+      "Code uses compact one-line statements and broad untyped dict interfaces; static-check success is not strict type coverage. Large service modules and shared path globals raise maintenance costs.",
+      "No independent browser or real-encoder rerun in this initial review; existing local/browser evidence was read, not relabeled as newly executed."
+    ],
+    "top_three_material_improvements": [
+      {
+        "priority": 1,
+        "improvement": "Close evaluator loopholes before optimizing pass counts.",
+        "acceptance": "The three independent adversarial outputs fail; valid existing cases still evaluate; public reports are regenerated under a new recorded evaluator/code fingerprint."
+      },
+      {
+        "priority": 2,
+        "improvement": "Make configuration changes invalidate computed state.",
+        "acceptance": "Changing only encoder configuration forces passage recomputation, semantic cache misses and new calibration; restart reuse still works for an unchanged configuration."
+      },
+      {
+        "priority": 3,
+        "improvement": "Make delivery and evidence reproducible at the claimed scope.",
+        "acceptance": "Declare one supported installation route, exercise it from a clean copy, keep CI locks synchronized, bind final reports to final sources, and label visible regression fixtures separately from genuinely new evaluation cases."
+      }
+    ]
+  },
+  "final": {
+    "status": "ORIGINAL_FINDINGS_RESOLVED_IN_RECHECKED_SCOPE",
+    "scope": "Direct recheck of this review agent's three original findings only. This is not whole-project final validation; Atlas quality work and final delivery reports/documentation are still being completed by the integrator.",
+    "assessment": "The observed evaluator and encoder-state defects are repaired in the checked source. Removing the misleading package entrypoint and explicitly defining checkout-only distribution is an appropriate scope decision for these local labs. This is a credible engineering demonstration with bounded claims; broader model-quality and production-readiness conclusions remain unsupported.",
+    "blockers_in_rechecked_scope": [],
+    "findings": [
+      {
+        "id": "IR-001",
+        "status": "RESOLVED",
+        "evidence": "All three original false-positive inputs now fail; source-faithful supported/conflict/refusal controls still pass. Evaluator version is canon-evidence-checks/2.",
+        "limitation": "Exact annotated source coverage and a canonical refusal template establish this extractive contract, not general natural-language entailment."
+      },
+      {
+        "id": "IR-002",
+        "status": "RESOLVED",
+        "evidence": "Changing only encoder configuration reencodes passages and changes answer-cache/calibration identity. Reopened store with unchanged configuration reuses passage vectors and preserves expected scores.",
+        "limitation": "Recheck uses controlled vectors. It is a state-invalidation test, not a new real-model quality measurement."
+      },
+      {
+        "id": "IR-003",
+        "status": "RESOLVED_BY_SUPPORTED_SCOPE",
+        "evidence": "pyproject no longer declares a build backend, distributable project or console script and explicitly documents checkout application use. Existing Makefile/PYTHONPATH route remains the supported interface.",
+        "follow_up": "Integrator must propagate checkout-only support into final README/delivery wording. No functional wheel-installation claim is made."
+      }
+    ],
+    "direct_probe_results": {
+      "checked_at": "2026-11-17T06:07:13.383364+00:00",
+      "implementation_hash_at_start": "5a2d52c35bf31d903cc50407d4c11fbc00925258370114adc505c0d7cbfcd6d7",
+      "implementation_hash_at_end": "5a2d52c35bf31d903cc50407d4c11fbc00925258370114adc505c0d7cbfcd6d7",
+      "implementation_changed_during_run": false,
+      "evaluator_version": "canon-evidence-checks/2",
+      "original_evaluator_probes": [
+        {
+          "probe": "non_answer_fragment_claim",
+          "case_id": "lf-palette-ru",
+          "initial_passed": true,
+          "recheck_passed": false,
+          "failed_checks": [
+            "required_content"
+          ]
+        },
+        {
+          "probe": "conflict_without_claims",
+          "case_id": "lf-conflict-ru",
+          "initial_passed": true,
+          "recheck_passed": false,
+          "failed_checks": [
+            "required_content",
+            "cited_sources_have_claims",
+            "supported_has_claims"
+          ]
+        },
+        {
+          "probe": "false_claim_in_abstention",
+          "case_id": "lf-unknown",
+          "initial_passed": true,
+          "recheck_passed": false,
+          "failed_checks": [
+            "refusal_content"
+          ]
+        }
+      ],
+      "valid_controls": [
+        {
+          "case_id": "lf-palette-ru",
+          "kind": "constructed source-faithful valid control, not Atlas quality measurement",
+          "passed": true
+        },
+        {
+          "case_id": "lf-conflict-ru",
+          "kind": "constructed source-faithful valid control, not Atlas quality measurement",
+          "passed": true
+        },
+        {
+          "case_id": "lf-unknown",
+          "kind": "constructed source-faithful valid control, not Atlas quality measurement",
+          "passed": true
+        }
+      ],
+      "configuration_checks": {
+        "changed_config_reencodes_passages": true,
+        "changed_config_scores_correct": true,
+        "unchanged_config_reuses_passages": true,
+        "unchanged_config_scores_correct": true,
+        "cache_namespace_changes": true,
+        "calibration_identity_changes": true,
+        "old_threshold_not_reused": true,
+        "exact_answer_not_reused_after_encoder_change": true
+      },
+      "configuration_probe_qualification": "Controlled encoder and fresh/reopened SQLite stores, not real model quality or separate-process encoder validation.",
+      "reviewed_files_sha256": {
+        "src/tracecraft/canon/evaluator.py": "cb866322f00589a4b9f897ab2e88761760ecd7d9bdde1df4c05f6e125f71876f",
+        "src/tracecraft/atlas/service.py": "4789d16666b99c67de1ea63240a6bf86dde91b592f6c2f42631f6c05ed1ea110",
+        "src/tracecraft/echo/service.py": "37bc2a999f0d5e0b4c59588041ed8289df07c1c7496e1663c25350a1ffa5d083",
+        "src/tracecraft/core/embeddings.py": "a59672e396e9b3b8be98250577c367340fce8ce2689ffed6d1986a35cb150529",
+        "pyproject.toml": "0c2ceddb03c386611fd34880ee8581ec47c3dee365a5a96f5cdc0552588a49c9"
+      }
+    },
+    "focused_regression_command": "PYTHONPATH=src .venv/bin/python -m pytest -q tests/test_evaluator_adversarial.py tests/test_encoder_config.py tests/test_canon.py tests/test_echo.py",
+    "delivery_checks_not_asserted": [
+      "Final whole-project test/static/privacy run after all edits",
+      "Refreshed public benchmark/summary/source fingerprints",
+      "Final README wording and clean-copy delivery test",
+      "Remote CI execution"
+    ],
+    "remaining_limitations": [
+      "Independent agent review remains same-session and is not a human audit.",
+      "Frozen new challenge cases are useful first-evaluation evidence but become known regression cases after implementation changes.",
+      "No demonstrated live-generative quality, customer outcomes, broad model generalization or production security certification.",
+      "Version locks still lack package hashes and action references remain major tags; remote Linux CI has not been independently observed.",
+      "Compact coding style and broad dictionaries remain maintenance tradeoffs."
+    ],
+    "focused_regression_result": {
+      "status": "PASS",
+      "passed": 35,
+      "seconds": 3.42
+    }
+  }
+}
